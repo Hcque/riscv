@@ -1,3 +1,0 @@
-/home/haochen/Videos/riscv/build/CMakeFiles/rebuild_cache.dir
-/home/haochen/Videos/riscv/build/CMakeFiles/edit_cache.dir
-/home/haochen/Videos/riscv/build/CMakeFiles/run.dir
