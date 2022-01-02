@@ -8,6 +8,8 @@
 
 // extend 11? 10
 
+// extend 10 12
+
 #ifndef INSTRUCTION_HPP
 #define INSTRUCTION_HPP
 
@@ -215,12 +217,12 @@ public:
                 break;
             default: type = ERROR; break;
         }
-        assert(type != ERROR);
+        // assert(type != ERROR);
         return type;
     }
 
     static uint signext(uint x, int n){
-        if ( x >> (n-1) ) x |= (0xffffffff >> n) << n;
+        if ( (x >> n) & 1 ) x |= 0xffffffff >> n << n;
         return x;
     }
 
@@ -253,7 +255,7 @@ void ff(uint fromMemory)
             case JALR:
             rd = ( fromMemory >> 7 ) & 31;
             imm = (fromMemory >> 20) & 4095;
-            imm = signext(imm, 10);
+            imm = signext(imm, 11);
             rs1 = ( fromMemory >> 15 ) & 31;
             break;
 

@@ -7,7 +7,7 @@
 // BNE case
 
 // func7 SLAI
-
+// sR >> not << !
 
 #ifndef EXECUTION_HPP
 #define EXECUTION_HPP
@@ -51,12 +51,12 @@ public:
                 // std::cout << regs->pc << "\n";
                 break;
 
-            case BEQ: inst.take_bch = (inst.src1 == inst.src2); break;
-            case BNE: inst.take_bch = (inst.src1 != inst.src2); break;
-            case BLT: inst.take_bch = (int)inst.src1 < (int)inst.src2; break;
-            case BGE: inst.take_bch = (int)inst.src1 >= (int)inst.src2; break;
-            case BLTU: inst.take_bch = inst.src1 < inst.src2; break;
-            case BGEU: inst.take_bch = inst.src1 >= inst.src2; break;
+            case BEQ: inst.dest = (inst.src1 == inst.src2); break;
+            case BNE: inst.dest = (inst.src1 != inst.src2); break;
+            case BLT: inst.dest = (int)inst.src1 < (int)inst.src2; break;
+            case BGE: inst.dest = (int)inst.src1 >= (int)inst.src2; break;
+            case BLTU: inst.dest = inst.src1 < inst.src2; break;
+            case BGEU: inst.dest = inst.src1 >= inst.src2; break;
 
             case LB: 
             case LH:
@@ -80,7 +80,7 @@ public:
 
             case SLLI: inst.dest = inst.src1 << inst.imm; break;
             case SRLI: inst.dest = inst.src1 >> inst.imm; break;
-            case SRAI: inst.dest = (inst.src1 << inst.imm ) | (inst.src1 >> 31 << 31); break; // TODO
+            case SRAI: inst.dest = (inst.src1 >> inst.imm ) | (inst.src1 >> 31 << 31); break; // TODO
            
             case ADD: inst.dest = inst.src1 + inst.src2; break;
             case SUB: inst.dest = inst.src1 - inst.src2; break;
@@ -100,7 +100,7 @@ public:
         if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
          inst.type == BLTU || inst.type == BGEU)
          {
-            if (inst.take_bch)
+            if (inst.dest)
             {
                 regs->pc = regs->pc - 4 + inst.imm;
             // std::cout << "BNE" << regs->pc << std::endl;

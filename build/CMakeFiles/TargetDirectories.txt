@@ -1,0 +1,5 @@
+/home/hc/Desktop/riscv/build/CMakeFiles/rebuild_cache.dir
+/home/hc/Desktop/riscv/build/CMakeFiles/edit_cache.dir
+/home/hc/Desktop/riscv/build/CMakeFiles/test.dir
+/home/hc/Desktop/riscv/build/CMakeFiles/code.dir
+/home/hc/Desktop/riscv/build/CMakeFiles/RISCV_Simulator_Test.dir

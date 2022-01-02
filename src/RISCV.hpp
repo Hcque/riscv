@@ -81,9 +81,10 @@ public:
     }
 
     int output(){
+        std::cerr << "=====\n";
         for (auto& item: regs._types) 
         {
-            std::cout << _type_Name[item] << " ";
+            std::cerr << _type_Name[item] << " ";
         }
         return regs.reg[10] & 255u;
     }

@@ -39,7 +39,7 @@ class Execution {
 				case JALR: 
 				inst.result = reg->pc;
                 reg->pc = inst.src1 + inst.imm ; 
-				std::cout << "pc:: " << reg->pc<< std::endl;
+				// std::cout << "pc:: " << reg->pc<< std::endl;
                 reg->pc = setlowzero(reg->pc);
 
 				// inst.resultpc = inst.src1 + inst.imm ; 
@@ -77,10 +77,10 @@ class Execution {
 				case SLT: inst.result =  ((int)inst.src1 < (int)inst.src2); break;
 				case SLTU: inst.result =  (inst.src1 < inst.src2); break;
 				case XOR: inst.result = (inst.src1 ^ inst.src2);
-				std::cout << "XOR" << inst.result << "|" << inst.src1 
-				<< "|" << inst.src2
-				<< std::endl;
-				 break;
+				// std::cout << "XOR" << inst.result << "|" << inst.src1 
+				// << "|" << inst.src2
+				// << std::endl;
+				break;
 				case OR: inst.result = (inst.src1 | inst.src2); break;
 				case AND: inst.result = (inst.src1 & inst.src2); break;
 				default: break;
@@ -94,7 +94,7 @@ class Execution {
             if (inst.result)
             {
                 reg->pc = reg->pc - 4 + inst.imm;
-            std::cout << "BNE" << reg->pc << std::endl;
+            // std::cout << "BNE" << reg->pc << std::endl;
             }
          }
 
