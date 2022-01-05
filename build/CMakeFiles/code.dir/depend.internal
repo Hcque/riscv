@@ -10,7 +10,9 @@ CMakeFiles/code.dir/src/main.cpp.o
  /home/hc/Desktop/riscv/src/MemoryAccess.hpp
  /home/hc/Desktop/riscv/src/RISCV.hpp
  /home/hc/Desktop/riscv/src/WriteBack.hpp
+ /home/hc/Desktop/riscv/src/forward.hpp
  /home/hc/Desktop/riscv/src/main.cpp
  /home/hc/Desktop/riscv/src/memory.hpp
+ /home/hc/Desktop/riscv/src/prediction.hpp
  /home/hc/Desktop/riscv/src/register.hpp
  /home/hc/Desktop/riscv/src/util.hpp

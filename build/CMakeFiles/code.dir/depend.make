@@ -9,8 +9,10 @@ CMakeFiles/code.dir/src/main.cpp.o: ../src/InstructionFetch.hpp
 CMakeFiles/code.dir/src/main.cpp.o: ../src/MemoryAccess.hpp
 CMakeFiles/code.dir/src/main.cpp.o: ../src/RISCV.hpp
 CMakeFiles/code.dir/src/main.cpp.o: ../src/WriteBack.hpp
+CMakeFiles/code.dir/src/main.cpp.o: ../src/forward.hpp
 CMakeFiles/code.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/code.dir/src/main.cpp.o: ../src/memory.hpp
+CMakeFiles/code.dir/src/main.cpp.o: ../src/prediction.hpp
 CMakeFiles/code.dir/src/main.cpp.o: ../src/register.hpp
 CMakeFiles/code.dir/src/main.cpp.o: ../src/util.hpp
 

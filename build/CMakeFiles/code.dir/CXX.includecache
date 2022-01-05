@@ -39,6 +39,8 @@ register.hpp
 /home/hc/Desktop/riscv/src/register.hpp
 MemoryAccess.hpp
 /home/hc/Desktop/riscv/src/MemoryAccess.hpp
+prediction.hpp
+/home/hc/Desktop/riscv/src/prediction.hpp
 
 /home/hc/Desktop/riscv/src/Instruction.hpp
 cstdint
@@ -63,12 +65,16 @@ Execution.hpp
 /home/hc/Desktop/riscv/src/Execution.hpp
 Common.hpp
 /home/hc/Desktop/riscv/src/Common.hpp
+prediction.hpp
+/home/hc/Desktop/riscv/src/prediction.hpp
 
 /home/hc/Desktop/riscv/src/InstructionFetch.hpp
 InstructionDecode.hpp
 /home/hc/Desktop/riscv/src/InstructionDecode.hpp
 iostream
 -
+prediction.hpp
+/home/hc/Desktop/riscv/src/prediction.hpp
 
 /home/hc/Desktop/riscv/src/MemoryAccess.hpp
 Instruction.hpp
@@ -101,8 +107,16 @@ MemoryAccess.hpp
 /home/hc/Desktop/riscv/src/MemoryAccess.hpp
 WriteBack.hpp
 /home/hc/Desktop/riscv/src/WriteBack.hpp
+prediction.hpp
+/home/hc/Desktop/riscv/src/prediction.hpp
+forward.hpp
+/home/hc/Desktop/riscv/src/forward.hpp
 
 /home/hc/Desktop/riscv/src/WriteBack.hpp
+Common.hpp
+/home/hc/Desktop/riscv/src/Common.hpp
+
+/home/hc/Desktop/riscv/src/forward.hpp
 Common.hpp
 /home/hc/Desktop/riscv/src/Common.hpp
 
@@ -127,6 +141,12 @@ fstream
 -
 util.hpp
 /home/hc/Desktop/riscv/src/util.hpp
+
+/home/hc/Desktop/riscv/src/prediction.hpp
+queue
+-
+unordered_map
+-
 
 /home/hc/Desktop/riscv/src/register.hpp
 cstdint

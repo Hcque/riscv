@@ -131,6 +131,7 @@ public:
 
     }
 
+
     friend std::ostream& operator<< (std::ostream& out, const Instruction& inst)
     {
         out << "instOUT";
@@ -217,7 +218,7 @@ public:
                 break;
             default: type = ERROR; break;
         }
-        // assert(type != ERROR);
+        assert(type != ERROR);
         return type;
     }
 
@@ -236,6 +237,7 @@ void ff(uint fromMemory)
     void getArgs(){
         uint tmp1, tmp2 , tmp3 , tmp4 ;
         switch (type){
+            case ERROR: return;
             case LUI:
             case AUIPC:
                 rd = ( fromMemory >> 7 ) & 31;

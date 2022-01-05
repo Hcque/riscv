@@ -1,4 +1,5 @@
 
+#pragma once
 
 #include <queue>
 #include <unordered_map>
@@ -7,14 +8,15 @@
 class StaticPred{
 public:
     int tot, hit;
-    Static(): tot(0), hit(0){}
+    StaticPred(): tot(0), hit(0){}
 
+    // always not taken
     bool take()   
     {
         return 0;
     }
 
-    vold validate(bool jump)
+    void validate(bool jump)
     {
         tot++;
         if (!jump) hit ++;
@@ -28,7 +30,7 @@ public:
     bool b0, b1;
     int tot, hit;
     bool pred;
-    Static(): tot(0), hit(0), b0(1), b1(0){}
+    TwobitPred(): tot(0), hit(0), b0(1), b1(0){}
 
     void increase()
     {
@@ -52,7 +54,7 @@ public:
         return b0;
     }
 
-    vold validate(bool jump)
+    void validate(bool jump)
     {
         tot++;
         if (jump == b0)  // pred correct
@@ -74,7 +76,7 @@ class AdptiveTrain //
         return 0;
     }
 
-    vold validate(bool jump)
+    void validate(bool jump)
     {
 
     }

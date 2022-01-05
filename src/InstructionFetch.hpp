@@ -4,15 +4,25 @@
 #include "InstructionDecode.hpp"
 #include <iostream>
 
+#include "prediction.hpp"
+
+
 class InstructionFetch {
+public:
     friend class RISCV;
     Register *regs;
-public:
+
+    StaticPred* pd;
+
+
     Instruction inst;
     InstructionFetch(){}
     InstructionFetch(Register *_regs) : regs(_regs) {}
+    InstructionFetch(Register *_regs, StaticPred* _pd) : regs(_regs), pd(_pd) {}
 
     void go(){
+
+        if (stall) return;
         inst.fromMemory = regs->load(regs->pc, 4);
 
 
@@ -46,7 +56,8 @@ public:
     // }
     // cout << endl;
 
-
+    // predict
+    // if (bchPred->take())
         regs->pc += 4;
     }
 

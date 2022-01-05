@@ -10,8 +10,8 @@
 #include "util.hpp"
 
 class MemoryAccess {
-    Register *regs;
 public:
+    Register *regs;
     Instruction inst;
     MemoryAccess() {}
     MemoryAccess(Register *_regs) : regs(_regs) {}
@@ -20,6 +20,7 @@ public:
 
     void go(){
         switch (inst.type){
+            case ERROR: return; break;
             case LB: inst.dest = signext( regs->load(inst.dest, 1), 7) ; break;
             case LH: inst.dest = signext( regs->load(inst.dest, 2), 15) ; break;
             case LW: inst.dest = regs->load(inst.dest, 4); break;

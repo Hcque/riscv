@@ -15,16 +15,21 @@
 #include "memory.hpp"
 #include "register.hpp"
 #include "MemoryAccess.hpp"
+
+#include "prediction.hpp"
 class MemoryAccess;
 
 class Execution {
-    Register *regs;
 public:
+    Register *regs;
+    StaticPred* pd;
+
     Instruction inst;
 
     Execution() {}
     Execution(Register *_regs) : regs(_regs) {}
     Execution(Register *_regs, Instruction _inst) : regs(_regs), inst(_inst) {}
+    Execution(Register *_regs, StaticPred* _pd) : regs(_regs), pd(_pd) {}
 
     uint32_t setlowZero(uint32_t x)
     {
@@ -32,10 +37,9 @@ public:
         else return x;
     }
     void go(){
-        inst.src1 = regs->get(inst.rs1);
-        inst.src2 = regs->get(inst.rs2);
-
+       
         switch (inst.type){
+            case ERROR: return; break;
             case LUI: inst.dest = inst.imm ; break;
             case AUIPC: inst.dest = regs->pc = regs->pc -4 + inst.imm; break;
             case JAL: 
@@ -100,12 +104,17 @@ public:
         if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
          inst.type == BLTU || inst.type == BGEU)
          {
+             bool jump = inst.dest;
             if (inst.dest)
             {
                 regs->pc = regs->pc - 4 + inst.imm;
             // std::cout << "BNE" << regs->pc << std::endl;
+
             }
+
+            pd->validate(jump);
          }
+
     }
 
     void pass(MemoryAccess &next){

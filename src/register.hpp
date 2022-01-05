@@ -22,7 +22,7 @@ public:
 
     std::unordered_set<Inst_Type > _types;
 
-    Register(memory* _mem): mem(_mem), _end(0){}
+    Register(memory* _mem): mem(_mem), _end(0),pc(0u){}
 
     uint32_t load(uint pos, uint p){
         uint32_t res = 0; unsigned char tmp[4];
@@ -56,7 +56,6 @@ public:
     void set(int i, uint item){
         if (i == 0) return;
         reg[i] = item;
-        // cout << item;
     }
 
 

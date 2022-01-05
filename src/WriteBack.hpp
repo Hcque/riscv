@@ -5,7 +5,10 @@
 #define WRITEBACK_HPP
 
 #include "Common.hpp"
+
+extern bool stall;
 class WriteBack {
+public:
     Register *regs;
     public:
     Instruction inst;
@@ -17,6 +20,7 @@ class WriteBack {
 
     void go(){
         switch (inst.type){
+            case ERROR: return; break;
             case LUI:
             case AUIPC:
             case JAL:
@@ -51,6 +55,7 @@ class WriteBack {
             case LHU:
             // cout << inst.dest;
             regs->set(inst.rd, inst.dest); // write back
+            if (stall) stall = 0;
             break;
         }
         // std::cout << *regs;

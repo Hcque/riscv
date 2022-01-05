@@ -16,4 +16,6 @@
 
 #include <iostream>
 
+
+bool stall = 0;
 #endif
