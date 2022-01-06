@@ -27,6 +27,8 @@ WriteBack.hpp
 /home/hc/Desktop/riscv/src/WriteBack.hpp
 RISCV.hpp
 /home/hc/Desktop/riscv/src/RISCV.hpp
+Stage.hpp
+/home/hc/Desktop/riscv/src/Stage.hpp
 iostream
 -
 
@@ -41,6 +43,8 @@ MemoryAccess.hpp
 /home/hc/Desktop/riscv/src/MemoryAccess.hpp
 prediction.hpp
 /home/hc/Desktop/riscv/src/prediction.hpp
+Stage.hpp
+/home/hc/Desktop/riscv/src/Stage.hpp
 
 /home/hc/Desktop/riscv/src/Instruction.hpp
 cstdint
@@ -67,6 +71,8 @@ Common.hpp
 /home/hc/Desktop/riscv/src/Common.hpp
 prediction.hpp
 /home/hc/Desktop/riscv/src/prediction.hpp
+Stage.hpp
+/home/hc/Desktop/riscv/src/Stage.hpp
 
 /home/hc/Desktop/riscv/src/InstructionFetch.hpp
 InstructionDecode.hpp
@@ -75,6 +81,8 @@ iostream
 -
 prediction.hpp
 /home/hc/Desktop/riscv/src/prediction.hpp
+Stage.hpp
+/home/hc/Desktop/riscv/src/Stage.hpp
 
 /home/hc/Desktop/riscv/src/MemoryAccess.hpp
 Instruction.hpp
@@ -87,6 +95,8 @@ WriteBack.hpp
 /home/hc/Desktop/riscv/src/WriteBack.hpp
 util.hpp
 /home/hc/Desktop/riscv/src/util.hpp
+Stage.hpp
+/home/hc/Desktop/riscv/src/Stage.hpp
 
 /home/hc/Desktop/riscv/src/RISCV.hpp
 iostream
@@ -111,10 +121,24 @@ prediction.hpp
 /home/hc/Desktop/riscv/src/prediction.hpp
 forward.hpp
 /home/hc/Desktop/riscv/src/forward.hpp
+Stage.hpp
+/home/hc/Desktop/riscv/src/Stage.hpp
+
+/home/hc/Desktop/riscv/src/Stage.hpp
+register.hpp
+/home/hc/Desktop/riscv/src/register.hpp
+memory.hpp
+/home/hc/Desktop/riscv/src/memory.hpp
+Instruction.hpp
+/home/hc/Desktop/riscv/src/Instruction.hpp
+prediction.hpp
+/home/hc/Desktop/riscv/src/prediction.hpp
 
 /home/hc/Desktop/riscv/src/WriteBack.hpp
 Common.hpp
 /home/hc/Desktop/riscv/src/Common.hpp
+Stage.hpp
+/home/hc/Desktop/riscv/src/Stage.hpp
 
 /home/hc/Desktop/riscv/src/forward.hpp
 Common.hpp

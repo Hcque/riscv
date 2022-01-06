@@ -6,21 +6,24 @@
 
 #include "Common.hpp"
 
-extern bool stall;
-class WriteBack {
+#include "Stage.hpp"
+// extern bool stall;
+class WriteBack: public Stage {
 public:
     Register *regs;
+    bool stall;
     public:
     Instruction inst;
     WriteBack() {}
     WriteBack(Register *_regs) : regs(_regs) {}
 
     WriteBack(Register *_regs, Instruction _inst) : regs(_regs), inst(_inst) {}
+    WriteBack(Register *_regs, bool _st) : regs(_regs),stall(_st){}
 
 
     void go(){
         switch (inst.type){
-            case ERROR: return; break;
+            case ERROR: return;
             case LUI:
             case AUIPC:
             case JAL:

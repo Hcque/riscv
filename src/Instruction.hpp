@@ -218,7 +218,7 @@ public:
                 break;
             default: type = ERROR; break;
         }
-        assert(type != ERROR);
+        // assert(type != ERROR);
         return type;
     }
 

@@ -8,6 +8,7 @@ CMakeFiles/RISCV_Simulator_Test.dir/src/test1.cpp.o: ../src/InstructionDecode.hp
 CMakeFiles/RISCV_Simulator_Test.dir/src/test1.cpp.o: ../src/InstructionFetch.hpp
 CMakeFiles/RISCV_Simulator_Test.dir/src/test1.cpp.o: ../src/MemoryAccess.hpp
 CMakeFiles/RISCV_Simulator_Test.dir/src/test1.cpp.o: ../src/RISCV.hpp
+CMakeFiles/RISCV_Simulator_Test.dir/src/test1.cpp.o: ../src/Stage.hpp
 CMakeFiles/RISCV_Simulator_Test.dir/src/test1.cpp.o: ../src/WriteBack.hpp
 CMakeFiles/RISCV_Simulator_Test.dir/src/test1.cpp.o: ../src/forward.hpp
 CMakeFiles/RISCV_Simulator_Test.dir/src/test1.cpp.o: ../src/memory.hpp

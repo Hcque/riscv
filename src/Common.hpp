@@ -13,9 +13,9 @@
 #include "MemoryAccess.hpp"
 #include "WriteBack.hpp"
 #include "RISCV.hpp"
-
+#include "Stage.hpp"
 #include <iostream>
 
 
-bool stall = 0;
+// bool stall = 0;
 #endif

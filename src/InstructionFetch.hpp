@@ -5,20 +5,23 @@
 #include <iostream>
 
 #include "prediction.hpp"
+#include "Stage.hpp"
 
 
-class InstructionFetch {
+class InstructionFetch: public Stage {
 public:
     friend class RISCV;
     Register *regs;
 
     StaticPred* pd;
+    bool stall;
 
 
     Instruction inst;
     InstructionFetch(){}
     InstructionFetch(Register *_regs) : regs(_regs) {}
     InstructionFetch(Register *_regs, StaticPred* _pd) : regs(_regs), pd(_pd) {}
+    InstructionFetch(Register *_regs, StaticPred* _pd, bool _st) : regs(_regs), pd(_pd) , stall(_st){}
 
     void go(){
 
@@ -62,6 +65,11 @@ public:
     }
 
     void pass(InstructionDecode &next){
+        if (stall)// condition
+        {
+            // stall = 1;
+            inst.type = ERROR;
+        }
             next.inst = inst;
             // std::cerr << "DONE: IF: inst: " << inst.fromMemory << "\n";
     }

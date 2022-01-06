@@ -17,12 +17,14 @@
 #include "MemoryAccess.hpp"
 
 #include "prediction.hpp"
+#include "Stage.hpp"
 class MemoryAccess;
 
-class Execution {
+class Execution :public Stage{
 public:
     Register *regs;
     StaticPred* pd;
+    bool stall;
 
     Instruction inst;
 
@@ -30,6 +32,7 @@ public:
     Execution(Register *_regs) : regs(_regs) {}
     Execution(Register *_regs, Instruction _inst) : regs(_regs), inst(_inst) {}
     Execution(Register *_regs, StaticPred* _pd) : regs(_regs), pd(_pd) {}
+    Execution(Register *_regs, StaticPred* _pd, bool _st) : regs(_regs), pd(_pd) , stall(_st){}
 
     uint32_t setlowZero(uint32_t x)
     {

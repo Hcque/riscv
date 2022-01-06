@@ -9,14 +9,20 @@
 #include "WriteBack.hpp"
 #include "util.hpp"
 
-class MemoryAccess {
+#include "Stage.hpp"
+
+
+class MemoryAccess: public Stage {
 public:
     Register *regs;
     Instruction inst;
+    bool stall;
+
     MemoryAccess() {}
     MemoryAccess(Register *_regs) : regs(_regs) {}
 
     MemoryAccess(Register *_regs, Instruction _inst) : regs(_regs), inst(_inst) {}
+    MemoryAccess(Register *_regs,  bool _st) : regs(_regs), stall(_st){}
 
     void go(){
         switch (inst.type){

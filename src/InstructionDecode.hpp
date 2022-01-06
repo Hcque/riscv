@@ -10,19 +10,24 @@
 
 #include "Common.hpp"
 #include "prediction.hpp"
+#include "Stage.hpp"
 
-extern bool stall;
+// extern bool stall;
 class Execution;
 
-class InstructionDecode {
+class InstructionDecode: public Stage {
 public:
     Register *regs;
     StaticPred* pd;
 
+
+    bool stall;
     Instruction inst;
     InstructionDecode() {}
     InstructionDecode(Register *_regs) : regs(_regs) {}
     InstructionDecode(Register *_regs, StaticPred* _pd) : regs(_regs), pd(_pd) {}
+    InstructionDecode(Register *_regs, StaticPred* _pd, bool _st) : regs(_regs), pd(_pd) , stall(_st){}
+
     void go(){
 
         inst.type = inst.getType();
@@ -47,9 +52,9 @@ public:
 
     }
     void pass(Execution& next){
-        if (0)// condition
+        if (stall)// condition
         {
-            stall = 1;
+            // stall = 1;
             inst.type = ERROR;
         }
         next.inst = inst;
