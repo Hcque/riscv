@@ -23,6 +23,8 @@ public:
         pc_value = 0u;
     }
     void loadFromDisk(const char *filename){
+    }
+    void loadFromDisk(){
         char buf[32]; memset(buf, 0, sizeof buf);
         int count = 0;
         // std::ifstream infile(filename);

@@ -123,18 +123,21 @@ public:
     uint src1, src2;
     uint dest;
     int take_bch;
+    uint32_t addr;
 
     Instruction(){
         imm = rs1 = rs2 = rd = opcode = func7 = func3 = 0u;
         dest = 0u;
-        take_bch = 0;
+        take_bch = addr = 0u;
+        type = ERROR;
 
     }
 
 
     friend std::ostream& operator<< (std::ostream& out, const Instruction& inst)
     {
-        out << "instOUT";
+        out << "=================== \n";
+        out << "INST FROM ADDR: " << _type_Name[inst.type] << " " << inst.addr << "\n";
         out << "rs1 "  << "rs2 " << "rd" << "\n";
         out << "TYPE:" << _type_Name[inst.type] << " | " << inst.rs1 << " | " << inst.rs2 << " | " << inst.rd << "\n";
         out << "TYPE:" << _type_Name[inst.type] << " | " << inst.src1 << " | " << inst.src2 << " | " << inst.dest << "\n";
@@ -227,13 +230,6 @@ public:
         return x;
     }
 
-void ff(uint fromMemory)
-{
-            using namespace std;
-            bitset<8> aaa(fromMemory);
-
-    // cout << aaa << endl;
-}
     void getArgs(){
         uint tmp1, tmp2 , tmp3 , tmp4 ;
         switch (type){
@@ -308,7 +304,6 @@ void ff(uint fromMemory)
             imm = signext(imm, 11);
             rd = ( fromMemory >> 7 ) & 31;
             rs1 = ( fromMemory >> 15 ) & 31;
-            // ff(fromMemory);
             break;
 
             case SLLI:

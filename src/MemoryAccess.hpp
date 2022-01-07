@@ -42,6 +42,7 @@ public:
 
     void pass(WriteBack &next){
         next.inst = inst;
+        inst.type = ERROR;
         // std::cerr << "DONE: MA:" << inst.dest << "\n";
 
     }

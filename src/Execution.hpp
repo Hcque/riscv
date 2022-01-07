@@ -44,12 +44,15 @@ public:
         switch (inst.type){
             case ERROR: return; break;
             case LUI: inst.dest = inst.imm ; break;
-            case AUIPC: inst.dest = regs->pc = regs->pc -4 + inst.imm; break;
+            case AUIPC: inst.dest = regs->pc = inst.addr + inst.imm; break;
             case JAL: 
-                inst.dest = regs->pc;
-                regs->pc = regs->pc + inst.imm - 4; // subtract 4 from IF stage
+                // inst.dest = regs->pc;
+                // regs->pc = regs->pc + inst.imm - 4; // subtract 4 from IF stage
+
+                inst.dest = inst.addr + 4;
+                regs->pc = inst.addr + inst.imm;
                 // cout << "==" << inst.imm<< endl;
-                // cout << "==" << regs->pc << endl;
+                cout << "+++++++++++++++++++++++ ==" << regs->pc << endl;
                 break;
             case JALR: 
                 inst.dest = regs->pc;
@@ -108,22 +111,23 @@ public:
          inst.type == BLTU || inst.type == BGEU)
          {
              bool jump = inst.dest;
+            regs->ctrUnit.bch_taken = inst.dest;
             if (inst.dest)
             {
-                regs->pc = regs->pc - 4 + inst.imm;
+                regs->pc = inst.addr + inst.imm;
             // std::cout << "BNE" << regs->pc << std::endl;
 
             }
 
-            pd->validate(jump);
+            // regs->ctrUnit.pd->validate(jump);
          }
 
     }
 
     void pass(MemoryAccess &next){
         next.inst = inst;
+        inst.type = ERROR;
         
-        // std::cerr << "DONE: EX: dest: " << inst.dest << "\n";
     }
 
 };

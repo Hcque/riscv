@@ -15,18 +15,23 @@ public:
 
     StaticPred* pd;
     bool stall;
+    // ControlUnit *ctrUnit;
 
 
     Instruction inst;
     InstructionFetch(){}
     InstructionFetch(Register *_regs) : regs(_regs) {}
+    // InstructionFetch(Register *_regs) : regs(_regs) {}
+
+
     InstructionFetch(Register *_regs, StaticPred* _pd) : regs(_regs), pd(_pd) {}
     InstructionFetch(Register *_regs, StaticPred* _pd, bool _st) : regs(_regs), pd(_pd) , stall(_st){}
 
     void go(){
 
-        if (stall) return;
+        if (regs->ctrUnit.stall) return;
         inst.fromMemory = regs->load(regs->pc, 4);
+        inst.addr = regs->pc;
 
 
     //     int I = 0;
@@ -65,13 +70,8 @@ public:
     }
 
     void pass(InstructionDecode &next){
-        if (stall)// condition
-        {
-            // stall = 1;
-            inst.type = ERROR;
-        }
-            next.inst = inst;
-            // std::cerr << "DONE: IF: inst: " << inst.fromMemory << "\n";
+        next.inst = inst;
+        inst.type = ERROR;
     }
 
 };

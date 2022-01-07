@@ -49,19 +49,13 @@ public:
              }
 
          }
+         
 
     }
     void pass(Execution& next){
-        if (stall)// condition
-        {
-            // stall = 1;
-            inst.type = ERROR;
-        }
         next.inst = inst;
-
-        // cout << inst;
+        inst.type = ERROR;
  
-        // std::cerr << "DONE: ID: type: " << inst.type << "\n";
     }
 
 };

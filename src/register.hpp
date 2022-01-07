@@ -9,8 +9,31 @@
 #include <unordered_set>
 
 #include "Instruction.hpp"
+#include "prediction.hpp"
 
 using namespace std;
+
+
+struct ControlUnit
+{
+    StaticPred* pd;
+    bool stall;
+    uint32_t stall_pc;
+    bool bch_taken;
+    ControlUnit() : pd(0), stall(0), stall_pc(0), bch_taken(0) {}
+
+    friend ostream& operator<< (ostream& out, const ControlUnit& cu)
+    {
+        out << " === CONTRAL UNIT === \n" 
+        << "| stall:" << cu.stall
+        << "| stall_pc:" << cu.stall_pc
+        << "| bch_taken:" << cu.bch_taken
+        << "\n";
+        return out;
+    }
+
+};
+
 
 class Register{
     
@@ -19,6 +42,8 @@ public:
     uint32_t pc{0};
     uint32_t _end;
     memory* mem;
+
+    ControlUnit ctrUnit;
 
     std::unordered_set<Inst_Type > _types;
 

@@ -18,7 +18,7 @@ memory mem;
 TEST(ArrayTest, test1)
 {
     RISCV riscv = RISCV(&mem);
-    mem.loadFromDisk("../data/array_test1.data");
+    mem.loadFromDisk();
     uint32_t base = 0x0000;
     uint32_t ans = riscv.regs.load(base, 4);
     char buf[4];
@@ -34,7 +34,7 @@ TEST(ArrayTest, test1)
 TEST(ArrayTest, test2)
 {
     RISCV riscv = RISCV(&mem);
-    mem.loadFromDisk("../data/array_test1.data");
+    mem.loadFromDisk();
     uint32_t base = 0x1000;
     uint32_t ans = riscv.regs.load(base, 4);
     // printf("%x\n", mem.data[base+0]);

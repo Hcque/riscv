@@ -58,7 +58,7 @@ public:
             case LHU:
             // cout << inst.dest;
             regs->set(inst.rd, inst.dest); // write back
-            if (stall) stall = 0;
+            // if (regs->ctrUnit.stall) stall = 0;
             break;
         }
         // std::cout << *regs;
