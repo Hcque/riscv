@@ -74,8 +74,8 @@ public:
           
             MA.go();
             EX.go();
-            // cout << EX.inst;
-            // cout << regs.ctrUnit;
+            cout << EX.inst;
+            cout << regs.ctrUnit;
 
             ID.go();
 
@@ -84,9 +84,7 @@ public:
          if (regs.ctrUnit.stall){
             regs.ctrUnit.stall = 0;
             regs.ctrUnit.bch_taken = 0;
-
         }
-
 
          if ( 
                 ID.inst.type == JAL || ID.inst.type == JALR ||
@@ -94,10 +92,8 @@ public:
             )
             {
                 regs.ctrUnit.stall = 1;
-                regs.ctrUnit.stall_pc = regs.pc - 4;
-                regs.pc = regs.pc - 4; // stall next valid addr
 
-                IF.inst.clear();
+                // IF.inst.clear();
                 regs.ctrUnit.bch_taken = 1;
                 
             } 
@@ -106,9 +102,9 @@ public:
             ID.inst.type == BLTU || ID.inst.type == BGEU )
             {
                     regs.ctrUnit.stall = 1;
-                    regs.ctrUnit.stall_pc = regs.pc - 4;
-                regs.pc = regs.pc - 4; // stall next valid addr
-                    IF.inst.clear();
+                    // regs.ctrUnit.stall_pc = regs.pc - 4;
+                    regs.pc -= 4; // stall next valid addr
+                    // IF.inst.clear();
                     // bch taken unknown
             }
 
@@ -119,16 +115,18 @@ public:
             )
             {
                 regs.ctrUnit.stall = 1;
-                regs.ctrUnit.stall_pc = regs.pc - 4; // stall next valid addr
-                regs.pc = regs.pc - 4; // stall next valid addr
-                IF.inst.clear();
+                regs.pc -= 4; // stall next valid addr
+                // IF.inst.clear();
                 std::cerr << "STORE THE DATA HAZARD FOR LOAD\n ";
 
             }
 
             // ===================
 
-            if (!regs.ctrUnit.stall) IF.go();
+            if (!regs.ctrUnit.stall) 
+            {
+                IF.go();
+            }
             std::cout <<  cc++  << "stall:" << regs.ctrUnit.stall << " pc:" << regs.pc << std::endl;
             if (cc > 180) break;
             if (regs._end) break;

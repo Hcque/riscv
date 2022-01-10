@@ -40,23 +40,29 @@ public:
         else return x;
     }
     void go(){
+
+        regs->ctrUnit.bch_taken = 0;
        
         switch (inst.type){
             case ERROR: return;
             case LUI: inst.dest = inst.imm ; break;
-            case AUIPC: inst.dest = regs->ctrUnit.jump_pc = inst.addr + inst.imm; break;
+            case AUIPC: 
+                inst.dest = regs->ctrUnit.jump_pc = inst.addr + inst.imm; break;
+                regs->ctrUnit.bch_taken = 1;
             case JAL: 
                 // inst.dest = regs->pc;
                 // regs->pc = regs->pc + inst.imm - 4; // subtract 4 from IF stage
 
                 inst.dest = inst.addr + 4;
                 regs->ctrUnit.jump_pc = inst.addr + inst.imm;
-                cout << "==" << regs->ctrUnit.jump_pc << endl;
+                regs->ctrUnit.bch_taken = 1;
+                cerr << "==" << regs->ctrUnit.jump_pc << endl;
                 break;
             case JALR: 
                 inst.dest = inst.addr + 4;
                 regs->ctrUnit.jump_pc = inst.src1 + inst.imm; 
                 regs->ctrUnit.jump_pc = setlowZero(regs->ctrUnit.jump_pc);
+                regs->ctrUnit.bch_taken = 1;
                 // std::cout << regs->pc << "\n";
                 break;
 

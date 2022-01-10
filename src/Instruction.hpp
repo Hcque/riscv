@@ -126,13 +126,14 @@ public:
     uint32_t addr;
     bool regWrite;
     bool memRead;
+    bool stalled;
 
     Instruction(){
         imm = rs1 = rs2 = rd = opcode = func7 = func3 = 0u;
         dest = 0u;
         take_bch = addr = 0u;
         type = ERROR;
-        regWrite = memRead = 0;
+        stalled = regWrite = memRead = 0;
 
     }
     void clear()

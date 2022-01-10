@@ -23,6 +23,11 @@ struct ControlUnit
     bool bch_taken;
     ControlUnit() : pd(0), stall(0), stall_pc(0), jump_pc(0), bch_taken(0) {}
 
+    void Stall()
+    {
+        
+    }
+
     friend ostream& operator<< (ostream& out, const ControlUnit& cu)
     {
         out << " === CONTRAL UNIT === \n" 
