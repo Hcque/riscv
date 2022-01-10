@@ -71,8 +71,9 @@ public:
 
     void pass(InstructionDecode &next){
         next.inst = inst;
-        inst.type = ERROR;
+        inst.clear();
     }
+
 
 };
 

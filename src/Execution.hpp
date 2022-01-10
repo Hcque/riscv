@@ -126,7 +126,7 @@ public:
 
     void pass(MemoryAccess &next){
         next.inst = inst;
-        inst.type = ERROR;
+        inst.clear();
         
     }
 

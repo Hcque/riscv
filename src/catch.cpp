@@ -39,12 +39,16 @@ int main(int argc, char* argv[])
     rd(n1,  v1);
     rd(n2,  v2);
 
-cout << "size:" << v1.size() << "\n";
-cout << "size:" << v2.size() << "\n";
+    cout << "size:" << v1.size() << "\n";
+    cout << "size:" << v2.size() << "\n";
 
     int i = 0, j = 0;
-    for (; i < v1.size(), j < v2.size(); i++, j ++ )
+    for (; i < v1.size(), j < v2.size(); )
     {
+        if (v1[i] != v2[j])
+        {
+            j++;
+        }
         if (v1[i] != v2[j])
         {
             cout << "i|j" << i  << "|" << j << "\n";
@@ -52,6 +56,8 @@ cout << "size:" << v2.size() << "\n";
             cout << v2[j] << endl;
             break;
         }
+        cout << v1[i] << " " << v2[j] << endl;
+        i++, j ++;
     }
 
 }

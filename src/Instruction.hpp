@@ -124,13 +124,24 @@ public:
     uint dest;
     int take_bch;
     uint32_t addr;
+    bool regWrite;
+    bool memRead;
 
     Instruction(){
         imm = rs1 = rs2 = rd = opcode = func7 = func3 = 0u;
         dest = 0u;
         take_bch = addr = 0u;
         type = ERROR;
+        regWrite = memRead = 0;
 
+    }
+    void clear()
+    {
+        // imm = rs1 = rs2 = rd = opcode = func7 = func3 = 0u;
+        // dest = 0u;
+        // take_bch = addr = 0u;
+        type = ERROR;
+        // regWrite = memRead = 0;
     }
 
 
@@ -222,6 +233,50 @@ public:
             default: type = ERROR; break;
         }
         // assert(type != ERROR);
+
+        if (
+            type == LW ||
+            type == LB ||
+            type == LH ||
+            type == LBU ||
+            type == LHU 
+        ) { memRead = 1; }
+
+        if (
+            type == LW ||
+            type == LB ||
+            type == LH ||
+            type == LBU ||
+            type == LHU ||
+
+            type == LUI ||
+            type == AUIPC ||
+            type == JAL ||
+            type == JALR ||
+
+            type == ADDI ||
+            type == SLTI ||
+            type == SLTIU ||
+            type == XORI ||
+            type == ORI ||
+            type == ANDI ||
+            type == SLLI ||
+            type == SRLI ||
+            type == SRAI ||
+
+            type == ADD ||
+            type == SUB ||
+            type == SLL ||
+            type == SLT ||
+            type == SLTU ||
+            type == XOR ||
+            type == SRL ||
+            type == SRA ||
+            type == OR ||
+            type == AND 
+
+        ) { regWrite = 1; }
+
         return type;
     }
 

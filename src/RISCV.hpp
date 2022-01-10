@@ -28,11 +28,12 @@
 enum RunMode {Serial, Parallel};
 
 
-void _forwardResolve(Stage& st1, Stage& st2)
-{
-    if (st2.inst.rd !=0 && st2.inst.rd == st1.inst.rs1) st1.regs->set(st2.inst.rd, st2.regs->get( st2.inst.rd ) );
-    if (st2.inst.rd !=0 && st2.inst.rd == st1.inst.rs2) st1.regs->set( st2.inst.rd, st2.regs->get( st2.inst.rd ) );
-}
+// void _forwardResolve(Stage& st1, Stage& st2)
+// {
+
+//     if (st2.inst.rd !=0 && st2.inst.rd == st1.inst.rs1) st1.regs->set(st2.inst.rd, st2.regs->get( st2.inst.rd ) );
+//     if (st2.inst.rd !=0 && st2.inst.rd == st1.inst.rs2) st1.regs->set( st2.inst.rd, st2.regs->get( st2.inst.rd ) );
+// }
 
 
 
@@ -67,6 +68,10 @@ public:
         {
             // go ===============================
             WB.go();
+
+            std::cout << " regs ======= \n";
+            std::cout << regs << "\n";
+
             if (regs.ctrUnit.stall) 
             {
                 // regs.ctrUnit.stall = 0;
@@ -100,8 +105,7 @@ public:
                 regs.ctrUnit.stall = 1;
                 regs.ctrUnit.stall_pc = regs.pc - 4;
 
-                std::cerr << regs.ctrUnit.stall_pc << "========++++++++++++++++++++++======\n ";
-                IF.inst.type = ERROR; // unnecessary, IF not pass to ID
+                IF.inst.clear();
                 regs.ctrUnit.bch_taken = 1;
                 
             } 
@@ -111,51 +115,44 @@ public:
             {
                     regs.ctrUnit.stall = 1;
                     regs.ctrUnit.stall_pc = regs.pc - 4;
-                    IF.inst.type = ERROR;
+                    IF.inst.clear();
                     // bch taken unknown
             }
 
-            if (ID.inst.type != ERROR && (
-                EX.inst.type == LB || EX.inst.type == LBU ||
-                EX.inst.type == LH || EX.inst.type == LHU ||
-            EX.inst.type == LW
-            )
-            
-            && EX.inst.rd != 0 &&
-                (EX.inst.rd == ID.inst.rs1 || EX.inst.rd == ID.inst.rs2)
+            if (ID.inst.type != ERROR 
+            && EX.inst.memRead
+            && EX.inst.rd != 0 
+            && (EX.inst.rd == ID.inst.rs1 || EX.inst.rd == ID.inst.rs2)
             )
             {
-                 regs.ctrUnit.stall = 1;
-                    regs.ctrUnit.stall_pc = regs.pc - 4; // stall next valid addr
-                    IF.inst.type = ERROR;
+                regs.ctrUnit.stall = 1;
+                regs.ctrUnit.stall_pc = regs.pc - 4; // stall next valid addr
+                IF.inst.clear();
+                std::cerr << "STORE THE DATA HAZARD FOR LOAD\n ";
 
             }
 
             } // skip ID
 
-
             if (!regs.ctrUnit.stall) IF.go();
-            std::cerr <<  cc++  << "stall:" << regs.ctrUnit.stall << " pc:" << regs.pc << std::endl;
+            std::cout <<  cc++  << "stall:" << regs.ctrUnit.stall << " pc:" << regs.pc << std::endl;
             if (cc > 180) break;
             if (regs._end) break;
 
             // pass =======================================
-
             MA.pass(WB);
-            forward(MA, EX);
-            forward(MA, ID);
             cout << EX.inst;
-
             EX.pass(MA);
-            forward(EX, ID);
-
-          
-         cout << regs.ctrUnit ;
+            cout << regs.ctrUnit ;
 
         if (! regs.ctrUnit.stall)
         {
-                ID.pass(EX);
-                IF.pass(ID);
+            // forward before pass to EX/ need oprands
+            forward(MA, ID, EX);
+            forward(EX, ID);
+
+            ID.pass(EX);
+            IF.pass(ID);
         }
 
 
@@ -178,6 +175,8 @@ public:
             MA.go();
             MA.pass(WB);
             WB.go();
+            std::cout << "regs ========= \n ";
+            std::cout << regs ;
         }
     }
 
