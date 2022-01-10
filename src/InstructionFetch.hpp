@@ -29,7 +29,13 @@ public:
 
     void go(){
 
+           
         if (regs->ctrUnit.stall) return;
+        std::cerr << regs->ctrUnit.bch_taken << "=== bch_taken^";
+
+        if (regs->ctrUnit.bch_taken) regs->pc = regs->ctrUnit.jump_pc;
+        std::cerr << "\n";
+
         inst.fromMemory = regs->load(regs->pc, 4);
         inst.addr = regs->pc;
 

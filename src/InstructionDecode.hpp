@@ -37,6 +37,9 @@ public:
         inst.src1 = regs->get(inst.rs1);
         inst.src2 = regs->get(inst.rs2);
 
+       
+
+
         // pred
         if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
          inst.type == BLTU || inst.type == BGEU )
@@ -49,12 +52,14 @@ public:
              }
 
          }
+
+
          
 
     }
     void pass(Execution& next){
         next.inst = inst;
-        inst.type = ERROR;
+        // inst.type = ERROR;
  
     }
 

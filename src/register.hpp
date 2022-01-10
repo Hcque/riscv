@@ -19,14 +19,16 @@ struct ControlUnit
     StaticPred* pd;
     bool stall;
     uint32_t stall_pc;
+    uint32_t jump_pc;
     bool bch_taken;
-    ControlUnit() : pd(0), stall(0), stall_pc(0), bch_taken(0) {}
+    ControlUnit() : pd(0), stall(0), stall_pc(0), jump_pc(0), bch_taken(0) {}
 
     friend ostream& operator<< (ostream& out, const ControlUnit& cu)
     {
         out << " === CONTRAL UNIT === \n" 
         << "| stall:" << cu.stall
         << "| stall_pc:" << cu.stall_pc
+        << "| jump_pc:" << cu.jump_pc
         << "| bch_taken:" << cu.bch_taken
         << "\n";
         return out;

@@ -24,7 +24,6 @@ void forward(MemoryAccess& ma, InstructionDecode& id, Execution& ex)
         std::cerr << "ma->id2\n ";
             id.inst.src2 = ma.inst.dest;
         }
-
     }
 
 }

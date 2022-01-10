@@ -42,22 +42,21 @@ public:
     void go(){
        
         switch (inst.type){
-            case ERROR: return; break;
+            case ERROR: return;
             case LUI: inst.dest = inst.imm ; break;
-            case AUIPC: inst.dest = regs->pc = inst.addr + inst.imm; break;
+            case AUIPC: inst.dest = regs->ctrUnit.jump_pc = inst.addr + inst.imm; break;
             case JAL: 
                 // inst.dest = regs->pc;
                 // regs->pc = regs->pc + inst.imm - 4; // subtract 4 from IF stage
 
                 inst.dest = inst.addr + 4;
-                regs->pc = inst.addr + inst.imm;
-                // cout << "==" << inst.imm<< endl;
-                cout << "+++++++++++++++++++++++ ==" << regs->pc << endl;
+                regs->ctrUnit.jump_pc = inst.addr + inst.imm;
+                cout << "==" << regs->ctrUnit.jump_pc << endl;
                 break;
             case JALR: 
-                inst.dest = regs->pc;
-                regs->pc = inst.src1 + inst.imm; 
-                regs->pc = setlowZero(regs->pc);
+                inst.dest = inst.addr + 4;
+                regs->ctrUnit.jump_pc = inst.src1 + inst.imm; 
+                regs->ctrUnit.jump_pc = setlowZero(regs->ctrUnit.jump_pc);
                 // std::cout << regs->pc << "\n";
                 break;
 
@@ -114,8 +113,8 @@ public:
             regs->ctrUnit.bch_taken = inst.dest;
             if (inst.dest)
             {
-                regs->pc = inst.addr + inst.imm;
-            // std::cout << "BNE" << regs->pc << std::endl;
+                regs->ctrUnit.jump_pc = inst.addr + inst.imm;
+            std::cout << "BNE *&*&#*&# " << regs->ctrUnit.jump_pc << std::endl;
 
             }
 

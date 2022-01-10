@@ -2,7 +2,7 @@
 =================== 
 INST FROM ADDR: LUI 0
 rs1 rs2 rd
-TYPE:LUI | 0 | 0 | 2
+TYPE:LcodeUI | 0 | 0 | 2
 TYPE:LUI | 0 | 0 | 131072
 TYPE:LUI | 000100000000000000000 
  TYPE:LUI func3| 0000000000 

@@ -69,41 +69,33 @@ public:
             // go ===============================
             WB.go();
 
-            std::cout << " regs ======= \n";
-            std::cout << regs << "\n";
-
-            if (regs.ctrUnit.stall) 
-            {
-                // regs.ctrUnit.stall = 0;
-                // if (!regs.ctrUnit.bch_taken) regs.pc = regs.ctrUnit.stall_pc;
-            }
+            // std::cout << " regs ======= \n";
+            // std::cout << regs << "\n";
+          
             MA.go();
             EX.go();
+            // cout << EX.inst;
+            // cout << regs.ctrUnit;
 
-            if (regs.ctrUnit.stall){
-                if (regs.ctrUnit.bch_taken){}
-                else
-                {
-                    regs.pc = regs.ctrUnit.stall_pc;
-                }
-                regs.ctrUnit.stall = 0;
-                regs.ctrUnit.bch_taken = 0;
-                skipID = 1;
-            }
-
-            if (skipID){
-                skipID = 0;
-            }
-            else{
             ID.go();
-              // set the stall
-            if ( 
+
+            // ==========================================
+             // stall
+         if (regs.ctrUnit.stall){
+            regs.ctrUnit.stall = 0;
+            regs.ctrUnit.bch_taken = 0;
+
+        }
+
+
+         if ( 
                 ID.inst.type == JAL || ID.inst.type == JALR ||
             ID.inst.type == AUIPC
             )
             {
                 regs.ctrUnit.stall = 1;
                 regs.ctrUnit.stall_pc = regs.pc - 4;
+                regs.pc = regs.pc - 4; // stall next valid addr
 
                 IF.inst.clear();
                 regs.ctrUnit.bch_taken = 1;
@@ -115,6 +107,7 @@ public:
             {
                     regs.ctrUnit.stall = 1;
                     regs.ctrUnit.stall_pc = regs.pc - 4;
+                regs.pc = regs.pc - 4; // stall next valid addr
                     IF.inst.clear();
                     // bch taken unknown
             }
@@ -127,12 +120,13 @@ public:
             {
                 regs.ctrUnit.stall = 1;
                 regs.ctrUnit.stall_pc = regs.pc - 4; // stall next valid addr
+                regs.pc = regs.pc - 4; // stall next valid addr
                 IF.inst.clear();
                 std::cerr << "STORE THE DATA HAZARD FOR LOAD\n ";
 
             }
 
-            } // skip ID
+            // ===================
 
             if (!regs.ctrUnit.stall) IF.go();
             std::cout <<  cc++  << "stall:" << regs.ctrUnit.stall << " pc:" << regs.pc << std::endl;
@@ -141,9 +135,7 @@ public:
 
             // pass =======================================
             MA.pass(WB);
-            cout << EX.inst;
             EX.pass(MA);
-            cout << regs.ctrUnit ;
 
         if (! regs.ctrUnit.stall)
         {
