@@ -1,14 +1,12 @@
 
 // func3, funct 7
-
 // + not &
-
 // JALR
 
 
 // extend 11? 10
-
 // extend 10 12
+// from mem flush
 
 #ifndef INSTRUCTION_HPP
 #define INSTRUCTION_HPP
@@ -130,6 +128,7 @@ public:
 
     Instruction(){
         imm = rs1 = rs2 = rd = opcode = func7 = func3 = 0u;
+        src1 = src2 = fromMemory = 0u;
         dest = 0u;
         take_bch = addr = 0u;
         type = ERROR;
@@ -138,11 +137,13 @@ public:
     }
     void clear()
     {
-        // imm = rs1 = rs2 = rd = opcode = func7 = func3 = 0u;
-        // dest = 0u;
-        // take_bch = addr = 0u;
+        imm = rs1 = rs2 = rd = opcode = func7 = func3 = 0u;
+        dest = 0u;
+        src1 = src2 = fromMemory = 0u;
+        take_bch = addr = 0u;
         type = ERROR;
-        // regWrite = memRead = 0;
+        opcode = 0u;
+        regWrite = memRead = 0;
     }
 
 
@@ -170,7 +171,8 @@ public:
         switch (opcode){
             case 55: type = LUI; break;
             case 23: type = AUIPC; break;
-            case 111: type = JAL; break;
+            case 111: type = JAL;
+             break;
             case 103: type = JALR; break;
             case 99: 
                 switch (func3){

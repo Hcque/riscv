@@ -15,30 +15,28 @@
 // extern bool stall;
 class Execution;
 
-class InstructionDecode: public Stage {
+class InstructionDecode {
 public:
     Register *regs;
     StaticPred* pd;
+    bool lock;
 
 
     bool stall;
     Instruction inst;
-    InstructionDecode() {}
-    InstructionDecode(Register *_regs) : regs(_regs) {}
+    InstructionDecode(): lock(0) {}
+    InstructionDecode(Register *_regs) : regs(_regs) , lock(0) {}
     InstructionDecode(Register *_regs, StaticPred* _pd) : regs(_regs), pd(_pd) {}
     InstructionDecode(Register *_regs, StaticPred* _pd, bool _st) : regs(_regs), pd(_pd) , stall(_st){}
 
     void go(){
 
         inst.type = inst.getType();
-        regs->_types.insert(inst.type);
+        // regs->_types.insert(inst.type);
         inst.getArgs();
 
         inst.src1 = regs->get(inst.rs1);
         inst.src2 = regs->get(inst.rs2);
-
-       
-
 
         // pred
         if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
@@ -58,8 +56,14 @@ public:
 
     }
     void pass(Execution& next){
-        next.inst = inst;
-        // inst.type = ERROR;
+        // std::cout << "LOCK:" << lock;
+        if (!lock) 
+        {
+            next.inst = inst;
+            inst.clear();
+            // std::cout << inst;
+        }
+        else lock = 0;
  
     }
 

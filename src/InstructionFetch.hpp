@@ -8,7 +8,7 @@
 #include "Stage.hpp"
 
 
-class InstructionFetch: public Stage {
+class InstructionFetch {
 public:
     friend class RISCV;
     Register *regs;
@@ -29,12 +29,15 @@ public:
 
     void go(){
 
-           
         if (regs->ctrUnit.stall) return;
-        std::cerr << regs->ctrUnit.bch_taken << "=== bch_taken^";
 
-        if (regs->ctrUnit.bch_taken) regs->pc = regs->ctrUnit.jump_pc;
-        std::cerr << "\n";
+        //     std::cout << "JUMP bch TAKEN: " << regs->ctrUnit.bch_taken << "\n";
+        // if (regs->ctrUnit.bch_taken) 
+        // {
+        //     regs->pc = regs->ctrUnit.jump_pc;
+        //     std::cerr << "JUMP" << regs->ctrUnit.jump_pc<< "\n";
+        //     regs->ctrUnit.bch_taken = 0;
+        // }
 
         inst.fromMemory = regs->load(regs->pc, 4);
         inst.addr = regs->pc;

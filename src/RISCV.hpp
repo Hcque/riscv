@@ -2,7 +2,7 @@
 
 // skip ID, write the schemeafter reading the book and concive the plan
 
-// regs.ctrUnit.stall_pc = regs.pc - 8; // stall next valid addr NOT 4
+// regs.ctrUnit.stall_pc = regs.pc - 0; // stall next valid addr NOT 4
 
 
 #ifndef RISCV_HPP
@@ -69,22 +69,41 @@ public:
             // go ===============================
             WB.go();
 
-            // std::cout << " regs ======= \n";
-            // std::cout << regs << "\n";
+           
           
             MA.go();
+            std::cout << "src1" << EX.inst.src1 << std::endl;
             EX.go();
+            cout << "EX inst\n";
             cout << EX.inst;
-            cout << regs.ctrUnit;
+            // cout << "==========  EX dest  ========= \n";
+            // cout << EX.inst.dest << "\n";
+            // cout << "==========  EX dest  ========= \n";
 
+            // cout << regs.pc << "|PC|\n";
+            // cout << regs.ctrUnit;
+
+ std::cout << " regs ======= \n";
+            std::cout << regs << "\n";
+           
+
+
+        // cout << "IDprev inst\n";
+        //     cout << ID.inst;
+        //     cout << ID.inst.opcode << "\n";
             ID.go();
+             cout << "ID inst\n";
+            cout << ID.inst;
+            
 
             // ==========================================
              // stall
-         if (regs.ctrUnit.stall){
+        if (regs.ctrUnit.stall){
             regs.ctrUnit.stall = 0;
-            regs.ctrUnit.bch_taken = 0;
+            EX.inst.stalled = 1;
         }
+
+        if (!EX.inst.stalled){
 
          if ( 
                 ID.inst.type == JAL || ID.inst.type == JALR ||
@@ -92,19 +111,25 @@ public:
             )
             {
                 regs.ctrUnit.stall = 1;
+                ID.lock = 0;
 
-                // IF.inst.clear();
-                regs.ctrUnit.bch_taken = 1;
+                IF.inst.clear();
+            //     cout << "if inst\n";
+            // cout << IF.inst;
+                // ID.inst.clear();
+                // regs.ctrUnit.bch_taken = 1;
                 
             } 
 
             if (ID.inst.type == BNE || ID.inst.type == BEQ || ID.inst.type == BLT || ID.inst.type == BGE ||
             ID.inst.type == BLTU || ID.inst.type == BGEU )
             {
+                    ID.lock = 0;
                     regs.ctrUnit.stall = 1;
                     // regs.ctrUnit.stall_pc = regs.pc - 4;
-                    regs.pc -= 4; // stall next valid addr
-                    // IF.inst.clear();
+                    // regs.pc -= 4; // stall next valid addr
+                    IF.inst.clear();
+                    // ID.inst.clear();
                     // bch taken unknown
             }
 
@@ -114,36 +139,47 @@ public:
             && (EX.inst.rd == ID.inst.rs1 || EX.inst.rd == ID.inst.rs2)
             )
             {
+                ID.lock = 1;
                 regs.ctrUnit.stall = 1;
-                regs.pc -= 4; // stall next valid addr
-                // IF.inst.clear();
-                std::cerr << "STORE THE DATA HAZARD FOR LOAD\n ";
+                // regs.pc -= 4; // stall next valid addr
+                IF.inst.clear();
+                std::cout << "STORE THE DATA HAZARD FOR LOAD\n ";
 
             }
+        }
 
             // ===================
 
             if (!regs.ctrUnit.stall) 
             {
                 IF.go();
+                cout << "IF\n";
+                cout << IF.inst;
             }
-            std::cout <<  cc++  << "stall:" << regs.ctrUnit.stall << " pc:" << regs.pc << std::endl;
-            if (cc > 180) break;
+            std::cout <<  cc++  << " =========++++===== stall:" << regs.ctrUnit.stall << " pc:" << regs.pc << std::endl;
+            std::cout << "\n";
+            // if (cc > 280) break;
             if (regs._end) break;
 
             // pass =======================================
             MA.pass(WB);
-            EX.pass(MA);
+            EX.pass(MA); // passed!
+               // forward before pass to EX/ need oprands
+            forward(WB, ID);
+            forward(MA, ID, EX);
+
+            ID.pass(EX);
+            // cout << "ID check\n";
+            // cout << ID.inst << ID.inst.opcode << "\n";
+          
 
         if (! regs.ctrUnit.stall)
         {
-            // forward before pass to EX/ need oprands
-            forward(MA, ID, EX);
-            forward(EX, ID);
-
-            ID.pass(EX);
+         
             IF.pass(ID);
         }
+
+        std::cout << "\n\n\n";
 
 
         } // while

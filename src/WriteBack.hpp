@@ -61,8 +61,13 @@ public:
             // if (regs->ctrUnit.stall) stall = 0;
             break;
         }
+        if (inst.type == LW) 
+        {
+            std::cout << "LW WB: " << inst.dest << std::endl;
+        }
         // std::cout << *regs;
         // std::cout << "DONE WB ====================== \n\n";
+        inst.clear();
     }
 
 };
