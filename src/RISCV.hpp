@@ -68,14 +68,11 @@ public:
         {
             // go ===============================
             WB.go();
-
-           
-          
             MA.go();
-            std::cout << "src1" << EX.inst.src1 << std::endl;
+            // std::cout << "src1" << EX.inst.src1 << std::endl;
             EX.go();
-            cout << "EX inst\n";
-            cout << EX.inst;
+            // cout << "EX inst\n";
+            // cout << EX.inst;
             // cout << "==========  EX dest  ========= \n";
             // cout << EX.inst.dest << "\n";
             // cout << "==========  EX dest  ========= \n";
@@ -83,8 +80,8 @@ public:
             // cout << regs.pc << "|PC|\n";
             // cout << regs.ctrUnit;
 
- std::cout << " regs ======= \n";
-            std::cout << regs << "\n";
+//  std::cout << " regs ======= \n";
+//             std::cout << regs << "\n";
            
 
 
@@ -92,8 +89,8 @@ public:
         //     cout << ID.inst;
         //     cout << ID.inst.opcode << "\n";
             ID.go();
-             cout << "ID inst\n";
-            cout << ID.inst;
+            //  cout << "ID inst\n";
+            // cout << ID.inst;
             
 
             // ==========================================
@@ -143,7 +140,7 @@ public:
                 regs.ctrUnit.stall = 1;
                 // regs.pc -= 4; // stall next valid addr
                 IF.inst.clear();
-                std::cout << "STORE THE DATA HAZARD FOR LOAD\n ";
+                // std::cout << "STORE THE DATA HAZARD FOR LOAD\n ";
 
             }
         }
@@ -153,11 +150,11 @@ public:
             if (!regs.ctrUnit.stall) 
             {
                 IF.go();
-                cout << "IF\n";
-                cout << IF.inst;
+                // cout << "IF\n";
+                // cout << IF.inst;
             }
-            std::cout <<  cc++  << " =========++++===== stall:" << regs.ctrUnit.stall << " pc:" << regs.pc << std::endl;
-            std::cout << "\n";
+            // std::cout <<  cc++  << " =========++++===== stall:" << regs.ctrUnit.stall << " pc:" << regs.pc << std::endl;
+            // std::cout << "\n";
             // if (cc > 280) break;
             if (regs._end) break;
 
@@ -179,7 +176,7 @@ public:
             IF.pass(ID);
         }
 
-        std::cout << "\n\n\n";
+        // std::cout << "\n\n\n";
 
 
         } // while
@@ -190,19 +187,19 @@ public:
         regs.pc = 0;
         int cc = 0;
         while ( !regs._end ){
-            std::cout <<  cc++ << " pc:" << regs.pc << std::endl;
+            // std::cout <<  cc++ << " pc:" << regs.pc << std::endl;
             IF.go();
             IF.pass(ID);
             ID.go();
             ID.pass(EX);
             EX.go();
-            std::cout << EX.inst;
+            // std::cout << EX.inst;
             EX.pass(MA);
             MA.go();
             MA.pass(WB);
             WB.go();
-            std::cout << "regs ========= \n ";
-            std::cout << regs ;
+            // std::cout << "regs ========= \n ";
+            // std::cout << regs ;
         }
     }
 

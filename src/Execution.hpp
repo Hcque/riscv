@@ -58,7 +58,7 @@ public:
                 inst.dest = inst.addr + 4;
                 regs->ctrUnit.jump_pc = inst.addr + inst.imm;
                 regs->ctrUnit.bch_taken = 1;
-                cerr << "==" << regs->ctrUnit.jump_pc << endl;
+                // cerr << "==" << regs->ctrUnit.jump_pc << endl;
                 break;
             case JALR: 
                 inst.dest = inst.addr + 4;
