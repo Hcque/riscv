@@ -63,7 +63,6 @@ public:
     void parallel(){
 
         int cc = 0;
-        bool skipID = 0;
         while (1)
         {
             // go ===============================
@@ -100,7 +99,7 @@ public:
             EX.inst.stalled = 1;
         }
 
-        if (!EX.inst.stalled){
+        // if (!EX.inst.stalled){
 
          if ( 
                 ID.inst.type == JAL || ID.inst.type == JALR ||
@@ -143,7 +142,7 @@ public:
                 // std::cout << "STORE THE DATA HAZARD FOR LOAD\n ";
 
             }
-        }
+        // }
 
             // ===================
 
