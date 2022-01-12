@@ -71,8 +71,8 @@ public:
             MA.go();
             // std::cout << "src1" << EX.inst.src1 << std::endl;
             EX.go();
-            // cout << "EX inst\n";
-            // cout << EX.inst;
+            cout << "EX inst\n";
+            cout << EX.inst;
             // cout << "==========  EX dest  ========= \n";
             // cout << EX.inst.dest << "\n";
             // cout << "==========  EX dest  ========= \n";
@@ -153,7 +153,7 @@ public:
                 // cout << "IF\n";
                 // cout << IF.inst;
             }
-            // std::cout <<  cc++  << " =========++++===== stall:" << regs.ctrUnit.stall << " pc:" << regs.pc << std::endl;
+            std::cout <<  cc++  << " pc:" << regs.pc << std::endl;
             // std::cout << "\n";
             // if (cc > 280) break;
             if (regs._end) break;
@@ -169,10 +169,8 @@ public:
             // cout << "ID check\n";
             // cout << ID.inst << ID.inst.opcode << "\n";
           
-
         if (! regs.ctrUnit.stall)
         {
-         
             IF.pass(ID);
         }
 
@@ -181,19 +179,18 @@ public:
 
         } // while
         
-
     }
     void serial(){
         regs.pc = 0;
         int cc = 0;
         while ( !regs._end ){
-            // std::cout <<  cc++ << " pc:" << regs.pc << std::endl;
+            std::cout <<  cc++ << " pc:" << regs.pc << std::endl;
             IF.go();
             IF.pass(ID);
             ID.go();
             ID.pass(EX);
             EX.go();
-            // std::cout << EX.inst;
+            std::cout << EX.inst;
             EX.pass(MA);
             MA.go();
             MA.pass(WB);

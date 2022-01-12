@@ -152,13 +152,13 @@ public:
         out << "=================== \n";
         out << "INST FROM ADDR: " << _type_Name[inst.type] << " " << inst.addr << "\n";
         out << "rs1 "  << "rs2 " << "rd" << "\n";
-        out << "TYPE:" << _type_Name[inst.type] << " | " << inst.rs1 << " | " << inst.rs2 << " | " << inst.rd << "\n";
-        out << "TYPE:" << _type_Name[inst.type] << " | " << inst.src1 << " | " << inst.src2 << " | " << inst.dest << "\n";
-        bitset<21> a(inst.imm);
-        bitset<10> b(inst.func3);
+        out << "TYPE:" << _type_Name[inst.type] << "  " << inst.rs1 << "  " << inst.rs2 << "  " << inst.rd << "\n";
+        out << "TYPE:" << _type_Name[inst.type] << "  " << inst.src1 << "  " << inst.src2 << "  " << inst.dest << "\n";
+        // bitset<21> a(inst.imm);
+        // bitset<10> b(inst.func3);
 
-        out << "TYPE:" << _type_Name[inst.type] << " | " << a << " \n ";
-        out << "TYPE:" << _type_Name[inst.type] << " func3| " << b << " \n ";
+        // out << "TYPE:" << _type_Name[inst.type] << " | " << a << " \n ";
+        // out << "TYPE:" << _type_Name[inst.type] << " func3| " << b << " \n ";
         return out;
     }
 
