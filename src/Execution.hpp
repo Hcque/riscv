@@ -11,6 +11,8 @@
 
 #ifndef EXECUTION_HPP
 #define EXECUTION_HPP
+#include <cassert>
+
 #include "Instruction.hpp"
 #include "memory.hpp"
 #include "register.hpp"
@@ -41,8 +43,6 @@ public:
     }
     void go(){
 
-        regs->ctrUnit.bch_taken = 0;
-       
         switch (inst.type){
             case ERROR: return;
             case LUI: inst.dest = inst.imm ; break;
@@ -53,11 +53,11 @@ public:
                 break;
             case JAL: 
                 // inst.dest = regs->pc;
-                regs->pc = regs->pc + inst.imm - 4; // subtract 4 from IF stage
+                regs->pc = inst.addr + inst.imm; // subtract 4 from IF stage
 
                 inst.dest = inst.addr + 4;
                 regs->ctrUnit.jump_pc = inst.addr + inst.imm;
-                regs->ctrUnit.bch_taken = 1;
+                // regs->ctrUnit.bch_taken = 1;
                 // cerr << "==" << regs->ctrUnit.jump_pc << endl;
                 break;
             case JALR: 
@@ -66,7 +66,7 @@ public:
                 regs->ctrUnit.jump_pc = setlowZero(regs->ctrUnit.jump_pc);
                 regs->pc = regs->ctrUnit.jump_pc;
 
-                regs->ctrUnit.bch_taken = 1;
+                // regs->ctrUnit.bch_taken = 1;
                 // std::cout << regs->pc << "\n";
                 break;
 
@@ -119,18 +119,18 @@ public:
         if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
          inst.type == BLTU || inst.type == BGEU)
          {
-             bool jump = inst.dest;
             regs->ctrUnit.bch_taken = inst.dest;
             if (inst.dest)
             {
+                regs->savedpc = regs->pc;
                 regs->pc = inst.addr + inst.imm;
                 // regs->ctrUnit.jump_pc = inst.addr + inst.imm;
-            // std::cout << "BNE *&*&#*&# " << regs->ctrUnit.jump_pc << std::endl;
 
             }
 
-            // regs->ctrUnit.pd->validate(jump);
          }
+
+        //  // decide jump stall
 
     }
 

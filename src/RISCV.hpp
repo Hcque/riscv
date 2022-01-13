@@ -4,6 +4,10 @@
 
 // regs.ctrUnit.stall_pc = regs.pc - 0; // stall next valid addr NOT 4
 
+// validates
+ // stall palce
+// succ condition
+
 
 #ifndef RISCV_HPP
 #define RISCV_HPP
@@ -66,15 +70,46 @@ public:
         while (1)
         {
             // go ===============================
+                           if (regs.ctrUnit.stall){
+            regs.ctrUnit.stall = 0;
+        }
+
             WB.go();
             MA.go();
-            // std::cout << "src1" << EX.inst.src1 << std::endl;
             EX.go();
+
+            // if (!EX.inst.BXX) assert(regs.ctrUnit.bch_taken == 0); 
+
+         // decide jump stall
+
+            // pred stall ========
+            if (EX.inst.BXX) regs.ctrUnit.pd.validate(EX.inst.dest);
+
+              if ( EX.inst.BXX && EX.inst.dest != regs.ctrUnit.pd.pred_taken)
+            {
+                ID.inst.clear();
+                regs.ctrUnit.stall = 0;
+                ID.lock = 1;
+                // regs.ctrUnit.pd.validate(EX.inst.dest);
+
+                if (!EX.inst.dest) //&& regs.ctrUnit.pd.pred_taken )
+                {
+                    regs.pc = EX.inst.addr + 4;
+                }
+                else{
+                    assert(regs.pc == EX.inst.addr + EX.inst.imm);
+                }
+               
+            }
+            if ( EX.inst.BXX && EX.inst.dest && EX.inst.dest == regs.ctrUnit.pd.pred_taken)
+            {
+                regs.pc = regs.savedpc;
+            }
+
+            cout << regs.ctrUnit.pd.pred_taken;
+
             cout << "EX inst\n";
             cout << EX.inst;
-            // cout << "==========  EX dest  ========= \n";
-            // cout << EX.inst.dest << "\n";
-            // cout << "==========  EX dest  ========= \n";
 
             // cout << regs.pc << "|PC|\n";
             // cout << regs.ctrUnit;
@@ -82,24 +117,26 @@ public:
 //  std::cout << " regs ======= \n";
 //             std::cout << regs << "\n";
            
-
-
-        // cout << "IDprev inst\n";
-        //     cout << ID.inst;
-        //     cout << ID.inst.opcode << "\n";
             ID.go();
+            if (ID.inst.type != ERROR)
+            {
+            // prediction ==== 
+            if (ID.inst.BXX )
+            {
+                if (regs.ctrUnit.pd.take()){ 
+                    // set the pc to jump addr
+                    regs.pc = ID.inst.addr + ID.inst.imm; // few number of gates ,makes this possible
+                }
+            }
             //  cout << "ID inst\n";
             // cout << ID.inst;
             
 
             // ==========================================
              // stall
-        if (regs.ctrUnit.stall){
-            regs.ctrUnit.stall = 0;
-            EX.inst.stalled = 1;
-        }
-
-        // if (!EX.inst.stalled){
+        // if (regs.ctrUnit.stall){
+        //     regs.ctrUnit.stall = 0;
+        // }
 
          if ( 
                 ID.inst.type == JAL || ID.inst.type == JALR ||
@@ -117,17 +154,17 @@ public:
                 
             } 
 
-            if (ID.inst.type == BNE || ID.inst.type == BEQ || ID.inst.type == BLT || ID.inst.type == BGE ||
-            ID.inst.type == BLTU || ID.inst.type == BGEU )
-            {
-                    ID.lock = 0;
-                    regs.ctrUnit.stall = 1;
-                    // regs.ctrUnit.stall_pc = regs.pc - 4;
-                    // regs.pc -= 4; // stall next valid addr
-                    IF.inst.clear();
-                    // ID.inst.clear();
-                    // bch taken unknown
-            }
+            // if (ID.inst.type == BNE || ID.inst.type == BEQ || ID.inst.type == BLT || ID.inst.type == BGE ||
+            // ID.inst.type == BLTU || ID.inst.type == BGEU )
+            // {
+            //         ID.lock = 0;
+            //         regs.ctrUnit.stall = 1;
+            //         // regs.ctrUnit.stall_pc = regs.pc - 4;
+            //         // regs.pc -= 4; // stall next valid addr
+            //         IF.inst.clear();
+            //         // ID.inst.clear();
+            //         // bch taken unknown
+            // }
 
             if (ID.inst.type != ERROR 
             && EX.inst.memRead
@@ -137,12 +174,11 @@ public:
             {
                 ID.lock = 1;
                 regs.ctrUnit.stall = 1;
-                // regs.pc -= 4; // stall next valid addr
                 IF.inst.clear();
                 // std::cout << "STORE THE DATA HAZARD FOR LOAD\n ";
 
             }
-        // }
+        }
 
             // ===================
 
@@ -153,8 +189,7 @@ public:
                 // cout << IF.inst;
             }
             std::cout <<  cc++  << " pc:" << regs.pc << std::endl;
-            // std::cout << "\n";
-            // if (cc > 280) break;
+            // if (cc > 50) break;
             if (regs._end) break;
 
             // pass =======================================
@@ -177,6 +212,8 @@ public:
 
 
         } // while
+
+        regs.ctrUnit.pd.clear();
         
     }
     void serial(){

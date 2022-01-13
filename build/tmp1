@@ -256,904 +256,904 @@ INST FROM ADDR: ADDI 4252
 rs1 rs2 rd
 TYPE:ADDI  8  0  8
 TYPE:ADDI  4512  0  4516
-36 pc:4248
-1EX inst
+36 pc:4264
+0EX inst
 =================== 
 INST FROM ADDR: BNE 4256
 rs1 rs2 rd
 TYPE:BNE  8  9  0
 TYPE:BNE  4516  4528  1
-37 pc:4252
-1EX inst
+37 pc:4248
+0EX inst
+=================== 
+INST FROM ADDR: ERROR 0
+rs1 rs2 rd
+TYPE:ERROR  0  0  0
+TYPE:ERROR  0  0  0
+38 pc:4252
+0EX inst
 =================== 
 INST FROM ADDR: LW 4244
 rs1 rs2 rd
 TYPE:LW  8  0  10
 TYPE:LW  4516  0  4516
-38 pc:4252
-1EX inst
+39 pc:4252
+0EX inst
 =================== 
 INST FROM ADDR: JAL 4248
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  4252
-39 pc:4100
-1EX inst
+40 pc:4100
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-40 pc:4104
-1EX inst
+41 pc:4104
+0EX inst
 =================== 
 INST FROM ADDR: LUI 4096
 rs1 rs2 rd
 TYPE:LUI  0  0  14
 TYPE:LUI  0  0  4096
-41 pc:4108
-1EX inst
+42 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: LW 4100
 rs1 rs2 rd
 TYPE:LW  14  0  15
 TYPE:LW  4096  0  4528
-42 pc:4108
-1EX inst
+43 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-43 pc:4112
-1EX inst
+44 pc:4112
+0EX inst
 =================== 
 INST FROM ADDR: XOR 4104
 rs1 rs2 rd
 TYPE:XOR  10  15  10
 TYPE:XOR  0  173  173
-44 pc:4116
-1EX inst
+45 pc:4116
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4108
 rs1 rs2 rd
 TYPE:ADDI  10  0  10
 TYPE:ADDI  173  0  346
-45 pc:4120
-1EX inst
+46 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: SW 4112
 rs1 rs2 rd
 TYPE:SW  14  10  0
 TYPE:SW  4096  346  4528
-46 pc:4120
-1EX inst
+47 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: JALR 4116
 rs1 rs2 rd
 TYPE:JALR  1  0  0
 TYPE:JALR  4252  0  4120
-47 pc:4256
-1EX inst
+48 pc:4256
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-48 pc:4260
-1EX inst
+49 pc:4260
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4252
 rs1 rs2 rd
 TYPE:ADDI  8  0  8
 TYPE:ADDI  4516  0  4520
-49 pc:4248
-1EX inst
+50 pc:4264
+0EX inst
 =================== 
 INST FROM ADDR: BNE 4256
 rs1 rs2 rd
 TYPE:BNE  8  9  0
 TYPE:BNE  4520  4528  1
-50 pc:4252
-1EX inst
+51 pc:4248
+0EX inst
+=================== 
+INST FROM ADDR: ERROR 0
+rs1 rs2 rd
+TYPE:ERROR  0  0  0
+TYPE:ERROR  0  0  0
+52 pc:4252
+0EX inst
 =================== 
 INST FROM ADDR: LW 4244
 rs1 rs2 rd
 TYPE:LW  8  0  10
 TYPE:LW  4520  0  4520
-51 pc:4252
-1EX inst
+53 pc:4252
+0EX inst
 =================== 
 INST FROM ADDR: JAL 4248
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  4252
-52 pc:4100
-1EX inst
+54 pc:4100
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-53 pc:4104
-1EX inst
+55 pc:4104
+0EX inst
 =================== 
 INST FROM ADDR: LUI 4096
 rs1 rs2 rd
 TYPE:LUI  0  0  14
 TYPE:LUI  0  0  4096
-54 pc:4108
-1EX inst
+56 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: LW 4100
 rs1 rs2 rd
 TYPE:LW  14  0  15
 TYPE:LW  4096  0  4528
-55 pc:4108
-1EX inst
+57 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-56 pc:4112
-1EX inst
+58 pc:4112
+0EX inst
 =================== 
 INST FROM ADDR: XOR 4104
 rs1 rs2 rd
 TYPE:XOR  10  15  10
 TYPE:XOR  0  346  346
-57 pc:4116
-1EX inst
+59 pc:4116
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4108
 rs1 rs2 rd
 TYPE:ADDI  10  0  10
 TYPE:ADDI  346  0  519
-58 pc:4120
-1EX inst
+60 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: SW 4112
 rs1 rs2 rd
 TYPE:SW  14  10  0
 TYPE:SW  4096  519  4528
-59 pc:4120
-1EX inst
+61 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: JALR 4116
 rs1 rs2 rd
 TYPE:JALR  1  0  0
 TYPE:JALR  4252  0  4120
-60 pc:4256
-1EX inst
+62 pc:4256
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-61 pc:4260
-1EX inst
+63 pc:4260
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4252
 rs1 rs2 rd
 TYPE:ADDI  8  0  8
 TYPE:ADDI  4520  0  4524
-62 pc:4248
-1EX inst
+64 pc:4264
+0EX inst
 =================== 
 INST FROM ADDR: BNE 4256
 rs1 rs2 rd
 TYPE:BNE  8  9  0
 TYPE:BNE  4524  4528  1
-63 pc:4252
-1EX inst
+65 pc:4248
+0EX inst
+=================== 
+INST FROM ADDR: ERROR 0
+rs1 rs2 rd
+TYPE:ERROR  0  0  0
+TYPE:ERROR  0  0  0
+66 pc:4252
+0EX inst
 =================== 
 INST FROM ADDR: LW 4244
 rs1 rs2 rd
 TYPE:LW  8  0  10
 TYPE:LW  4524  0  4524
-64 pc:4252
-1EX inst
+67 pc:4252
+0EX inst
 =================== 
 INST FROM ADDR: JAL 4248
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  4252
-65 pc:4100
-1EX inst
+68 pc:4100
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-66 pc:4104
-1EX inst
+69 pc:4104
+0EX inst
 =================== 
 INST FROM ADDR: LUI 4096
 rs1 rs2 rd
 TYPE:LUI  0  0  14
 TYPE:LUI  0  0  4096
-67 pc:4108
-1EX inst
+70 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: LW 4100
 rs1 rs2 rd
 TYPE:LW  14  0  15
 TYPE:LW  4096  0  4528
-68 pc:4108
-1EX inst
+71 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-69 pc:4112
-1EX inst
+72 pc:4112
+0EX inst
 =================== 
 INST FROM ADDR: XOR 4104
 rs1 rs2 rd
 TYPE:XOR  10  15  10
 TYPE:XOR  0  519  519
-70 pc:4116
-1EX inst
+73 pc:4116
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4108
 rs1 rs2 rd
 TYPE:ADDI  10  0  10
 TYPE:ADDI  519  0  692
-71 pc:4120
-1EX inst
+74 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: SW 4112
 rs1 rs2 rd
 TYPE:SW  14  10  0
 TYPE:SW  4096  692  4528
-72 pc:4120
-1EX inst
+75 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: JALR 4116
 rs1 rs2 rd
 TYPE:JALR  1  0  0
 TYPE:JALR  4252  0  4120
-73 pc:4256
-1EX inst
+76 pc:4256
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-74 pc:4260
-1EX inst
+77 pc:4260
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4252
 rs1 rs2 rd
 TYPE:ADDI  8  0  8
 TYPE:ADDI  4524  0  4528
-75 pc:4248
-1EX inst
+78 pc:4264
+0EX inst
 =================== 
 INST FROM ADDR: BNE 4256
 rs1 rs2 rd
 TYPE:BNE  8  9  0
 TYPE:BNE  4528  4528  0
-76 pc:4264
-1EX inst
-=================== 
-INST FROM ADDR: ERROR 0
-rs1 rs2 rd
-TYPE:ERROR  0  0  0
-TYPE:ERROR  0  0  0
-77 pc:4268
-1EX inst
+79 pc:4268
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4260
 rs1 rs2 rd
 TYPE:ADDI  0  0  10
 TYPE:ADDI  0  0  1
-78 pc:4268
-1EX inst
+80 pc:4268
+0EX inst
 =================== 
 INST FROM ADDR: JAL 4264
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  4268
-79 pc:4100
-1EX inst
+81 pc:4100
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-80 pc:4104
-1EX inst
+82 pc:4104
+0EX inst
 =================== 
 INST FROM ADDR: LUI 4096
 rs1 rs2 rd
 TYPE:LUI  0  0  14
 TYPE:LUI  0  0  4096
-81 pc:4108
-1EX inst
+83 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: LW 4100
 rs1 rs2 rd
 TYPE:LW  14  0  15
 TYPE:LW  4096  0  4528
-82 pc:4108
-1EX inst
+84 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-83 pc:4112
-1EX inst
+85 pc:4112
+0EX inst
 =================== 
 INST FROM ADDR: XOR 4104
 rs1 rs2 rd
 TYPE:XOR  10  15  10
 TYPE:XOR  1  692  693
-84 pc:4116
-1EX inst
+86 pc:4116
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4108
 rs1 rs2 rd
 TYPE:ADDI  10  0  10
 TYPE:ADDI  693  0  866
-85 pc:4120
-1EX inst
+87 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: SW 4112
 rs1 rs2 rd
 TYPE:SW  14  10  0
 TYPE:SW  4096  866  4528
-86 pc:4120
-1EX inst
+88 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: JALR 4116
 rs1 rs2 rd
 TYPE:JALR  1  0  0
 TYPE:JALR  4268  0  4120
-87 pc:4272
-1EX inst
+89 pc:4272
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-88 pc:4276
-1EX inst
+90 pc:4276
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4268
 rs1 rs2 rd
 TYPE:ADDI  0  0  10
 TYPE:ADDI  0  0  2
-89 pc:4276
-1EX inst
+91 pc:4276
+0EX inst
 =================== 
 INST FROM ADDR: JAL 4272
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  4276
-90 pc:4100
-1EX inst
+92 pc:4100
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-91 pc:4104
-1EX inst
+93 pc:4104
+0EX inst
 =================== 
 INST FROM ADDR: LUI 4096
 rs1 rs2 rd
 TYPE:LUI  0  0  14
 TYPE:LUI  0  0  4096
-92 pc:4108
-1EX inst
+94 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: LW 4100
 rs1 rs2 rd
 TYPE:LW  14  0  15
 TYPE:LW  4096  0  4528
-93 pc:4108
-1EX inst
+95 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-94 pc:4112
-1EX inst
+96 pc:4112
+0EX inst
 =================== 
 INST FROM ADDR: XOR 4104
 rs1 rs2 rd
 TYPE:XOR  10  15  10
 TYPE:XOR  2  866  864
-95 pc:4116
-1EX inst
+97 pc:4116
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4108
 rs1 rs2 rd
 TYPE:ADDI  10  0  10
 TYPE:ADDI  864  0  1037
-96 pc:4120
-1EX inst
+98 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: SW 4112
 rs1 rs2 rd
 TYPE:SW  14  10  0
 TYPE:SW  4096  1037  4528
-97 pc:4120
-1EX inst
+99 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: JALR 4116
 rs1 rs2 rd
 TYPE:JALR  1  0  0
 TYPE:JALR  4276  0  4120
-98 pc:4280
-1EX inst
+100 pc:4280
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-99 pc:4284
-1EX inst
+101 pc:4284
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4276
 rs1 rs2 rd
 TYPE:ADDI  0  0  10
 TYPE:ADDI  0  0  3
-100 pc:4284
-1EX inst
+102 pc:4284
+0EX inst
 =================== 
 INST FROM ADDR: JAL 4280
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  4284
-101 pc:4100
-1EX inst
+103 pc:4100
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-102 pc:4104
-1EX inst
+104 pc:4104
+0EX inst
 =================== 
 INST FROM ADDR: LUI 4096
 rs1 rs2 rd
 TYPE:LUI  0  0  14
 TYPE:LUI  0  0  4096
-103 pc:4108
-1EX inst
+105 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: LW 4100
 rs1 rs2 rd
 TYPE:LW  14  0  15
 TYPE:LW  4096  0  4528
-104 pc:4108
-1EX inst
+106 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-105 pc:4112
-1EX inst
+107 pc:4112
+0EX inst
 =================== 
 INST FROM ADDR: XOR 4104
 rs1 rs2 rd
 TYPE:XOR  10  15  10
 TYPE:XOR  3  1037  1038
-106 pc:4116
-1EX inst
+108 pc:4116
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4108
 rs1 rs2 rd
 TYPE:ADDI  10  0  10
 TYPE:ADDI  1038  0  1211
-107 pc:4120
-1EX inst
+109 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: SW 4112
 rs1 rs2 rd
 TYPE:SW  14  10  0
 TYPE:SW  4096  1211  4528
-108 pc:4120
-1EX inst
+110 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: JALR 4116
 rs1 rs2 rd
 TYPE:JALR  1  0  0
 TYPE:JALR  4284  0  4120
-109 pc:4288
-1EX inst
+111 pc:4288
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-110 pc:4292
-1EX inst
+112 pc:4292
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4284
 rs1 rs2 rd
 TYPE:ADDI  0  0  10
 TYPE:ADDI  0  0  4
-111 pc:4292
-1EX inst
+113 pc:4292
+0EX inst
 =================== 
 INST FROM ADDR: JAL 4288
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  4292
-112 pc:4100
-1EX inst
+114 pc:4100
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-113 pc:4104
-1EX inst
+115 pc:4104
+0EX inst
 =================== 
 INST FROM ADDR: LUI 4096
 rs1 rs2 rd
 TYPE:LUI  0  0  14
 TYPE:LUI  0  0  4096
-114 pc:4108
-1EX inst
+116 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: LW 4100
 rs1 rs2 rd
 TYPE:LW  14  0  15
 TYPE:LW  4096  0  4528
-115 pc:4108
-1EX inst
+117 pc:4108
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-116 pc:4112
-1EX inst
+118 pc:4112
+0EX inst
 =================== 
 INST FROM ADDR: XOR 4104
 rs1 rs2 rd
 TYPE:XOR  10  15  10
 TYPE:XOR  4  1211  1215
-117 pc:4116
-1EX inst
+119 pc:4116
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4108
 rs1 rs2 rd
 TYPE:ADDI  10  0  10
 TYPE:ADDI  1215  0  1388
-118 pc:4120
-1EX inst
+120 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: SW 4112
 rs1 rs2 rd
 TYPE:SW  14  10  0
 TYPE:SW  4096  1388  4528
-119 pc:4120
-1EX inst
+121 pc:4120
+0EX inst
 =================== 
 INST FROM ADDR: JALR 4116
 rs1 rs2 rd
 TYPE:JALR  1  0  0
 TYPE:JALR  4292  0  4120
-120 pc:4296
-1EX inst
+122 pc:4296
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-121 pc:4300
-1EX inst
+123 pc:4300
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4292
 rs1 rs2 rd
 TYPE:ADDI  0  0  11
 TYPE:ADDI  0  0  253
-122 pc:4304
-1EX inst
+124 pc:4304
+0EX inst
 =================== 
 INST FROM ADDR: LUI 4296
 rs1 rs2 rd
 TYPE:LUI  0  0  15
 TYPE:LUI  0  0  4096
-123 pc:4308
-1EX inst
+125 pc:4308
+0EX inst
 =================== 
 INST FROM ADDR: LW 4300
 rs1 rs2 rd
 TYPE:LW  15  0  10
 TYPE:LW  4096  0  4528
-124 pc:4308
-1EX inst
+126 pc:4308
+0EX inst
 =================== 
 INST FROM ADDR: JAL 4304
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  4308
-125 pc:4464
-1EX inst
+127 pc:4464
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-126 pc:4468
-1EX inst
+128 pc:4468
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4460
 rs1 rs2 rd
 TYPE:ADDI  1  0  5
 TYPE:ADDI  4308  0  4308
-127 pc:4488
-1EX inst
+129 pc:4472
+0EX inst
 =================== 
 INST FROM ADDR: BLT 4464
 rs1 rs2 rd
 TYPE:BLT  11  0  0
 TYPE:BLT  253  0  0
-128 pc:4472
-1EX inst
-=================== 
-INST FROM ADDR: ERROR 0
-rs1 rs2 rd
-TYPE:ERROR  0  0  0
-TYPE:ERROR  0  0  0
-129 pc:4476
+130 pc:4476
 0EX inst
 =================== 
 INST FROM ADDR: BLT 4468
 rs1 rs2 rd
 TYPE:BLT  10  0  0
 TYPE:BLT  1388  0  0
-130 pc:4476
+131 pc:4476
 0EX inst
 =================== 
 INST FROM ADDR: JAL 4472
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  4476
-131 pc:4340
+132 pc:4340
 0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-132 pc:4344
+133 pc:4344
 0EX inst
 =================== 
 INST FROM ADDR: ADDI 4336
 rs1 rs2 rd
 TYPE:ADDI  11  0  12
 TYPE:ADDI  253  0  253
-133 pc:4348
+134 pc:4348
 0EX inst
 =================== 
 INST FROM ADDR: ADDI 4340
 rs1 rs2 rd
 TYPE:ADDI  10  0  11
 TYPE:ADDI  1388  0  1388
-134 pc:4352
+135 pc:4352
 0EX inst
 =================== 
 INST FROM ADDR: ADDI 4344
 rs1 rs2 rd
 TYPE:ADDI  0  0  10
 TYPE:ADDI  0  0  4294967295
-135 pc:4356
+136 pc:4356
 0EX inst
 =================== 
 INST FROM ADDR: BEQ 4348
 rs1 rs2 rd
 TYPE:BEQ  12  0  0
 TYPE:BEQ  253  0  0
-136 pc:4360
+137 pc:4360
 0EX inst
 =================== 
 INST FROM ADDR: ADDI 4352
 rs1 rs2 rd
 TYPE:ADDI  0  0  13
 TYPE:ADDI  0  0  1
-137 pc:4364
+138 pc:4364
 0EX inst
 =================== 
 INST FROM ADDR: BGEU 4356
 rs1 rs2 rd
 TYPE:BGEU  12  11  0
 TYPE:BGEU  253  1388  0
-138 pc:4368
+139 pc:4368
 0EX inst
 =================== 
 INST FROM ADDR: BGE 4360
 rs1 rs2 rd
 TYPE:BGE  0  12  0
 TYPE:BGE  0  253  0
-139 pc:4372
+140 pc:4372
 0EX inst
 =================== 
 INST FROM ADDR: SLLI 4364
 rs1 rs2 rd
 TYPE:SLLI  12  0  12
 TYPE:SLLI  253  0  506
-140 pc:4376
+141 pc:4376
 0EX inst
 =================== 
 INST FROM ADDR: SLLI 4368
 rs1 rs2 rd
 TYPE:SLLI  13  0  13
 TYPE:SLLI  1  0  2
-141 pc:4380
+142 pc:4380
 0EX inst
 =================== 
 INST FROM ADDR: BLTU 4372
 rs1 rs2 rd
 TYPE:BLTU  12  11  0
 TYPE:BLTU  506  1388  1
-142 pc:4364
+143 pc:4364
 0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-143 pc:4368
+144 pc:4368
 0EX inst
 =================== 
 INST FROM ADDR: BGE 4360
 rs1 rs2 rd
 TYPE:BGE  0  12  0
 TYPE:BGE  0  506  0
-144 pc:4372
+145 pc:4372
 0EX inst
 =================== 
 INST FROM ADDR: SLLI 4364
 rs1 rs2 rd
 TYPE:SLLI  12  0  12
 TYPE:SLLI  506  0  1012
-145 pc:4376
+146 pc:4376
 0EX inst
 =================== 
 INST FROM ADDR: SLLI 4368
 rs1 rs2 rd
 TYPE:SLLI  13  0  13
 TYPE:SLLI  2  0  4
-146 pc:4380
+147 pc:4380
 0EX inst
 =================== 
 INST FROM ADDR: BLTU 4372
 rs1 rs2 rd
 TYPE:BLTU  12  11  0
 TYPE:BLTU  1012  1388  1
-147 pc:4364
+148 pc:4364
 0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-148 pc:4368
+149 pc:4368
 0EX inst
 =================== 
 INST FROM ADDR: BGE 4360
 rs1 rs2 rd
 TYPE:BGE  0  12  0
 TYPE:BGE  0  1012  0
-149 pc:4372
+150 pc:4372
 0EX inst
 =================== 
 INST FROM ADDR: SLLI 4364
 rs1 rs2 rd
 TYPE:SLLI  12  0  12
 TYPE:SLLI  1012  0  2024
-150 pc:4376
+151 pc:4376
 0EX inst
 =================== 
 INST FROM ADDR: SLLI 4368
 rs1 rs2 rd
 TYPE:SLLI  13  0  13
 TYPE:SLLI  4  0  8
-151 pc:4380
+152 pc:4380
 0EX inst
 =================== 
 INST FROM ADDR: BLTU 4372
 rs1 rs2 rd
 TYPE:BLTU  12  11  0
 TYPE:BLTU  2024  1388  0
-152 pc:4384
+153 pc:4384
 0EX inst
 =================== 
 INST FROM ADDR: ADDI 4376
 rs1 rs2 rd
 TYPE:ADDI  0  0  10
 TYPE:ADDI  0  0  0
-153 pc:4388
+154 pc:4388
 0EX inst
 =================== 
 INST FROM ADDR: BLTU 4380
 rs1 rs2 rd
 TYPE:BLTU  11  12  0
 TYPE:BLTU  1388  2024  1
-154 pc:4396
+155 pc:4396
 0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-155 pc:4400
+156 pc:4400
 0EX inst
 =================== 
 INST FROM ADDR: SRLI 4392
 rs1 rs2 rd
 TYPE:SRLI  13  0  13
 TYPE:SRLI  8  0  4
-156 pc:4404
+157 pc:4404
 0EX inst
 =================== 
 INST FROM ADDR: SRLI 4396
 rs1 rs2 rd
 TYPE:SRLI  12  0  12
 TYPE:SRLI  2024  0  1012
-157 pc:4408
+158 pc:4408
 0EX inst
 =================== 
 INST FROM ADDR: BNE 4400
 rs1 rs2 rd
 TYPE:BNE  13  0  0
 TYPE:BNE  4  0  1
-158 pc:4384
+159 pc:4384
 0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-159 pc:4396
-1EX inst
+160 pc:4388
+0EX inst
 =================== 
 INST FROM ADDR: BLTU 4380
 rs1 rs2 rd
 TYPE:BLTU  11  12  0
 TYPE:BLTU  1388  1012  0
-160 pc:4388
-1EX inst
-=================== 
-INST FROM ADDR: ERROR 0
-rs1 rs2 rd
-TYPE:ERROR  0  0  0
-TYPE:ERROR  0  0  0
 161 pc:4392
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: SUB 4384
 rs1 rs2 rd
 TYPE:SUB  11  12  11
 TYPE:SUB  1388  1012  376
 162 pc:4396
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: OR 4388
 rs1 rs2 rd
 TYPE:OR  10  13  10
 TYPE:OR  0  4  4
 163 pc:4400
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: SRLI 4392
 rs1 rs2 rd
 TYPE:SRLI  13  0  13
 TYPE:SRLI  4  0  2
 164 pc:4404
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: SRLI 4396
 rs1 rs2 rd
@@ -1173,183 +1173,183 @@ INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
-167 pc:4396
-1EX inst
+167 pc:4388
+0EX inst
 =================== 
 INST FROM ADDR: BLTU 4380
 rs1 rs2 rd
 TYPE:BLTU  11  12  0
 TYPE:BLTU  376  506  1
-168 pc:4400
-1EX inst
+168 pc:4396
+0EX inst
+=================== 
+INST FROM ADDR: ERROR 0
+rs1 rs2 rd
+TYPE:ERROR  0  0  0
+TYPE:ERROR  0  0  0
+169 pc:4400
+0EX inst
 =================== 
 INST FROM ADDR: SRLI 4392
 rs1 rs2 rd
 TYPE:SRLI  13  0  13
 TYPE:SRLI  2  0  1
-169 pc:4404
-1EX inst
+170 pc:4404
+0EX inst
 =================== 
 INST FROM ADDR: SRLI 4396
 rs1 rs2 rd
 TYPE:SRLI  12  0  12
 TYPE:SRLI  506  0  253
-170 pc:4384
-1EX inst
+171 pc:4408
+0EX inst
 =================== 
 INST FROM ADDR: BNE 4400
 rs1 rs2 rd
 TYPE:BNE  13  0  0
 TYPE:BNE  1  0  1
-171 pc:4396
-1EX inst
+172 pc:4384
+0EX inst
+=================== 
+INST FROM ADDR: ERROR 0
+rs1 rs2 rd
+TYPE:ERROR  0  0  0
+TYPE:ERROR  0  0  0
+173 pc:4388
+0EX inst
 =================== 
 INST FROM ADDR: BLTU 4380
 rs1 rs2 rd
 TYPE:BLTU  11  12  0
 TYPE:BLTU  376  253  0
-172 pc:4388
-1EX inst
-=================== 
-INST FROM ADDR: ERROR 0
-rs1 rs2 rd
-TYPE:ERROR  0  0  0
-TYPE:ERROR  0  0  0
-173 pc:4392
-1EX inst
+174 pc:4392
+0EX inst
 =================== 
 INST FROM ADDR: SUB 4384
 rs1 rs2 rd
 TYPE:SUB  11  12  11
 TYPE:SUB  376  253  123
-174 pc:4396
-1EX inst
+175 pc:4396
+0EX inst
 =================== 
 INST FROM ADDR: OR 4388
 rs1 rs2 rd
 TYPE:OR  10  13  10
 TYPE:OR  4  1  5
-175 pc:4400
-1EX inst
+176 pc:4400
+0EX inst
 =================== 
 INST FROM ADDR: SRLI 4392
 rs1 rs2 rd
 TYPE:SRLI  13  0  13
 TYPE:SRLI  1  0  0
-176 pc:4404
-1EX inst
+177 pc:4404
+0EX inst
 =================== 
 INST FROM ADDR: SRLI 4396
 rs1 rs2 rd
 TYPE:SRLI  12  0  12
 TYPE:SRLI  253  0  126
-177 pc:4384
-1EX inst
+178 pc:4408
+0EX inst
 =================== 
 INST FROM ADDR: BNE 4400
 rs1 rs2 rd
 TYPE:BNE  13  0  0
 TYPE:BNE  0  0  0
-178 pc:4408
-1EX inst
-=================== 
-INST FROM ADDR: ERROR 0
-rs1 rs2 rd
-TYPE:ERROR  0  0  0
-TYPE:ERROR  0  0  0
 179 pc:4408
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: JALR 4404
 rs1 rs2 rd
 TYPE:JALR  1  0  0
 TYPE:JALR  4476  0  4408
 180 pc:4480
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
 181 pc:4484
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4476
 rs1 rs2 rd
 TYPE:ADDI  11  0  10
 TYPE:ADDI  123  0  123
 182 pc:4484
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: JALR 4480
 rs1 rs2 rd
 TYPE:JALR  5  0  0
 TYPE:JALR  4308  0  4484
 183 pc:4312
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
 184 pc:4316
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: LW 4308
 rs1 rs2 rd
 TYPE:LW  2  0  1
 TYPE:LW  131040  0  131068
 185 pc:4320
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: LW 4312
 rs1 rs2 rd
 TYPE:LW  2  0  8
 TYPE:LW  131040  0  131064
 186 pc:4324
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: LW 4316
 rs1 rs2 rd
 TYPE:LW  2  0  9
 TYPE:LW  131040  0  131060
 187 pc:4328
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 4320
 rs1 rs2 rd
 TYPE:ADDI  2  0  2
 TYPE:ADDI  131040  0  131072
 188 pc:4328
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: JALR 4324
 rs1 rs2 rd
 TYPE:JALR  1  0  0
 TYPE:JALR  8  0  4328
 189 pc:12
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: ERROR 0
 rs1 rs2 rd
 TYPE:ERROR  0  0  0
 TYPE:ERROR  0  0  0
 190 pc:16
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: ADDI 8
 rs1 rs2 rd
 TYPE:ADDI  0  0  12
 TYPE:ADDI  0  0  255
 191 pc:20
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: LUI 12
 rs1 rs2 rd
 TYPE:LUI  0  0  13
 TYPE:LUI  0  0  196608
 192 pc:24
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: SB 16
 rs1 rs2 rd
@@ -1357,7 +1357,7 @@ TYPE:SB  13  12  0
 TYPE:SB  196608  255  196612
 193 pc:24
 END
-1EX inst
+0EX inst
 =================== 
 INST FROM ADDR: JAL 20
 rs1 rs2 rd

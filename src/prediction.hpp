@@ -3,12 +3,20 @@
 
 #include <queue>
 #include <unordered_map>
+#include <cassert>
+
+
+// IF ID EX
+//         ^ validate
+//      ^ pred
+// 
 
 
 class StaticPred{
 public:
     int tot, hit;
-    StaticPred(): tot(0), hit(0){}
+    int pred_taken;
+    StaticPred(): tot(0), hit(0), pred_taken(0) {}
 
     // always not taken
     bool take()   
@@ -21,16 +29,22 @@ public:
         tot++;
         if (!jump) hit ++;
     }
+    void clear()
+    {
+        if (tot == 0) tot = hit = 1;
+        std::cerr << "accuacy rate:" <<  hit * 100.0f / tot << " %\n" ;
+        tot = hit = 0;
+    }
 
 };
 
-class TwobitPred
+class TwobitPred: public StaticPred
 {
 public:
     bool b0, b1;
-    int tot, hit;
+    // int tot, hit;
     bool pred;
-    TwobitPred(): tot(0), hit(0), b0(1), b1(0){}
+    TwobitPred(): b0(1), b1(0){}
 
     void increase()
     {
@@ -51,6 +65,7 @@ public:
 
     bool take()   
     {
+        pred_taken = b0;
         return b0;
     }
 
@@ -61,8 +76,8 @@ public:
         {
             hit ++;
         }
-        if (jump) decrease();
-        else increase();
+        if (jump) increase();
+        else decrease();
     }
 
 };

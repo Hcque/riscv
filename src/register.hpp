@@ -16,12 +16,17 @@ using namespace std;
 
 struct ControlUnit
 {
-    StaticPred* pd;
     bool stall;
     uint32_t stall_pc;
     uint32_t jump_pc;
+
+    // branch prediction    
     bool bch_taken;
-    ControlUnit() : pd(0), stall(0), stall_pc(0), jump_pc(0), bch_taken(0) {}
+    // StaticPred pd;
+    TwobitPred pd;
+
+
+    ControlUnit() : pd(), stall(0), stall_pc(0), jump_pc(0), bch_taken(0) {}
 
     void Stall()
     {
@@ -47,6 +52,7 @@ class Register{
 public:
     uint32_t reg[32]{}; // reg x0 - x31
     uint32_t pc{0};
+    uint32_t savedpc{0};
     uint32_t _end;
     memory* mem;
 

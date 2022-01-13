@@ -121,6 +121,9 @@ public:
     uint src1, src2;
     uint dest;
     int take_bch;
+    int BXX;
+    int succ;
+
     uint32_t addr;
     bool regWrite;
     bool memRead;
@@ -133,6 +136,7 @@ public:
         take_bch = addr = 0u;
         type = ERROR;
         stalled = regWrite = memRead = 0;
+        BXX = 0; succ = 0;
 
     }
     void clear()
@@ -144,6 +148,7 @@ public:
         type = ERROR;
         opcode = 0u;
         regWrite = memRead = 0;
+        BXX = 0; succ = 0;
     }
 
 
@@ -328,6 +333,7 @@ public:
             imm = signext(imm, 12);
             rs1 = ( fromMemory >> 15 ) & 31;
             rs2 = ( fromMemory >> 20 ) & 31;
+            BXX = 1;
             break;
 
             case LB:

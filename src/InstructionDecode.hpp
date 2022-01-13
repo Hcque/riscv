@@ -18,16 +18,12 @@ class Execution;
 class InstructionDecode {
 public:
     Register *regs;
-    StaticPred* pd;
     bool lock;
 
-
-    bool stall;
     Instruction inst;
+
     InstructionDecode(): lock(0) {}
     InstructionDecode(Register *_regs) : regs(_regs) , lock(0) {}
-    InstructionDecode(Register *_regs, StaticPred* _pd) : regs(_regs), pd(_pd) {}
-    InstructionDecode(Register *_regs, StaticPred* _pd, bool _st) : regs(_regs), pd(_pd) , stall(_st){}
 
     void go(){
 
@@ -38,18 +34,19 @@ public:
         inst.src1 = regs->get(inst.rs1);
         inst.src2 = regs->get(inst.rs2);
 
-        // pred
-        if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
-         inst.type == BLTU || inst.type == BGEU )
-         {
-             if (pd->take()){
+        // // prediction
+        // if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
+        //  inst.type == BLTU || inst.type == BGEU )
+        //  {
+        //      if (regs->ctrUnit.pd.take()){
+        //         // set the pc to jump addr
+        //         regs->pc = inst.addr + inst.imm; // few number of gates ,makes this possible
+        //      }
+        //      else {
 
-             }
-             else {
+        //     }
 
-             }
-
-         }
+        //  }
 
 
          
