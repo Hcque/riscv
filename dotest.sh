@@ -20,3 +20,5 @@ echo qsort
 ./code < ../data/statement_test.data > tmp
 ./code < ../data/superloop.data > tmp
 ./code < ../data/tak.data > tmp
+
+rm tmp

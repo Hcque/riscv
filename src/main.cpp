@@ -1,9 +1,8 @@
+// notice the memory size!
+
 #include <iostream>
 #include "RISCV.hpp"
 #include "memory.hpp"
-
-
-
 
 memory mem;
 int main(int argc, char* argv[]){

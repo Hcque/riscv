@@ -123,7 +123,8 @@ public:
             // prediction ==== 
             if (ID.inst.BXX )
             {
-                if (regs.ctrUnit.pd.take()){ 
+                // if (regs.ctrUnit.pd.take()){ 
+                if (regs.ctrUnit.pd.take(ID.inst.addr)){ 
                     // set the pc to jump addr
                     regs.pc = ID.inst.addr + ID.inst.imm; // few number of gates ,makes this possible
                 }
@@ -133,10 +134,7 @@ public:
             
 
             // ==========================================
-             // stall
-        // if (regs.ctrUnit.stall){
-        //     regs.ctrUnit.stall = 0;
-        // }
+            // stall
 
          if ( 
                 ID.inst.type == JAL || ID.inst.type == JALR ||
@@ -145,13 +143,7 @@ public:
             {
                 regs.ctrUnit.stall = 1;
                 ID.lock = 0;
-
                 IF.inst.clear();
-            //     cout << "if inst\n";
-            // cout << IF.inst;
-                // ID.inst.clear();
-                // regs.ctrUnit.bch_taken = 1;
-                
             } 
 
             // if (ID.inst.type == BNE || ID.inst.type == BEQ || ID.inst.type == BLT || ID.inst.type == BGE ||

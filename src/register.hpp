@@ -23,7 +23,9 @@ struct ControlUnit
     // branch prediction    
     bool bch_taken;
     // StaticPred pd;
-    TwobitPred pd;
+    // TwobitPred pd;
+    // AdptiveTrain pd;
+    AdptiveTrain2 pd;
 
 
     ControlUnit() : pd(), stall(0), stall_pc(0), jump_pc(0), bch_taken(0) {}

@@ -19,8 +19,11 @@ public:
     StaticPred(): tot(0), hit(0), pred_taken(0) {}
 
     // always not taken
-    bool take()   
+    // notice this take should save 
+    // the prediction  in "pred_taken" , using in RISCV.hpp
+    bool take(uint32_t addr = 0u)   
     {
+        // pred_taken = 0;
         return 0;
     }
 
@@ -32,7 +35,7 @@ public:
     void clear()
     {
         if (tot == 0) tot = hit = 1;
-        std::cerr << "accuacy rate:" <<  hit * 100.0f / tot << " %\n" ;
+        std::cerr << "accuacy rate:" <<  hit * 100.0f / tot << "% ";
         tot = hit = 0;
     }
 
@@ -63,7 +66,7 @@ public:
         else assert(0);
     }
 
-    bool take()   
+    bool take(uint32_t addr = 0u)   
     {
         pred_taken = b0;
         return b0;
@@ -82,31 +85,73 @@ public:
 
 };
 
-
-class AdptiveTrain // 
+// for the whole code texts, but combine with global history imformation,
+// not just local TWO BIT.
+class AdptiveTrain : public StaticPred
 {
-    bool b0, b1;
-    bool take()   
+    unsigned char HR; // history register / only 8 bit pasts ,2^8 possible cases.
+    TwobitPred patternTable[1<<8];
+public:
+    AdptiveTrain(): HR(0u) {}
+
+    bool take(uint32_t addr = 0u)   
     {
-        return 0;
+        pred_taken = patternTable[HR].b0;
+        return patternTable[HR].take();
     }
 
     void validate(bool jump)
     {
+        tot++;
+        if (jump == patternTable[HR].b0) hit++;
 
+        patternTable[HR].validate(jump);
+        HR = (HR << 1) + jump;
     }
+
+    void clear()
+    {
+        if (tot == 0) tot = hit = 1;
+        std::cerr << "accuacy rate:" <<  hit * 100.0f / tot << "% " ;
+        tot = hit = 0;
+        HR = 0u;
+    }
+
 
 };
 
-class Prediction
+class AdptiveTrain2: public StaticPred
 {
-    std::unordered_map<uint32_t, TwobitPred> strmap;
-    std::queue<bool> predictPool;
-
-    bool take()
+    std::unordered_map<uint32_t, AdptiveTrain> addrTable; // only store used addr
+    uint32_t addr;
+public:
+    bool take(uint32_t addr)   
     {
-        return 0;
+        this->addr = addr;
+        if (addrTable.count(addr) == 0)
+        {
+            addrTable[addr] = AdptiveTrain();
+        }
+        
+        addrTable[addr].take();
+        pred_taken = addrTable[addr].pred_taken;
+        return pred_taken;
     }
 
+    void validate(bool jump)
+    {
+        tot++;
+        if (jump == pred_taken) hit++;
+
+        addrTable[addr].validate(jump);
+    }
+
+    void clear()
+    {
+        if (tot == 0) tot = hit = 1;
+        std::cerr << "accuacy rate:" <<  hit * 100.0f / tot << "% " ;
+        tot = hit = 0;
+        addrTable.clear();
+    }
 
 };
