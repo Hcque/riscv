@@ -40,7 +40,9 @@ notice3. stall
 	
 The above design make me fell difficult of this project. I debuged line by line, which is sometimes frustrating.
 
-3)real ineresting parts : branch prediction.
+3)real ineresting parts : branch prediction Here I implenting the two bit sature prediction and also adaptive training in "Two-Level Adaptive Training Branch Prediction".
+The best is adaptive training :![image](https://user-images.githubusercontent.com/43036142/149615779-c5f4d3d1-e190-4db1-826f-72788640aece.png)
+
 I reflect the whole design and throught. I think the main goal is to make it fast by instruction parallel, a counterpart of threads parallelism. Which will be my next project's focused point.
 
 I also learned that to propose an idea, such as pipeline, you will also confront with problems brought to the desk, the engineer should deal with these problems, such as hazard in this project. This strategy is wroth to notice. 
