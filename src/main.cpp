@@ -4,11 +4,13 @@
 #include "RISCV.hpp"
 #include "memory.hpp"
 
+#include "Tomasulo.hpp"
+
 memory mem;
 int main(int argc, char* argv[]){
+    /*
+    // 5 staged  ===== 
     RISCV riscv = RISCV(&mem);
-
-
     // std::cerr << "argc:" << argc << std::endl;
     mem.loadFromDisk();
     int mode; 
@@ -21,6 +23,10 @@ int main(int argc, char* argv[]){
     // std::cout << riscv.output() << std::endl;
     int ans = riscv.output();
     std::cerr << ans << std::endl;
+    */
 
+    // tomasulo ====
+    Tomasolu tomasulo;
+    tomasulo.run_tomasolu();
     return 0;
 }

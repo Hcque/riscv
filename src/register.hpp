@@ -52,7 +52,9 @@ struct ControlUnit
 class Register{
     
 public:
-    uint32_t reg[32]{}; // reg x0 - x31
+    uint32_t reg[32]{0}; // reg x0 - x31
+    uint32_t Qi[32]{0};
+    uint32_t Q[32]{0};
     uint32_t pc{0};
     uint32_t savedpc{0};
     uint32_t _end;
