@@ -1,6 +1,7 @@
 #pragma once
 
 #include <unordered_map>
+#include <unordered_set>
 
 #include "memory.hpp"
 #include "register.hpp"
@@ -49,21 +50,27 @@ struct CDB
 struct Hub // envolved across all stages and units
 {
     CDB cdb;
-    RStbl rs;
-    Register regs;
+    RS rst;
+    Register regs; 
+    Hub(memory *mem): regs(mem) {}
 };
+
+#define R_S h->rst.rs
+#define Q_i h->regs.Qi
+#define REGS h->regs
 
 class Issue
 {
     Instruction inst;
     Hub *h;
 
+public:
     Issue(Hub *_h): h(_h) {}
     void go()
     {
         // fetch
-        inst.frommemory = h->regs.load(pc, 4);
-        pc += 4;
+        inst.fromMemory = h->regs.load(h->regs.pc, 4);
+        h->regs.pc += 4;
 
         // decode
         inst.type = inst.getType();
@@ -72,40 +79,41 @@ class Issue
         // find an empty station;
         if (inst.FP_action)
         {
-            int r = h->rs.find_empty_fp();
+
+            int r = h->rst.find_empty_fp();
             // FP action
-            if (regs->Qi[inst.rs1] == 0)
-                execu->RStbl.rs[r].Qj = regs->Qi[inst.rs1]; 
+            if (Q_i[inst.rs1] == 0)
+                R_S[r].Qj = Q_i[inst.rs1]; 
             else { 
-                execu->RStbl.rs[r].Vj = regs->get(inst.rs1); execu->RStbl[r].Qj = 0;
+                R_S[r].Vj = REGS.get(inst.rs1); R_S[r].Qj = 0;
             }
-            if (regs->Qi[inst.rs2] == 0)
-                execu->RStbl[r].Qk = regs->Qi[inst.rs2];
+            if (Q_i[inst.rs2] == 0)
+                R_S[r].Qk = Q_i[inst.rs2];
             else { 
-                execu->RStbl[r].Vk = regs->get(inst.rs2); execu->RStbl[r].Qk = 0;
+                R_S[r].Vk = REGS.get(inst.rs2); R_S[r].Qk = 0;
             }
-            execu->RStbl[r].busy = 1;
-            regs->Qi[inst.rd] = r;
+            R_S[r].busy = 1;
+            Q_i[inst.rd] = r;
         }
 
         else if (inst.load || inst.store)
         {
-            int r = execu->RStbl.find_empty_ls();
+            int r = h->rst.find_empty_ls();
             // for load store
-            if (regs->Qi[inst.rs1] == 0)
-                execu->RStbl[r].Qj = regs->Qi[inst.rs1]; 
+            if (Q_i[inst.rs1] == 0)
+                R_S[r].Qj = Q_i[inst.rs1]; 
             else { 
-                execu->RStbl[r].Vj = regs->get(inst.rs1); execu->RStbl[r].Qj = 0;
+                R_S[r].Vj = REGS.get(inst.rs1); R_S[r].Qj = 0;
             }
-            execu->RStbl[r].busy = 1;
-            execu->RStbl[r].A = inst.imm;
-            if (inst.load) regs->Qi[inst.rd] = r;
+            R_S[r].busy = 1;
+            R_S[r].A = inst.imm;
+            if (inst.load) Q_i[inst.rd] = r;
             if (inst.store)
             {
-                if (regs->Qi[inst.rs2] == 0)
-                    execu->RStbl[r].Qk = regs->Qi[inst.rs2]; 
+                if (Q_i[inst.rs2] == 0)
+                    R_S[r].Qk = Q_i[inst.rs2]; 
                 else { 
-                    execu->RStbl[r].Vk = regs->get(inst.rs2); execu->RStbl[r].Qk = 0;
+                    R_S[r].Vk = REGS.get(inst.rs2); R_S[r].Qk = 0;
                 }
             }
         }
@@ -116,7 +124,12 @@ class Issue
 
 struct ALUUnit
 {
-    
+    Hub *h;
+    Instruction inst;
+
+    ALUUnit(){}
+    ALUUnit(Hub *_h): h(_h) {}
+
     uint32_t setlowZero(uint32_t x)
     {
         if (x & 1) return x^1;
@@ -128,76 +141,75 @@ struct ALUUnit
     // FP
     void go()
     {
-        for (int r = 1; r <= 4 ; r ++) if ()
+        for (int r = 1; r <= 4 ; r ++) 
             go(r);
     }
     void go(int r){
-    if (rs[r].Qj == 0 && rs[r].Qk == 0)
-    {
-        // do use Vj,Vk;
-        inst.src1 = Vj;
-        inst.src2 = Vk;
+        if (R_S[r].Qj == 0 && R_S[r].Qk == 0)  // the condition to check
+        {
+            // do use Vj,Vk;
+            inst.src1 = R_S[r].Vj;
+            inst.src2 = R_S[r].Vk;
 
-        switch (inst.type){
-            case ERROR: return;
-            case LUI: inst.dest = inst.imm ; break;
-            case AUIPC: 
-                inst.dest = inst.addr + inst.imm; 
+            switch (inst.type){
+                case ERROR: return;
+                case LUI: inst.dest = inst.imm ; break;
+                case AUIPC: 
+                    inst.dest = inst.addr + inst.imm; 
+                    break;
+                case JAL: 
+                    // regs->pc = inst.addr + inst.imm; // subtract 4 from IF stage
+                    inst.dest = inst.addr + 4;
+                    break;
+                case JALR: 
+                    inst.dest = inst.addr + 4;
+                    // regs->ctrUnit.jump_pc = inst.src1 + inst.imm; 
+                    // regs->ctrUnit.jump_pc = setlowZero(regs->ctrUnit.jump_pc);
+                    // regs->pc = regs->ctrUnit.jump_pc;
+                    break;
+
+                case BEQ: inst.dest = (inst.src1 == inst.src2); break;
+                case BNE: inst.dest = (inst.src1 != inst.src2); break;
+                case BLT: inst.dest = (int)inst.src1 < (int)inst.src2; break;
+                case BGE: inst.dest = (int)inst.src1 >= (int)inst.src2; break;
+                case BLTU: inst.dest = inst.src1 < inst.src2; break;
+                case BGEU: inst.dest = inst.src1 >= inst.src2; break;
+
+                case ADDI: inst.dest = inst.src1 + inst.imm; break;
+                case SLTI: inst.dest = ((int)inst.src1 < (int)inst.imm) ? 1:0; break;
+                case SLTIU: inst.dest = (inst.src1 < inst.imm) ? 1:0; break;
+                case XORI: inst.dest = inst.src1 ^ inst.imm; break;
+                case ORI: inst.dest = inst.src1 | inst.imm; break;
+                case ANDI: inst.dest = inst.src1 & inst.imm; break;
+
+                case SLLI: inst.dest = inst.src1 << inst.imm; break;
+                case SRLI: inst.dest = inst.src1 >> inst.imm; break;
+                case SRAI: inst.dest = (inst.src1 >> inst.imm ) | (inst.src1 >> 31 << 31); break; // TODO
+            
+                case ADD: inst.dest = inst.src1 + inst.src2; break;
+                case SUB: inst.dest = inst.src1 - inst.src2; break;
+                case SLL: inst.dest = inst.src1 << inst.src2; break;
+                case SLT: inst.dest = ((int)inst.src1 < (int)inst.src2) ? 1:0; break;
+                case SLTU: inst.dest = (inst.src1 < inst.src2) ? 1:0; break;
+                case XOR: inst.dest = (inst.src1 ^ inst.src2);
                 break;
-            case JAL: 
-                regs->pc = inst.addr + inst.imm; // subtract 4 from IF stage
-                inst.dest = inst.addr + 4;
-                break;
-            case JALR: 
-                inst.dest = inst.addr + 4;
-                regs->ctrUnit.jump_pc = inst.src1 + inst.imm; 
-                regs->ctrUnit.jump_pc = setlowZero(regs->ctrUnit.jump_pc);
-                regs->pc = regs->ctrUnit.jump_pc;
-
-                break;
-
-            case BEQ: inst.dest = (inst.src1 == inst.src2); break;
-            case BNE: inst.dest = (inst.src1 != inst.src2); break;
-            case BLT: inst.dest = (int)inst.src1 < (int)inst.src2; break;
-            case BGE: inst.dest = (int)inst.src1 >= (int)inst.src2; break;
-            case BLTU: inst.dest = inst.src1 < inst.src2; break;
-            case BGEU: inst.dest = inst.src1 >= inst.src2; break;
-
-            case ADDI: inst.dest = inst.src1 + inst.imm; break;
-            case SLTI: inst.dest = ((int)inst.src1 < (int)inst.imm) ? 1:0; break;
-            case SLTIU: inst.dest = (inst.src1 < inst.imm) ? 1:0; break;
-            case XORI: inst.dest = inst.src1 ^ inst.imm; break;
-            case ORI: inst.dest = inst.src1 | inst.imm; break;
-            case ANDI: inst.dest = inst.src1 & inst.imm; break;
-
-            case SLLI: inst.dest = inst.src1 << inst.imm; break;
-            case SRLI: inst.dest = inst.src1 >> inst.imm; break;
-            case SRAI: inst.dest = (inst.src1 >> inst.imm ) | (inst.src1 >> 31 << 31); break; // TODO
-           
-            case ADD: inst.dest = inst.src1 + inst.src2; break;
-            case SUB: inst.dest = inst.src1 - inst.src2; break;
-            case SLL: inst.dest = inst.src1 << inst.src2; break;
-            case SLT: inst.dest = ((int)inst.src1 < (int)inst.src2) ? 1:0; break;
-            case SLTU: inst.dest = (inst.src1 < inst.src2) ? 1:0; break;
-            case XOR: inst.dest = (inst.src1 ^ inst.src2);
-             break;
-            case SRL: inst.dest = inst.src1 >> inst.src2; break;
-            case SRA: inst.dest = (inst.src1 >> inst.src2) + (inst.src1 >> 31 << 31); break; 
-            case OR: inst.dest = inst.src1 | inst.src2; break;
-            case AND: inst.dest = inst.src1 & inst.src2; break;
-        }
-
-        if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
-         inst.type == BLTU || inst.type == BGEU)
-         {
-            if (inst.dest)
-            {
-                regs->pc = inst.addr + inst.imm;
+                case SRL: inst.dest = inst.src1 >> inst.src2; break;
+                case SRA: inst.dest = (inst.src1 >> inst.src2) + (inst.src1 >> 31 << 31); break; 
+                case OR: inst.dest = inst.src1 | inst.src2; break;
+                case AND: inst.dest = inst.src1 & inst.src2; break;
             }
 
-         }
+            // if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
+            //  inst.type == BLTU || inst.type == BGEU)
+            //  {
+            //     if (inst.dest)
+            //     {
+            //         regs->pc = inst.addr + inst.imm;
+            //     }
 
-    }
+            //  }
+
+        }
 
     }
     // bch? 
@@ -207,16 +219,103 @@ struct ALUUnit
 
 struct LoadStoreUnit
 {
+    Hub *h;
+    Instruction inst;
+    LoadStoreUnit(){}
+    LoadStoreUnit(Hub *_h): h(_h) {}
     // load & store
-    void loadstore(){
-    if (rs[r].Qj == 0 && r is head)
-        rs[r].A += rs[r].Vj;
+    void loadstore(int r){
+    if (R_S[r].Qj == 0 && 1) // r is head)
+        R_S[r].A += R_S[r].Vj;
     }
     void load2()
     {
     // load setp 2 MA
+      switch (inst.type){
+            case ERROR: return;
+            case LB: inst.dest = signext( REGS.load(inst.dest, 1), 7) ; break;
+            case LH: inst.dest = signext( REGS.load(inst.dest, 2), 15) ; break;
+            case LW: inst.dest = REGS.load(inst.dest, 4); break;
+
+            case LBU: inst.dest = REGS.load(inst.dest, 1); break;
+            case LHU: inst.dest = REGS.load(inst.dest, 2); break;
+
+            case SB: REGS.store(inst.dest, 1, inst.src2); break;
+            case SH: REGS.store(inst.dest, 2, inst.src2); break;
+            case SW: REGS.store(inst.dest, 4, inst.src2); break;
+        }
 
     }
+    void go()
+    {
+        loadstore(1);
+        load2();
+    }
+};
+
+
+
+class Execu
+{
+#define NUM_ALU 4
+#define NUM_LOAD 3
+#define NUM_STORE 3
+    Instruction inst;
+    Hub *h;
+    ALUUnit alu[NUM_ALU];
+    LoadStoreUnit ldu[NUM_LOAD];
+    LoadStoreUnit stu[NUM_STORE];
+public:
+    Execu(Hub* _h): h(_h){
+        for (int i = 0; i < NUM_ALU; i ++ )
+            alu[i] = ALUUnit(h);
+        for (int i = 0; i < NUM_LOAD; i ++ )
+            ldu[i] = LoadStoreUnit(h);
+        for (int i = 0; i < NUM_STORE; i ++ )
+            stu[i] = LoadStoreUnit(h);
+    }
+
+    void go()
+    { 
+        // alu 4 parallel
+        for (auto& a: alu) a.go();
+        for (auto& l: ldu) l.go();
+        for (auto& s: stu) s.go();
+    }
+
+};
+
+class WriteB
+{
+    Hub *h;
+    Instruction inst;
+    WriteB() {}
+public:
+    WriteB(Hub* _h): h(_h) {}
+    void go()
+    {
+        // if (inst.FP_action || inst.load)
+        // {
+        //     // load FP
+        //     if (r is done && !commondatabus.busy)
+        //     {
+        //         for each x
+        //             if (reg.Qi[x] == r) reg[x] = res, res.Qi[x] = 0; // !!notice r != 0;
+        //             if (R_S[r].Qj == r) R_S[r].Vj = res, R_S[r].Qj = 0; // !!notice r != 0;
+        //             if (R_S[r].Qk == r) R_S[r].Vk = res, R_S[r].Qk = 0; // !!notice r != 0;
+
+        //         R_S[r].busy = 0;
+        //     }
+        // }
+        // else if (inst.store)
+        // {
+        //     // store
+        //     store(R_S[r].A, R_S[r].Vk);
+        //     R_S[r].busy = 0;
+        // }
+
+    }
+    
 };
 
 
@@ -226,39 +325,6 @@ struct Commit
     {
 
     }
-
-};
-
-
-
-class Execu
-{
-    ALUUnit alu[4];
-    LoadStoreUnit[6];
-
-    void go()
-    { 
-        // alu 4 parallel
-        // write to cdb
-    }
-
-};
-
-class WriteBack
-{
-    // load FP
-    if (r is done && !commondatabus.busy)
-    {
-        for each x
-            if (reg.Qi[x] == r) reg[x] = res, res.Qi[x] = 0; // !!notice r != 0;
-            if (rs[r].Qj == r) rs[r].Vj = res, rs[r].Qj = 0; // !!notice r != 0;
-            if (rs[r].Qk == r) rs[r].Vk = res, rs[r].Qk = 0; // !!notice r != 0;
-
-        rs[r].busy = 0;
-    }
-    // store
-    store(rs[r].A, rs[r].Vk);
-    rs[r].busy = 0;
 };
 
 class Tomasolu
@@ -267,9 +333,9 @@ class Tomasolu
     memory *mem;
     Issue issue;
     Execu execu;
-    WriteBack wb;
-    Tomasolu(memory* _mem): mem(_mem) {}
-
+    WriteB wb;
+public:
+    Tomasolu(memory* _mem):h(_mem), mem(_mem), issue(&h), execu(&h), wb(&h) {}
     void run()
     {
         // fetch to inst_queue;

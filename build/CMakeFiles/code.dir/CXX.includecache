@@ -138,6 +138,18 @@ Instruction.hpp
 prediction.hpp
 /home/hc/Desktop/riscv/src/prediction.hpp
 
+/home/hc/Desktop/riscv/src/Tomasulo.hpp
+unordered_map
+-
+unordered_set
+-
+memory.hpp
+/home/hc/Desktop/riscv/src/memory.hpp
+register.hpp
+/home/hc/Desktop/riscv/src/register.hpp
+Instruction.hpp
+/home/hc/Desktop/riscv/src/Instruction.hpp
+
 /home/hc/Desktop/riscv/src/WriteBack.hpp
 Common.hpp
 /home/hc/Desktop/riscv/src/Common.hpp
@@ -155,6 +167,8 @@ RISCV.hpp
 /home/hc/Desktop/riscv/src/RISCV.hpp
 memory.hpp
 /home/hc/Desktop/riscv/src/memory.hpp
+Tomasulo.hpp
+/home/hc/Desktop/riscv/src/Tomasulo.hpp
 
 /home/hc/Desktop/riscv/src/memory.hpp
 iostream

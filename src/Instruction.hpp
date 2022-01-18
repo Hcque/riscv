@@ -257,7 +257,7 @@ public:
          if (
             type == SW ||
             type == SB ||
-            type == SH ||
+            type == SH
         ) { store = 1; }
 
         if (

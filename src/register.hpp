@@ -57,13 +57,14 @@ public:
     uint32_t Q[32]{0};
     uint32_t pc{0};
     uint32_t savedpc{0};
-    uint32_t _end;
+    uint32_t _end{0};
     memory* mem;
 
     ControlUnit ctrUnit;
 
     std::unordered_set<Inst_Type > _types;
 
+    Register(){}
     Register(memory* _mem): mem(_mem), _end(0),pc(0u){}
 
     uint32_t load(uint pos, uint p){
