@@ -26,7 +26,7 @@ int main(int argc, char* argv[]){
     */
 
     // tomasulo ====
-    Tomasolu tomasulo;
-    tomasulo.run_tomasolu();
+    Tomasolu tomasulo = Tomasolu(&mem);
+    tomasulo.run();
     return 0;
 }

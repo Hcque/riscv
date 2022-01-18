@@ -123,6 +123,7 @@ public:
     int take_bch;
     int BXX;
     int succ;
+    bool FP_action, load, store;
 
     uint32_t addr;
     bool regWrite;
@@ -137,6 +138,7 @@ public:
         type = ERROR;
         stalled = regWrite = memRead = 0;
         BXX = 0; succ = 0;
+        FP_action = load = store = 0;
 
     }
     void clear()
@@ -149,6 +151,7 @@ public:
         opcode = 0u;
         regWrite = memRead = 0;
         BXX = 0; succ = 0;
+        FP_action = load = store = 0;
     }
 
 
@@ -175,10 +178,9 @@ public:
         
         switch (opcode){
             case 55: type = LUI; break;
-            case 23: type = AUIPC; break;
-            case 111: type = JAL;
-             break;
-            case 103: type = JALR; break;
+            case 23: type = AUIPC; FP_action = 1; break;
+            case 111: type = JAL; FP_action = 1; break;
+            case 103: type = JALR; FP_action = 1; break;
             case 99: 
                 switch (func3){
                     case 0: type = BEQ; break;
@@ -188,6 +190,7 @@ public:
                     case 6: type = BLTU; break;
                     case 7: type = BGEU; break;
                 }
+                FP_action = 1;
                 break;
             case 3:
                 switch (func3){
@@ -222,6 +225,7 @@ public:
                         break;
                 
                 }
+                FP_action = 1;
                 break;
             case 51:
                 switch (func3) {
@@ -237,6 +241,7 @@ public:
                     case 6: type = OR; break;
                     case 7: type = AND; break;
                 }
+                FP_action = 1;
                 break;
             default: type = ERROR; break;
         }
@@ -248,7 +253,12 @@ public:
             type == LH ||
             type == LBU ||
             type == LHU 
-        ) { memRead = 1; }
+        ) { memRead = 1; load = 1; }
+         if (
+            type == SW ||
+            type == SB ||
+            type == SH ||
+        ) { store = 1; }
 
         if (
             type == LW ||
