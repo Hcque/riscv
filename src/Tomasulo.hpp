@@ -17,10 +17,16 @@ enum RSID
 struct RS{
     struct RS_entry
     {
-        uint32_t op;
+        // uint32_t op;
+        Inst_Type type;
+        bool load{0}, store{0}, FP_action{0};
+        bool done{0};
+        uint32_t dest{0};
         uint32_t Vj, Vk, Qj, Qk, A;
-        bool busy;
-    } rs[16];
+        bool busy{0};
+    } rs[16]; // 1,2,3,4 for FP
+        // 5,6,7 for load buffer 
+        // 9 10, 11 for store buffer
 
     int find_empty_fp()
     {
@@ -79,8 +85,8 @@ public:
         // find an empty station;
         if (inst.FP_action)
         {
-
             int r = h->rst.find_empty_fp();
+            assert(r != 0);
             // FP action
             if (Q_i[inst.rs1] == 0)
                 R_S[r].Qj = Q_i[inst.rs1]; 
@@ -93,7 +99,12 @@ public:
                 R_S[r].Vk = REGS.get(inst.rs2); R_S[r].Qk = 0;
             }
             R_S[r].busy = 1;
+            R_S[r].load = inst.load;
+            R_S[r].FP_action = inst.FP_action;
+            R_S[r].store = inst.store;
             Q_i[inst.rd] = r;
+            inst.clear();
+        std::cerr << "Issue FP\n";
         }
 
         else if (inst.load || inst.store)
@@ -116,6 +127,11 @@ public:
                     R_S[r].Vk = REGS.get(inst.rs2); R_S[r].Qk = 0;
                 }
             }
+            R_S[r].load = inst.load;
+            R_S[r].FP_action = inst.FP_action;
+            R_S[r].store = inst.store;
+
+        std::cerr << "Issue LD ST\n";
         }
 
     }
@@ -125,10 +141,11 @@ public:
 struct ALUUnit
 {
     Hub *h;
-    Instruction inst;
 
+    Instruction inst;
     ALUUnit(){}
-    ALUUnit(Hub *_h): h(_h) {}
+    ALUUnit(Hub *_h): h(_h){}
+    ALUUnit(Hub *_h, Instruction &inst): h(_h), inst(inst) {}
 
     uint32_t setlowZero(uint32_t x)
     {
@@ -143,6 +160,7 @@ struct ALUUnit
     {
         for (int r = 1; r <= 4 ; r ++) 
             go(r);
+        std::cerr << "FP ALU\n";
     }
     void go(int r){
         if (R_S[r].Qj == 0 && R_S[r].Qk == 0)  // the condition to check
@@ -150,6 +168,7 @@ struct ALUUnit
             // do use Vj,Vk;
             inst.src1 = R_S[r].Vj;
             inst.src2 = R_S[r].Vk;
+            inst.type = R_S[r].type;
 
             switch (inst.type){
                 case ERROR: return;
@@ -198,7 +217,6 @@ struct ALUUnit
                 case OR: inst.dest = inst.src1 | inst.src2; break;
                 case AND: inst.dest = inst.src1 & inst.src2; break;
             }
-
             // if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
             //  inst.type == BLTU || inst.type == BGEU)
             //  {
@@ -208,13 +226,11 @@ struct ALUUnit
             //     }
 
             //  }
-
+            R_S[r].done = 1;
+            R_S[r].dest = inst.dest;
         }
-
     }
     // bch? 
-
-  
 };
 
 struct LoadStoreUnit
@@ -223,14 +239,16 @@ struct LoadStoreUnit
     Instruction inst;
     LoadStoreUnit(){}
     LoadStoreUnit(Hub *_h): h(_h) {}
+    LoadStoreUnit(Hub *_h, Instruction &inst): h(_h), inst(inst) {}
     // load & store
     void loadstore(int r){
     if (R_S[r].Qj == 0 && 1) // r is head)
         R_S[r].A += R_S[r].Vj;
     }
-    void load2()
+    void load2(int r)
     {
     // load setp 2 MA
+    inst.type = R_S[r].type;
       switch (inst.type){
             case ERROR: return;
             case LB: inst.dest = signext( REGS.load(inst.dest, 1), 7) ; break;
@@ -244,12 +262,19 @@ struct LoadStoreUnit
             case SH: REGS.store(inst.dest, 2, inst.src2); break;
             case SW: REGS.store(inst.dest, 4, inst.src2); break;
         }
+        R_S[r].done = 1;
+        R_S[r].dest = inst.dest;
 
     }
     void go()
     {
-        loadstore(1);
-        load2();
+        for (int r = 5 ; r <= 11; r ++ )
+        {
+            loadstore(r);
+            load2(r);
+        }
+        
+        std::cerr << "LW ALU\n";
     }
 };
 
@@ -260,7 +285,6 @@ class Execu
 #define NUM_ALU 4
 #define NUM_LOAD 3
 #define NUM_STORE 3
-    Instruction inst;
     Hub *h;
     ALUUnit alu[NUM_ALU];
     LoadStoreUnit ldu[NUM_LOAD];
@@ -287,33 +311,44 @@ public:
 
 class WriteB
 {
-    Hub *h;
-    Instruction inst;
-    WriteB() {}
 public:
+    Hub *h;
+    Execu *ex;
+    WriteB(Execu* ex): ex(ex) {}
     WriteB(Hub* _h): h(_h) {}
     void go()
     {
-        // if (inst.FP_action || inst.load)
-        // {
-        //     // load FP
-        //     if (r is done && !commondatabus.busy)
-        //     {
-        //         for each x
-        //             if (reg.Qi[x] == r) reg[x] = res, res.Qi[x] = 0; // !!notice r != 0;
-        //             if (R_S[r].Qj == r) R_S[r].Vj = res, R_S[r].Qj = 0; // !!notice r != 0;
-        //             if (R_S[r].Qk == r) R_S[r].Vk = res, R_S[r].Qk = 0; // !!notice r != 0;
+        for (int r = 1; r <= 11; r ++ ) go(r);
+        std::cerr << "WB\n";
+    }
+    void go(int r)
+    {
+        if (R_S[r].FP_action || R_S[r].load)
+        {
+            // load FP
+            if (R_S[r].done && !h->cdb.busy)
+            {
+                for (int x = 1; x <= 31; x ++){
+                    if (Q_i[x] == r) REGS.reg[x] = R_S[r].dest, Q_i[x] = 0; // !!notice r != 0;
+                    if (R_S[r].Qj == r) R_S[r].Vj = R_S[r].dest, R_S[r].Qj = 0; // !!notice r != 0;
+                    if (R_S[r].Qk == r) R_S[r].Vk = R_S[r].dest, R_S[r].Qk = 0; // !!notice r != 0;
+                }
+                R_S[r].busy = 0;
+            }
+        }
+        else if (R_S[r].store)
+        {
+            // store
+            // REGS.store(R_S[r].A, R_S[r].Vk);
 
-        //         R_S[r].busy = 0;
-        //     }
-        // }
-        // else if (inst.store)
-        // {
-        //     // store
-        //     store(R_S[r].A, R_S[r].Vk);
-        //     R_S[r].busy = 0;
-        // }
-
+            switch (R_S[r].type){
+                    case ERROR: return;
+                    case SB: REGS.store(R_S[r].A, 1, R_S[r].Vk); break;
+                    case SH: REGS.store(R_S[r].A, 2, R_S[r].Vk); break;
+                    case SW: REGS.store(R_S[r].A, 4, R_S[r].Vk); break;
+            }
+            R_S[r].busy = 0;
+        }
     }
     
 };

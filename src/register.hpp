@@ -85,7 +85,7 @@ public:
         {
             // assert(0);
             _end = 1;
-            std::cout << "END\n";
+            // std::cout << "END\n";
         }
         for (int i=0;i<p;i++){
             mem->data[pos+i] = (item >> 8*i) & 255;
