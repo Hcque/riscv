@@ -1,3 +1,5 @@
+ // TODO: bch stall and pred
+
 #pragma once
 
 #include <unordered_map>
@@ -19,6 +21,9 @@ struct RS{
     {
         // uint32_t op;
         Inst_Type type;
+        // Instruction inst;
+        bool BXX{0};
+        uint32_t addr;
         bool load{0}, store{0}, FP_action{0};
         bool done{0};
         uint32_t dest{0};
@@ -50,14 +55,15 @@ struct CDB
         assert(!busy);
         commondatabus[r] = data;
     }
-
 };
 
 struct Hub // envolved across all stages and units
 {
+    bool stall_signal{0};
     CDB cdb;
     RS rst;
     Register regs; 
+    uint32_t nextpc{0};
     Hub(memory *mem): regs(mem) {}
 };
 
@@ -76,11 +82,16 @@ public:
     {
         // fetch
         inst.fromMemory = h->regs.load(h->regs.pc, 4);
+        inst.addr = h->regs.pc;
         h->regs.pc += 4;
 
         // decode
         inst.type = inst.getType();
         inst.getArgs();
+        if (inst.BXX || inst.type == AUIPC || inst.type == JALR || inst.type == JAL)
+        {
+            h->stall_signal = 1;
+        }
 
         // find an empty station;
         if (inst.FP_action)
@@ -99,9 +110,12 @@ public:
                 R_S[r].Vk = REGS.get(inst.rs2); R_S[r].Qk = 0;
             }
             R_S[r].busy = 1;
+
             R_S[r].load = inst.load;
             R_S[r].FP_action = inst.FP_action;
             R_S[r].store = inst.store;
+            R_S[r].addr = inst.addr;
+            R_S[r].BXX = inst.BXX;
             Q_i[inst.rd] = r;
             inst.clear();
         std::cerr << "Issue FP\n";
@@ -130,6 +144,8 @@ public:
             R_S[r].load = inst.load;
             R_S[r].FP_action = inst.FP_action;
             R_S[r].store = inst.store;
+            R_S[r].addr = inst.addr;
+            R_S[r].BXX = inst.BXX;
 
         std::cerr << "Issue LD ST\n";
         }
@@ -177,14 +193,13 @@ struct ALUUnit
                     inst.dest = inst.addr + inst.imm; 
                     break;
                 case JAL: 
-                    // regs->pc = inst.addr + inst.imm; // subtract 4 from IF stage
+                    h->nextpc = inst.addr + inst.imm; // subtract 4 from IF stage
                     inst.dest = inst.addr + 4;
                     break;
                 case JALR: 
                     inst.dest = inst.addr + 4;
-                    // regs->ctrUnit.jump_pc = inst.src1 + inst.imm; 
-                    // regs->ctrUnit.jump_pc = setlowZero(regs->ctrUnit.jump_pc);
-                    // regs->pc = regs->ctrUnit.jump_pc;
+                    h->nextpc = inst.src1 + inst.imm; 
+                    h->nextpc = setlowZero(h->nextpc);
                     break;
 
                 case BEQ: inst.dest = (inst.src1 == inst.src2); break;
@@ -217,15 +232,13 @@ struct ALUUnit
                 case OR: inst.dest = inst.src1 | inst.src2; break;
                 case AND: inst.dest = inst.src1 & inst.src2; break;
             }
-            // if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
-            //  inst.type == BLTU || inst.type == BGEU)
-            //  {
-            //     if (inst.dest)
-            //     {
-            //         regs->pc = inst.addr + inst.imm;
-            //     }
+            if (inst.type == BNE || inst.type == BEQ || inst.type == BLT || inst.type == BGE ||
+             inst.type == BLTU || inst.type == BGEU)
+             {
+                if (inst.dest)
+                    h->nextpc = inst.addr + inst.imm;
 
-            //  }
+             }
             R_S[r].done = 1;
             R_S[r].dest = inst.dest;
         }
@@ -243,7 +256,7 @@ struct LoadStoreUnit
     // load & store
     void loadstore(int r){
     if (R_S[r].Qj == 0 && 1) // r is head)
-        R_S[r].A += R_S[r].Vj;
+        inst.dest = R_S[r].A += R_S[r].Vj;
     }
     void load2(int r)
     {
@@ -264,7 +277,6 @@ struct LoadStoreUnit
         }
         R_S[r].done = 1;
         R_S[r].dest = inst.dest;
-
     }
     void go()
     {
@@ -273,12 +285,9 @@ struct LoadStoreUnit
             loadstore(r);
             load2(r);
         }
-        
         std::cerr << "LW ALU\n";
     }
 };
-
-
 
 class Execu
 {
@@ -301,6 +310,7 @@ public:
 
     void go()
     { 
+ 
         // alu 4 parallel
         for (auto& a: alu) a.go();
         for (auto& l: ldu) l.go();
@@ -328,12 +338,23 @@ public:
             // load FP
             if (R_S[r].done && !h->cdb.busy)
             {
+                h->cdb.busy = 1;
                 for (int x = 1; x <= 31; x ++){
                     if (Q_i[x] == r) REGS.reg[x] = R_S[r].dest, Q_i[x] = 0; // !!notice r != 0;
-                    if (R_S[r].Qj == r) R_S[r].Vj = R_S[r].dest, R_S[r].Qj = 0; // !!notice r != 0;
-                    if (R_S[r].Qk == r) R_S[r].Vk = R_S[r].dest, R_S[r].Qk = 0; // !!notice r != 0;
                 }
+                if (R_S[r].Qj == r) R_S[r].Vj = R_S[r].dest, R_S[r].Qj = 0; // !!notice r != 0;
+                if (R_S[r].Qk == r) R_S[r].Vk = R_S[r].dest, R_S[r].Qk = 0; // !!notice r != 0;
                 R_S[r].busy = 0;
+                h->cdb.busy = 0;
+            }
+
+            // deal with branches && jumps
+            if (R_S[r].BXX || R_S[r].type == JAL || R_S[r].type == JALR || R_S[r].type == AUIPC)
+            {
+                h->stall_signal = 0;
+                REGS.pc = h->nextpc;
+                if (! R_S[r].dest && R_S[r].BXX ) 
+                    REGS.pc = R_S[r].addr + 4;
             }
         }
         else if (R_S[r].store)
@@ -350,9 +371,7 @@ public:
             R_S[r].busy = 0;
         }
     }
-    
 };
-
 
 struct Commit
 {
@@ -380,7 +399,7 @@ public:
             if (h.regs._end) break;
             wb.go();
             execu.go();
-            issue.go();
+            if (!h.stall_signal) issue.go();
         }
     }
 };
