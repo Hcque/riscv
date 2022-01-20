@@ -1,4 +1,6 @@
  // TODO: bch stall and pred
+ // in RS , things happened not expected
+
 
 #pragma once
 
@@ -20,18 +22,30 @@ struct RS{
     struct RS_entry
     {
         // uint32_t op;
-        Inst_Type type;
+        Inst_Type type{ERROR};
         // Instruction inst;
         bool BXX{0};
-        uint32_t addr;
+        uint32_t addr{0};
         bool load{0}, store{0}, FP_action{0};
         bool done{0};
         uint32_t dest{0};
         uint32_t Vj, Vk, Qj, Qk, A;
         bool busy{0};
+
+    friend ostream& operator<< (ostream& out, const RS_entry& _RS) 
+    {
+        out << "\n ===================== \n";
+        out << "INST TYPE:" <<  _type_Name[_RS.type] << "\n";
+        out << "INST addr:" <<  _RS.addr << "\n";
+        out << "INST busy:" <<  _RS.busy << "\n";
+        return out;
+    }
+
+
     } rs[16]; // 1,2,3,4 for FP
         // 5,6,7 for load buffer 
         // 9 10, 11 for store buffer
+
 
     int find_empty_fp()
     {
@@ -82,6 +96,7 @@ public:
     {
         // fetch
         inst.fromMemory = h->regs.load(h->regs.pc, 4);
+        std::cerr << "FROM MEMORY: "<< inst.fromMemory << "\n";
         inst.addr = h->regs.pc;
         h->regs.pc += 4;
 
@@ -117,8 +132,7 @@ public:
             R_S[r].addr = inst.addr;
             R_S[r].BXX = inst.BXX;
             Q_i[inst.rd] = r;
-            inst.clear();
-        std::cerr << "Issue FP\n";
+        std::cout << "Issue FP\n";
         }
 
         else if (inst.load || inst.store)
@@ -147,8 +161,9 @@ public:
             R_S[r].addr = inst.addr;
             R_S[r].BXX = inst.BXX;
 
-        std::cerr << "Issue LD ST\n";
+        std::cout << "Issue LD ST\n";
         }
+        inst.clear();
 
     }
 };
@@ -176,10 +191,11 @@ struct ALUUnit
     {
         for (int r = 1; r <= 4 ; r ++) 
             go(r);
-        std::cerr << "FP ALU\n";
+        std::cout << "FP ALU\n";
     }
     void go(int r){
-        if (R_S[r].Qj == 0 && R_S[r].Qk == 0)  // the condition to check
+
+        if (R_S[r].busy && R_S[r].Qj == 0 && R_S[r].Qk == 0)  // the condition to check
         {
             // do use Vj,Vk;
             inst.src1 = R_S[r].Vj;
@@ -241,6 +257,9 @@ struct ALUUnit
              }
             R_S[r].done = 1;
             R_S[r].dest = inst.dest;
+
+
+        std::cerr << r << "|r|" << R_S[r];
         }
     }
     // bch? 
@@ -255,12 +274,13 @@ struct LoadStoreUnit
     LoadStoreUnit(Hub *_h, Instruction &inst): h(_h), inst(inst) {}
     // load & store
     void loadstore(int r){
-    if (R_S[r].Qj == 0 && 1) // r is head)
+    if (R_S[r].busy && R_S[r].Qj == 0 && 1) // r is head)
         inst.dest = R_S[r].A += R_S[r].Vj;
     }
     void load2(int r)
     {
     // load setp 2 MA
+    if (R_S[r].busy){
     inst.type = R_S[r].type;
       switch (inst.type){
             case ERROR: return;
@@ -278,6 +298,8 @@ struct LoadStoreUnit
         R_S[r].done = 1;
         R_S[r].dest = inst.dest;
     }
+    }
+
     void go()
     {
         for (int r = 5 ; r <= 11; r ++ )
@@ -285,7 +307,7 @@ struct LoadStoreUnit
             loadstore(r);
             load2(r);
         }
-        std::cerr << "LW ALU\n";
+        std::cout << "LW ALU\n";
     }
 };
 
@@ -329,7 +351,7 @@ public:
     void go()
     {
         for (int r = 1; r <= 11; r ++ ) go(r);
-        std::cerr << "WB\n";
+        std::cout << "WB\n";
     }
     void go(int r)
     {
@@ -393,13 +415,16 @@ public:
     void run()
     {
         // fetch to inst_queue;
-        std::cerr << "RUN TOMASOLU\n ";
+        std::cout << "RUN TOMASOLU\n ";
+        int cc = 0;
         while (1)
         {
             if (h.regs._end) break;
+            if (cc > 8) break;
             wb.go();
             execu.go();
             if (!h.stall_signal) issue.go();
+            cc++;
         }
     }
 };

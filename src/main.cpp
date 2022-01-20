@@ -27,6 +27,7 @@ int main(int argc, char* argv[]){
 
     // tomasulo ====
     Tomasolu tomasulo = Tomasolu(&mem);
+    mem.loadFromDisk();
     tomasulo.run();
     return 0;
 }
