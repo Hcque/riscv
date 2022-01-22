@@ -177,7 +177,7 @@ public:
         // cout  << "opcode: " << opcode  << endl;
         
         switch (opcode){
-            case 55: type = LUI; break;
+            case 55: type = LUI;FP_action = 1; break;
             case 23: type = AUIPC; FP_action = 1; break;
             case 111: type = JAL; FP_action = 1; break;
             case 103: type = JALR; FP_action = 1; break;

@@ -106,7 +106,7 @@ public:
     {
         for (int i = 0; i < 32; i ++ )
         {
-            out << "|" <<i << ":" << Reg.reg[i] << "|    ";
+            out << "|" <<i << ":" << Reg.Qi[i] << "|    ";
         }
         out << "pc:" << Reg.pc;
         out << "\n";
