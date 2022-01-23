@@ -143,6 +143,8 @@ unordered_map
 -
 unordered_set
 -
+queue
+-
 memory.hpp
 /home/hc/Desktop/riscv/src/memory.hpp
 register.hpp
