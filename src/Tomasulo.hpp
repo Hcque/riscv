@@ -22,6 +22,15 @@
 // line 213 , has full rs
 // if cdb execu should do it ! line 455
 
+// inst with one reg
+
+// first BNE DONE of regs, but still not stop, jump problem
+
+// store forget busy
+
+// still regs, not equal in first BNE, bad for which place
+
+
 #pragma once
 #include <unordered_map>
 #include <unordered_set>
@@ -160,6 +169,7 @@ public:
         // fetch
         assert(inst.type == ERROR);
         std::cout << h->regs.pc << "|pc|\n";
+
         inst.fromMemory = h->regs.load(h->regs.pc, 4);
         // std::cout << "FROM MEMORY: "<< inst.fromMemory << "\n";
         inst.addr = h->regs.pc;
@@ -173,6 +183,7 @@ public:
             h->stall_signal = 1;
         }
         std::cout << inst;
+        std::cout << "REGS VALUE: " << REGS.get(inst.rs1) << "|" << REGS.get(inst.rs2) << "\n";
 
         // find an empty station;
         if (inst.FP_action)
@@ -191,7 +202,7 @@ public:
                 R_S[r].Qj = Q_i[inst.rs1]; 
             else { 
                 R_S[r].Vj = REGS.get(inst.rs1); R_S[r].Qj = 0;
-            // std::cout << R_S[r].Vj << "\n";
+           // std::cout << R_S[r].Vj << "\n";
             }
             if (Q_i[inst.rs2] != 0)
                 R_S[r].Qk = Q_i[inst.rs2];
@@ -209,7 +220,7 @@ public:
             R_S[r].type = inst.type;
 
             R_S[r].A = inst.imm;
-            Q_i[inst.rd] = r;
+            REGS.setQi(inst.rd, r);
             assert(R_S[r].done == 0);
         }
 
@@ -231,7 +242,8 @@ public:
             }
             R_S[r].busy = 1;
             R_S[r].A = inst.imm;
-            if (inst.load) Q_i[inst.rd] = r;
+
+            if (inst.load) REGS.setQi(inst.rd, r);
             if (inst.store)
             {
                 if (Q_i[inst.rs2] != 0)
@@ -360,8 +372,8 @@ struct LoadStoreUnit
     // load & store
     void loadstore(int r){
             // assert(h->stall_signal == 0 || R_S[r].type == ERROR);
-    if (R_S[r].busy && R_S[r].Qj == 0 && 1) // r is head)
-        inst.dest = R_S[r].A += R_S[r].Vj;
+    if (R_S[r].busy && R_S[r].Qj == 0 ) // r is head)
+        inst.dest = R_S[r].A = R_S[r].A + R_S[r].Vj;
     }
     void load2(int r)
     {
@@ -522,11 +534,8 @@ public:
                 }
                 R_S[r].done = 0;
             }
-            
-
-         
         }
-        else if (R_S[r].store) // not done
+        else if (R_S[r].busy && R_S[r].done && R_S[r].store) // not done
         {
             // store
             // REGS.store(R_S[r].A, R_S[r].Vk);
@@ -569,10 +578,18 @@ public:
         {
             std::cout << "cc" << cc ;
             if (h.regs._end) break;
-            if (cc > 40) break;
+            if (cc > 80) break;
             wb.go();
             execu.go();
-            if (!h.stall_signal || h.cdb.commondatabus.size() == 0) 
+
+            // RS is not full check
+            if (h.rst.find_empty_fp() == 0 || h.rst.find_empty_ld() == 0 || h.rst.find_empty_sw() == 0 )
+            {
+                h.stall_signal = 1;
+            }
+            else h.stall_signal = 0;
+
+            if (!h.stall_signal && h.cdb.commondatabus.size() == 0) 
             {
                 std::cout << "ISSUE NOT STALL\n";
                 issue.go();

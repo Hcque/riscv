@@ -101,6 +101,11 @@ public:
         reg[i] = item;
     }
 
+    void setQi(int i, uint item){
+        if (i == 0) return;
+        Qi[i] = item;
+    }
+
 
     friend std::ostream& operator<<(std::ostream& out, const Register& Reg)
     {

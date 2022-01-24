@@ -219,6 +219,7 @@ public:
             ID.pass(EX);
             EX.go();
             std::cout << EX.inst;
+            std::cout << regs ;
             EX.pass(MA);
             MA.go();
             MA.pass(WB);
