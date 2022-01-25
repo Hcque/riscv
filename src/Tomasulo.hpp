@@ -30,6 +30,11 @@
 
 // still regs, not equal in first BNE, bad for which place
 
+// !done condition for execu,
+// not for one time for each clock
+
+// store no RD , write bc chaged , execu should read, not 
+
 
 #pragma once
 #include <unordered_map>
@@ -70,6 +75,12 @@ struct RS{
         out << "busy:" <<  _RS.busy << " ";
         out << "Qj:" <<  _RS.Qj << " ";
         out << "Qk:" <<  _RS.Qk << " ";
+
+        out << "Vj:" <<  _RS.Vj << " ";
+        out << "Vk:" <<  _RS.Vk << " ";
+
+
+        out << "Rd:" <<  _RS.rd << " ";
         out << "done:" <<  _RS.done << " \n";
         return out;
     }
@@ -85,14 +96,14 @@ struct RS{
         for (int i = 1; i <= 4; i ++ ){
             out << i << _RS.rs[i];
         }
-        out << "=======LOAD ========= \n";
-        for (int i = 5; i <= 7; i ++ ){
-            out << i << _RS.rs[i];
-        }
-        // out << "======= SW ========= \n";
-        // for (int i = 8; i <= 10; i ++ ){
+        // out << "=======LOAD ========= \n";
+        // for (int i = 5; i <= 7; i ++ ){
         //     out << i << _RS.rs[i];
         // }
+        out << "======= SW ========= \n";
+        for (int i = 8; i <= 10; i ++ ){
+            out << i << _RS.rs[i];
+        }
         return out;
     }
 
@@ -145,6 +156,7 @@ struct ROB
 struct Hub // envolved across all stages and units
 {
     bool stall_signal{0};
+    bool RS_stall_signal{0};
     CDB cdb;
     ROB rob;
     RS rst;
@@ -183,26 +195,20 @@ public:
             h->stall_signal = 1;
         }
         std::cout << inst;
-        std::cout << "REGS VALUE: " << REGS.get(inst.rs1) << "|" << REGS.get(inst.rs2) << "\n";
+        // std::cout << "REGS VALUE: " << REGS.get(inst.rs1) << "|" << REGS.get(inst.rs2) << "\n";
+        std::cout << "REGS VALUE"  << Q_i[2] << "\n";
 
         // find an empty station;
         if (inst.FP_action)
         {
             int r = h->rst.find_empty_fp();
-            // assert(r != 0); // ASSERT
-            if (r==0) 
-            {
-                // h->stall_signal = 1;
-                inst.clear();
-                return;
-            }
+            assert(r != 0); // ASSERT // streategy , always find the r because any of "FULL"
             // FP action
-            // std::cout << Q_i[inst.rs1] << "\n";
+
             if (Q_i[inst.rs1] != 0)  // always busy, when not 0 , means busy, means waiting
                 R_S[r].Qj = Q_i[inst.rs1]; 
             else { 
                 R_S[r].Vj = REGS.get(inst.rs1); R_S[r].Qj = 0;
-           // std::cout << R_S[r].Vj << "\n";
             }
             if (Q_i[inst.rs2] != 0)
                 R_S[r].Qk = Q_i[inst.rs2];
@@ -227,12 +233,7 @@ public:
         else if (inst.load || inst.store)
         {
             int r = inst.load ? h->rst.find_empty_ld() : h->rst.find_empty_sw();
-            if (r==0) 
-            {
-                // h->stall_signal = 1;
-                inst.clear();
-                return;
-            }
+            assert(r != 0);
 
             // for load store
             if (Q_i[inst.rs1] == 0)
@@ -288,8 +289,11 @@ struct ALUUnit
     {
         for (int r = 4; r >= 1 ; r --) 
         {
-            if (R_S[r].busy)
+            if (R_S[r].busy && !R_S[r].done)
+            {
+                assert(R_S[r].done == 0);
                 go(r);
+            }
         }
     }
     void go(int r){
@@ -373,6 +377,7 @@ struct LoadStoreUnit
     void loadstore(int r){
             // assert(h->stall_signal == 0 || R_S[r].type == ERROR);
     if (R_S[r].busy && R_S[r].Qj == 0 ) // r is head)
+    
         inst.dest = R_S[r].A = R_S[r].A + R_S[r].Vj;
     }
     void load2(int r)
@@ -407,9 +412,10 @@ struct LoadStoreUnit
     {
         for (int r = 10 ; r >= 5; r -- )
         {
-            if (h->stall_signal) R_S[r].type = ERROR;
-            loadstore(r);
-            load2(r);
+            if (R_S[r].busy && R_S[r].Qj == 0 && !R_S[r].done){
+                go(r);
+                break;
+            }
         }
     }
 };
@@ -445,8 +451,11 @@ public:
             if (h->cdb.commondatabus.size()) 
             {
                 int ri = h->cdb.commondatabus.front(); 
-                if (ri >= 1 && ri <= 4) a.go(ri);
-                h->cdb.commondatabus.pop();
+                if (ri >= 1 && ri <= 4) 
+                {
+                    a.go(ri);
+                    h->cdb.commondatabus.pop();
+                }
             }
             else
                 a.go();
@@ -456,8 +465,11 @@ public:
             if (h->cdb.commondatabus.size()) 
             {
                 int ri = h->cdb.commondatabus.front(); 
-                if (ri >= 5 && ri <= 7) l.go(ri);
-                h->cdb.commondatabus.pop();
+                if (ri >= 5 && ri <= 7)
+                {
+                    l.go(ri);
+                    h->cdb.commondatabus.pop();
+                }
             }
             else
                 l.go();
@@ -467,8 +479,11 @@ public:
             if (h->cdb.commondatabus.size()) 
             {
                 int ri = h->cdb.commondatabus.front(); 
-                if (ri >= 8 && ri <= 10) s.go(ri);
-                h->cdb.commondatabus.pop();
+                if (ri >= 8 && ri <= 10) 
+                {
+                    s.go(ri);
+                    h->cdb.commondatabus.pop();
+                }
             }
             else
                 s.go();
@@ -492,13 +507,12 @@ public:
         if (R_S[r].busy && R_S[r].done && (R_S[r].FP_action || R_S[r].load))
         {
             // load FP
-            // std::cout << r << "|r|\n";
-            std::cout << "WRITE BACK \n";
-            if (!h->cdb.busy)
+            if (!h->cdb.busyQ)
             {
                 h->cdb.busy = 1;
-                for (int x = 1; x <= 31; x ++){
-                    if (Q_i[x] == r) REGS.reg[x] = R_S[r].dest, Q_i[x] = 0; // !!notice r != 0;
+                for (int x = 1; x <= 31; x ++) if (Q_i[x] == r) {
+                     REGS.reg[x] = R_S[r].dest, Q_i[x] = 0; // !!notice r != 0;
+                     std::cout << "CHANGE QI" << r << "\n";
                 }
                 // std::cout << "Q_I AFTER WRITE BACK:" << Q_i[2] << "\n";
                 for (int ri = 1; ri <= 10; ri ++ ) {
@@ -519,8 +533,8 @@ public:
                 h->cdb.busy = 0;
 
                 // write file to regs
-                std::cout << "WRITE BACK \n";
                 REGS.set(R_S[r].rd, R_S[r].dest); // write back
+
                 // deal with branches && jumps
                 if (R_S[r].BXX || R_S[r].type == JAL || R_S[r].type == JALR || R_S[r].type == AUIPC) 
                 {
@@ -585,11 +599,11 @@ public:
             // RS is not full check
             if (h.rst.find_empty_fp() == 0 || h.rst.find_empty_ld() == 0 || h.rst.find_empty_sw() == 0 )
             {
-                h.stall_signal = 1;
+                h.RS_stall_signal = 1;
             }
-            else h.stall_signal = 0;
+            else h.RS_stall_signal = 0;
 
-            if (!h.stall_signal && h.cdb.commondatabus.size() == 0) 
+            if (!h.stall_signal && h.cdb.commondatabus.size() == 0 && h.RS_stall_signal == 0) 
             {
                 std::cout << "ISSUE NOT STALL\n";
                 issue.go();

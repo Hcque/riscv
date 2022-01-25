@@ -1,20 +1,20 @@
 RUN TOMASOLU
  cc0=======FP ========= 
 1 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:226653584 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:226653584 Vj:32747 Vk:2872297072 Rd:0 done:0 
 2 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872155472 Rd:0 done:0 
 3 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:1 Vj:32747 Vk:2874085236 Rd:0 done:0 
+9 
+TYPE:ERROR addr:0 busy:0 Qj:21852 Qk:5 Vj:32747 Vk:3500179896 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:0|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 |0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
@@ -24,23 +24,23 @@ INST FROM ADDR: LUI 0
 rs1 rs2 rd
 TYPE:LUI  0  0  2
 TYPE:LUI  0  0  0
-REGS VALUE: 0|0
+REGS VALUE0
 cc1=======FP ========= 
 1 
-TYPE:LUI addr:0 busy:1 Qj:0 Qk:0 done:1 
+TYPE:LUI addr:0 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:2 done:1 
 2 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872155472 Rd:0 done:0 
 3 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:1 Vj:32747 Vk:2874085236 Rd:0 done:0 
+9 
+TYPE:ERROR addr:0 busy:0 Qj:21852 Qk:5 Vj:32747 Vk:3500179896 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4|0:0|    |1:0|    |2:1|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 |0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
@@ -50,85 +50,65 @@ INST FROM ADDR: JAL 4
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  0
-REGS VALUE: 0|0
-cc2WRITE BACK 
+REGS VALUE1
+cc2CHANGE QI1
 WB Q & V:1
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:LUI addr:0 busy:0 Qj:0 Qk:0 done:0 
+TYPE:LUI addr:0 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:2 done:0 
 2 
-TYPE:JAL addr:4 busy:1 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:0 Vj:32747 Vk:131072 Rd:0 done:0 
+9 
+TYPE:ERROR addr:0 busy:0 Qj:21852 Qk:5 Vj:32747 Vk:3500179896 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:8|0:0|    |1:2|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 |0:0|    |1:0|    |2:131072|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-8|pc|
-=================== 
-INST FROM ADDR: ADDI 8
-rs1 rs2 rd
-TYPE:ADDI  0  0  12
-TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
 cc3=======FP ========= 
 1 
-TYPE:ADDI addr:8 busy:1 Qj:0 Qk:0 done:1 
+TYPE:LUI addr:0 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:2 done:0 
 2 
-TYPE:JAL addr:4 busy:1 Qj:0 Qk:0 done:1 
+TYPE:JAL addr:4 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:1 
 3 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:12|0:0|    |1:2|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:1|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:0 Vj:32747 Vk:131072 Rd:0 done:0 
+9 
+TYPE:ERROR addr:0 busy:0 Qj:21852 Qk:5 Vj:32747 Vk:3500179896 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:8|0:0|    |1:2|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 |0:0|    |1:0|    |2:131072|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-12|pc|
-=================== 
-INST FROM ADDR: LUI 12
-rs1 rs2 rd
-TYPE:LUI  0  0  13
-TYPE:LUI  0  0  0
-REGS VALUE: 0|0
-cc4WRITE BACK 
-WRITE BACK 
-WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 16
+cc4CHANGE QI2
+RESET SIGNAL 8
 =======FP ========= 
 1 
-TYPE:ADDI addr:8 busy:0 Qj:0 Qk:0 done:0 
+TYPE:LUI addr:0 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:2 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4164|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:3|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131072|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:255|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:0 Vj:32747 Vk:131072 Rd:0 done:0 
+9 
+TYPE:ERROR addr:0 busy:0 Qj:21852 Qk:5 Vj:32747 Vk:3500179896 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4164|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131072|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4164|pc|
 =================== 
@@ -136,27 +116,25 @@ INST FROM ADDR: ADDI 4164
 rs1 rs2 rd
 TYPE:ADDI  2  0  2
 TYPE:ADDI  0  0  0
-REGS VALUE: 131072|0
-cc5WRITE BACK 
-WRITE BACK 
-=======FP ========= 
+REGS VALUE0
+cc5=======FP ========= 
 1 
-TYPE:ADDI addr:4164 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4164 busy:1 Qj:0 Qk:0 Vj:131072 Vk:0 Rd:2 done:1 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:0 Vj:32747 Vk:131072 Rd:0 done:0 
+9 
+TYPE:ERROR addr:0 busy:0 Qj:21852 Qk:5 Vj:32747 Vk:3500179896 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4168|0:0|    |1:0|    |2:1|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131072|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131072|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4168|pc|
 =================== 
@@ -164,27 +142,26 @@ INST FROM ADDR: SW 4168
 rs1 rs2 rd
 TYPE:SW  2  1  0
 TYPE:SW  0  0  0
-REGS VALUE: 131072|8
-cc6WRITE BACK 
-WRITE BACK 
+REGS VALUE1
+cc6CHANGE QI1
 =======FP ========= 
 1 
-TYPE:ADDI addr:4164 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4164 busy:0 Qj:0 Qk:0 Vj:131072 Vk:0 Rd:2 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4168 busy:1 Qj:0 Qk:0 Vj:131072 Vk:8 Rd:0 done:1 
+9 
+TYPE:ERROR addr:0 busy:0 Qj:21852 Qk:5 Vj:32747 Vk:3500179896 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4172|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4172|pc|
 =================== 
@@ -192,25 +169,25 @@ INST FROM ADDR: SW 4172
 rs1 rs2 rd
 TYPE:SW  2  8  0
 TYPE:SW  0  0  0
-REGS VALUE: 131040|0
+REGS VALUE0
 cc7=======FP ========= 
 1 
-TYPE:ADDI addr:4164 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4164 busy:0 Qj:0 Qk:0 Vj:131072 Vk:0 Rd:2 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4168 busy:0 Qj:0 Qk:0 Vj:131072 Vk:8 Rd:0 done:0 
+9 
+TYPE:SW addr:4172 busy:1 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:1 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4176|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4176|pc|
 =================== 
@@ -218,25 +195,25 @@ INST FROM ADDR: SW 4176
 rs1 rs2 rd
 TYPE:SW  2  9  0
 TYPE:SW  0  0  0
-REGS VALUE: 131040|0
+REGS VALUE0
 cc8=======FP ========= 
 1 
-TYPE:ADDI addr:4164 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4164 busy:0 Qj:0 Qk:0 Vj:131072 Vk:0 Rd:2 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4176 busy:1 Qj:0 Qk:0 Vj:131072 Vk:0 Rd:0 done:1 
+9 
+TYPE:SW addr:4172 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4180|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4180|pc|
 =================== 
@@ -244,25 +221,25 @@ INST FROM ADDR: LUI 4180
 rs1 rs2 rd
 TYPE:LUI  0  0  8
 TYPE:LUI  0  0  0
-REGS VALUE: 0|0
+REGS VALUE0
 cc9=======FP ========= 
 1 
-TYPE:LUI addr:4180 busy:1 Qj:0 Qk:0 done:1 
+TYPE:LUI addr:4180 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:8 done:1 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4176 busy:0 Qj:0 Qk:0 Vj:131072 Vk:0 Rd:0 done:0 
+9 
+TYPE:SW addr:4172 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4184|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:1|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4184|pc|
 =================== 
@@ -270,27 +247,26 @@ INST FROM ADDR: SW 4184
 rs1 rs2 rd
 TYPE:SW  8  0  0
 TYPE:SW  0  0  0
-REGS VALUE: 0|0
-cc10WRITE BACK 
-WRITE BACK 
+REGS VALUE0
+cc10CHANGE QI1
 =======FP ========= 
 1 
-TYPE:LUI addr:4180 busy:0 Qj:0 Qk:0 done:0 
+TYPE:LUI addr:4180 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:8 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4184 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:0 done:1 
+9 
+TYPE:SW addr:4172 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4188|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4188|pc|
 =================== 
@@ -298,25 +274,25 @@ INST FROM ADDR: ADDI 4188
 rs1 rs2 rd
 TYPE:ADDI  0  0  15
 TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
+REGS VALUE0
 cc11=======FP ========= 
 1 
-TYPE:ADDI addr:4188 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4188 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:15 done:1 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4184 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:0 done:0 
+9 
+TYPE:SW addr:4172 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4192|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:1|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4192|pc|
 =================== 
@@ -324,28 +300,27 @@ INST FROM ADDR: SW 4192
 rs1 rs2 rd
 TYPE:SW  2  15  0
 TYPE:SW  0  0  0
-REGS VALUE: 131040|0
-cc12WRITE BACK 
+REGS VALUE0
+cc12CHANGE QI1
 WB Q & V:1
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:ADDI addr:4188 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4188 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:15 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4192 busy:1 Qj:0 Qk:0 Vj:0 Vk:1 Rd:0 done:1 
+9 
+TYPE:SW addr:4172 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4196|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:0|    |15:1|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:1|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4196|pc|
 =================== 
@@ -353,25 +328,25 @@ INST FROM ADDR: ADDI 4196
 rs1 rs2 rd
 TYPE:ADDI  8  0  15
 TYPE:ADDI  0  0  0
-REGS VALUE: 4096|0
+REGS VALUE0
 cc13=======FP ========= 
 1 
-TYPE:ADDI addr:4196 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4196 busy:1 Qj:0 Qk:0 Vj:4096 Vk:0 Rd:15 done:1 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4192 busy:0 Qj:0 Qk:0 Vj:0 Vk:1 Rd:0 done:0 
+9 
+TYPE:SW addr:4172 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4200|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:1|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:0|    |15:1|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:1|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4200|pc|
 =================== 
@@ -379,27 +354,26 @@ INST FROM ADDR: SW 4200
 rs1 rs2 rd
 TYPE:SW  15  0  0
 TYPE:SW  0  0  0
-REGS VALUE: 1|0
-cc14WRITE BACK 
-WRITE BACK 
+REGS VALUE0
+cc14CHANGE QI1
 =======FP ========= 
 1 
-TYPE:ADDI addr:4196 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4196 busy:0 Qj:0 Qk:0 Vj:4096 Vk:0 Rd:15 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4200 busy:1 Qj:0 Qk:0 Vj:1 Vk:0 Rd:0 done:1 
+9 
+TYPE:SW addr:4172 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4204|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:0|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4204|pc|
 =================== 
@@ -407,25 +381,25 @@ INST FROM ADDR: ADDI 4204
 rs1 rs2 rd
 TYPE:ADDI  0  0  14
 TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
+REGS VALUE0
 cc15=======FP ========= 
 1 
-TYPE:ADDI addr:4204 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4204 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:1 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4200 busy:0 Qj:0 Qk:0 Vj:1 Vk:0 Rd:0 done:0 
+9 
+TYPE:SW addr:4172 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4208|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:1|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:0|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4208|pc|
 =================== 
@@ -433,28 +407,27 @@ INST FROM ADDR: SW 4208
 rs1 rs2 rd
 TYPE:SW  2  14  0
 TYPE:SW  0  0  0
-REGS VALUE: 131040|0
-cc16WRITE BACK 
+REGS VALUE0
+cc16CHANGE QI1
 WB Q & V:1
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:ADDI addr:4204 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4204 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4208 busy:1 Qj:0 Qk:0 Vj:1 Vk:2 Rd:0 done:1 
+9 
+TYPE:SW addr:4172 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4212|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:2|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:2|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4212|pc|
 =================== 
@@ -462,25 +435,25 @@ INST FROM ADDR: SW 4212
 rs1 rs2 rd
 TYPE:SW  15  0  0
 TYPE:SW  0  0  0
-REGS VALUE: 4512|0
+REGS VALUE0
 cc17=======FP ========= 
 1 
-TYPE:ADDI addr:4204 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4204 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4208 busy:0 Qj:0 Qk:0 Vj:1 Vk:2 Rd:0 done:0 
+9 
+TYPE:SW addr:4212 busy:1 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:1 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4216|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:2|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:2|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4216|pc|
 =================== 
@@ -488,25 +461,25 @@ INST FROM ADDR: ADDI 4216
 rs1 rs2 rd
 TYPE:ADDI  0  0  14
 TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
+REGS VALUE0
 cc18=======FP ========= 
 1 
-TYPE:ADDI addr:4216 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4216 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:1 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4208 busy:0 Qj:0 Qk:0 Vj:1 Vk:2 Rd:0 done:0 
+9 
+TYPE:SW addr:4212 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4220|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:1|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:2|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:2|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4220|pc|
 =================== 
@@ -514,28 +487,27 @@ INST FROM ADDR: SW 4220
 rs1 rs2 rd
 TYPE:SW  2  14  0
 TYPE:SW  0  0  0
-REGS VALUE: 131040|2
-cc19WRITE BACK 
+REGS VALUE0
+cc19CHANGE QI1
 WB Q & V:1
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:ADDI addr:4216 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4216 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4220 busy:1 Qj:0 Qk:0 Vj:1 Vk:3 Rd:0 done:1 
+9 
+TYPE:SW addr:4212 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4224|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:3|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:3|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4224|pc|
 =================== 
@@ -543,25 +515,25 @@ INST FROM ADDR: SW 4224
 rs1 rs2 rd
 TYPE:SW  15  0  0
 TYPE:SW  0  0  0
-REGS VALUE: 4512|0
+REGS VALUE0
 cc20=======FP ========= 
 1 
-TYPE:ADDI addr:4216 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4216 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4220 busy:0 Qj:0 Qk:0 Vj:1 Vk:3 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:1 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:1 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4228|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:3|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:3|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4228|pc|
 =================== 
@@ -569,25 +541,25 @@ INST FROM ADDR: ADDI 4228
 rs1 rs2 rd
 TYPE:ADDI  0  0  15
 TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
+REGS VALUE0
 cc21=======FP ========= 
 1 
-TYPE:ADDI addr:4228 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4228 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:15 done:1 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4220 busy:0 Qj:0 Qk:0 Vj:1 Vk:3 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4232|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:1|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:3|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:3|    |15:4512|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4232|pc|
 =================== 
@@ -595,28 +567,27 @@ INST FROM ADDR: SW 4232
 rs1 rs2 rd
 TYPE:SW  2  15  0
 TYPE:SW  0  0  0
-REGS VALUE: 131040|4512
-cc22WRITE BACK 
+REGS VALUE0
+cc22CHANGE QI1
 WB Q & V:1
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:ADDI addr:4228 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4228 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:15 done:0 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4232 busy:1 Qj:0 Qk:0 Vj:1 Vk:4 Rd:0 done:1 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4236|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4236|pc|
 =================== 
@@ -624,25 +595,25 @@ INST FROM ADDR: ADDI 4236
 rs1 rs2 rd
 TYPE:ADDI  8  0  8
 TYPE:ADDI  0  0  0
-REGS VALUE: 4096|0
+REGS VALUE0
 cc23=======FP ========= 
 1 
-TYPE:ADDI addr:4236 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4236 busy:1 Qj:0 Qk:0 Vj:4096 Vk:0 Rd:8 done:1 
 2 
-TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4232 busy:0 Qj:0 Qk:0 Vj:1 Vk:4 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4240|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:1|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4096|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4240|pc|
 =================== 
@@ -650,28 +621,27 @@ INST FROM ADDR: ADDI 4240
 rs1 rs2 rd
 TYPE:ADDI  8  0  9
 TYPE:ADDI  0  0  0
-REGS VALUE: 4096|0
-cc24WRITE BACK 
+REGS VALUE0
+cc24CHANGE QI1
 WB Q & V:1
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:ADDI addr:4236 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4236 busy:0 Qj:0 Qk:0 Vj:4096 Vk:0 Rd:8 done:0 
 2 
-TYPE:ADDI addr:4240 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4240 busy:1 Qj:0 Qk:0 Vj:4512 Vk:0 Rd:9 done:1 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4232 busy:0 Qj:0 Qk:0 Vj:1 Vk:4 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4244|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:2|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:0|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4244|pc|
 =================== 
@@ -679,27 +649,26 @@ INST FROM ADDR: LW 4244
 rs1 rs2 rd
 TYPE:LW  8  0  10
 TYPE:LW  0  0  0
-REGS VALUE: 4512|0
-cc25WRITE BACK 
-WRITE BACK 
+REGS VALUE0
+cc25CHANGE QI2
 =======FP ========= 
 1 
-TYPE:ADDI addr:4236 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4236 busy:0 Qj:0 Qk:0 Vj:4096 Vk:0 Rd:8 done:0 
 2 
-TYPE:ADDI addr:4240 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4240 busy:0 Qj:0 Qk:0 Vj:4512 Vk:0 Rd:9 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4244 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4232 busy:0 Qj:0 Qk:0 Vj:1 Vk:4 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4248|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:5|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:0|    |11:0|    |12:0|    |13:0|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4248|pc|
 =================== 
@@ -707,56 +676,46 @@ INST FROM ADDR: JAL 4248
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  0
-REGS VALUE: 0|0
-cc26WRITE BACK 
-WRITE BACK 
+REGS VALUE0
+cc26CHANGE QI5
 =======FP ========= 
 1 
-TYPE:JAL addr:4248 busy:1 Qj:0 Qk:0 done:1 
+TYPE:JAL addr:4248 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:1 
 2 
-TYPE:ADDI addr:4240 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4240 busy:0 Qj:0 Qk:0 Vj:4512 Vk:0 Rd:9 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4244 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4232 busy:0 Qj:0 Qk:0 Vj:1 Vk:4 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4252|0:0|    |1:1|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4252|pc|
-=================== 
-INST FROM ADDR: ADDI 4252
-rs1 rs2 rd
-TYPE:ADDI  8  0  8
-TYPE:ADDI  0  0  0
-REGS VALUE: 4512|0
-cc27WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4256
+|0:0|    |1:8|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:0|    |11:0|    |12:0|    |13:0|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc27CHANGE QI1
+RESET SIGNAL 4252
 =======FP ========= 
 1 
-TYPE:JAL addr:4248 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4248 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 2 
-TYPE:ADDI addr:4252 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4240 busy:0 Qj:0 Qk:0 Vj:4512 Vk:0 Rd:9 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4244 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4096|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:2|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4232 busy:0 Qj:0 Qk:0 Vj:1 Vk:4 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4096|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:0|    |11:0|    |12:0|    |13:0|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4096|pc|
 =================== 
@@ -764,27 +723,25 @@ INST FROM ADDR: LUI 4096
 rs1 rs2 rd
 TYPE:LUI  0  0  14
 TYPE:LUI  0  0  0
-REGS VALUE: 0|0
-cc28WRITE BACK 
-WRITE BACK 
-=======FP ========= 
+REGS VALUE0
+cc28=======FP ========= 
 1 
-TYPE:LUI addr:4096 busy:1 Qj:0 Qk:0 done:1 
+TYPE:LUI addr:4096 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:1 
 2 
-TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4240 busy:0 Qj:0 Qk:0 Vj:4512 Vk:0 Rd:9 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4244 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4232 busy:0 Qj:0 Qk:0 Vj:1 Vk:4 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4100|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:1|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:0|    |11:0|    |12:0|    |13:0|    |14:3|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4100|pc|
 =================== 
@@ -792,27 +749,26 @@ INST FROM ADDR: LW 4100
 rs1 rs2 rd
 TYPE:LW  14  0  15
 TYPE:LW  0  0  0
-REGS VALUE: 3|0
-cc29WRITE BACK 
-WRITE BACK 
+REGS VALUE0
+cc29CHANGE QI1
 =======FP ========= 
 1 
-TYPE:LUI addr:4096 busy:0 Qj:0 Qk:0 done:0 
+TYPE:LUI addr:4096 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:0 
 2 
-TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4240 busy:0 Qj:0 Qk:0 Vj:4512 Vk:0 Rd:9 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4232 busy:0 Qj:0 Qk:0 Vj:1 Vk:4 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4104|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:0|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:4|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4104|pc|
 =================== 
@@ -820,28 +776,27 @@ INST FROM ADDR: XOR 4104
 rs1 rs2 rd
 TYPE:XOR  10  15  10
 TYPE:XOR  0  0  0
-REGS VALUE: 0|4
-cc30WRITE BACK 
+REGS VALUE0
+cc30CHANGE QI5
 WB Q & V:5
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:XOR addr:4104 busy:1 Qj:0 Qk:0 done:1 
+TYPE:XOR addr:4104 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:10 done:1 
 2 
-TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4240 busy:0 Qj:0 Qk:0 Vj:4512 Vk:0 Rd:9 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4232 busy:0 Qj:0 Qk:0 Vj:1 Vk:4 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4108|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:0|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4108|pc|
 =================== 
@@ -849,28 +804,26 @@ INST FROM ADDR: ADDI 4108
 rs1 rs2 rd
 TYPE:ADDI  10  0  10
 TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
-cc31WRITE BACK 
-WB Q & V:1
-WRITE BACK 
+REGS VALUE0
+cc31WB Q & V:1
 =======FP ========= 
 1 
-TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 done:0 
+TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:10 done:0 
 2 
-TYPE:ADDI addr:4108 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4108 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:10 done:1 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4232 busy:0 Qj:0 Qk:0 Vj:1 Vk:4 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4112|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:2|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:0|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:0|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4112|pc|
 =================== 
@@ -878,28 +831,27 @@ INST FROM ADDR: SW 4112
 rs1 rs2 rd
 TYPE:SW  14  10  0
 TYPE:SW  0  0  0
-REGS VALUE: 4096|0
-cc32WRITE BACK 
+REGS VALUE0
+cc32CHANGE QI2
 WB Q & V:2
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 done:0 
+TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:10 done:0 
 2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:10 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:1 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:1 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4116|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:173|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:173|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4116|pc|
 =================== 
@@ -907,54 +859,44 @@ INST FROM ADDR: JALR 4116
 rs1 rs2 rd
 TYPE:JALR  1  0  0
 TYPE:JALR  0  0  0
-REGS VALUE: 4252|0
+REGS VALUE0
 cc33=======FP ========= 
 1 
-TYPE:JALR addr:4116 busy:1 Qj:0 Qk:0 done:1 
+TYPE:JALR addr:4116 busy:1 Qj:0 Qk:0 Vj:4252 Vk:0 Rd:0 done:1 
 2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:10 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4120|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:173|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4120|pc|
-=================== 
-INST FROM ADDR: LBU 4120
-rs1 rs2 rd
-TYPE:LBU  10  0  15
-TYPE:LBU  0  0  0
-REGS VALUE: 173|0
-cc34WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4124
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:173|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc34RESET SIGNAL 4120
 =======FP ========= 
 1 
-TYPE:JALR addr:4116 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JALR addr:4116 busy:0 Qj:0 Qk:0 Vj:4252 Vk:0 Rd:0 done:0 
 2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:10 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LBU addr:4120 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4252|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:173|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4252|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:173|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4252|pc|
 =================== 
@@ -962,27 +904,25 @@ INST FROM ADDR: ADDI 4252
 rs1 rs2 rd
 TYPE:ADDI  8  0  8
 TYPE:ADDI  0  0  0
-REGS VALUE: 4516|0
-cc35WRITE BACK 
-WRITE BACK 
-=======FP ========= 
+REGS VALUE0
+cc35=======FP ========= 
 1 
-TYPE:ADDI addr:4252 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4252 busy:1 Qj:0 Qk:0 Vj:4512 Vk:0 Rd:8 done:1 
 2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:10 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LBU addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4256|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:1|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:173|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:2|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4512|    |9:4528|    |10:173|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4256|pc|
 =================== 
@@ -990,57 +930,46 @@ INST FROM ADDR: BNE 4256
 rs1 rs2 rd
 TYPE:BNE  8  9  0
 TYPE:BNE  0  0  0
-REGS VALUE: 4516|4528
-cc36WRITE BACK 
+REGS VALUE0
+cc36CHANGE QI1
 WB Q & V:1
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 Vj:4512 Vk:0 Rd:8 done:0 
 2 
-TYPE:BNE addr:4256 busy:1 Qj:0 Qk:0 done:1 
+TYPE:BNE addr:4256 busy:1 Qj:0 Qk:0 Vj:4516 Vk:4528 Rd:0 done:1 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4260|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:173|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:2|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4260|pc|
-=================== 
-INST FROM ADDR: ADDI 4260
-rs1 rs2 rd
-TYPE:ADDI  0  0  10
-TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
-cc37WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4264
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:173|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc37RESET SIGNAL 4260
 =======FP ========= 
 1 
-TYPE:ADDI addr:4260 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 Vj:4512 Vk:0 Rd:8 done:0 
 2 
-TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 done:0 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4516 Vk:4528 Rd:0 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4244|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:173|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:2|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4244|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:173|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4244|pc|
 =================== 
@@ -1048,27 +977,25 @@ INST FROM ADDR: LW 4244
 rs1 rs2 rd
 TYPE:LW  8  0  10
 TYPE:LW  0  0  0
-REGS VALUE: 4520|0
-cc38WRITE BACK 
-WRITE BACK 
-=======FP ========= 
+REGS VALUE0
+cc38=======FP ========= 
 1 
-TYPE:ADDI addr:4260 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 Vj:4512 Vk:0 Rd:8 done:0 
 2 
-TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 done:0 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4516 Vk:4528 Rd:0 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4244 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4248|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:5|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:1|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:2|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:173|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4248|pc|
 =================== 
@@ -1076,56 +1003,46 @@ INST FROM ADDR: JAL 4248
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  0
-REGS VALUE: 0|0
-cc39WRITE BACK 
-WRITE BACK 
+REGS VALUE0
+cc39CHANGE QI5
 =======FP ========= 
 1 
-TYPE:JAL addr:4248 busy:1 Qj:0 Qk:0 done:1 
+TYPE:JAL addr:4248 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:1 
 2 
-TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 done:0 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4516 Vk:4528 Rd:0 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4244 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4252|0:0|    |1:1|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:2|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4252|pc|
-=================== 
-INST FROM ADDR: ADDI 4252
-rs1 rs2 rd
-TYPE:ADDI  8  0  8
-TYPE:ADDI  0  0  0
-REGS VALUE: 4520|0
-cc40WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4256
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:192256|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc40CHANGE QI1
+RESET SIGNAL 4252
 =======FP ========= 
 1 
-TYPE:JAL addr:4248 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4248 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 2 
-TYPE:ADDI addr:4252 busy:1 Qj:0 Qk:0 done:1 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4516 Vk:4528 Rd:0 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4244 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4096|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:2|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:2|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4096|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:192256|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4096|pc|
 =================== 
@@ -1133,27 +1050,25 @@ INST FROM ADDR: LUI 4096
 rs1 rs2 rd
 TYPE:LUI  0  0  14
 TYPE:LUI  0  0  0
-REGS VALUE: 0|0
-cc41WRITE BACK 
-WRITE BACK 
-=======FP ========= 
+REGS VALUE0
+cc41=======FP ========= 
 1 
-TYPE:LUI addr:4096 busy:1 Qj:0 Qk:0 done:1 
+TYPE:LUI addr:4096 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:1 
 2 
-TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 done:0 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4516 Vk:4528 Rd:0 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4244 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4100|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:1|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:2|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:192256|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4100|pc|
 =================== 
@@ -1161,27 +1076,26 @@ INST FROM ADDR: LW 4100
 rs1 rs2 rd
 TYPE:LW  14  0  15
 TYPE:LW  0  0  0
-REGS VALUE: 4096|0
-cc42WRITE BACK 
-WRITE BACK 
+REGS VALUE0
+cc42CHANGE QI1
 =======FP ========= 
 1 
-TYPE:LUI addr:4096 busy:0 Qj:0 Qk:0 done:0 
+TYPE:LUI addr:4096 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:0 
 2 
-TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 done:0 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4516 Vk:4528 Rd:0 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4104|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:2|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:192256|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4104|pc|
 =================== 
@@ -1189,28 +1103,27 @@ INST FROM ADDR: XOR 4104
 rs1 rs2 rd
 TYPE:XOR  10  15  10
 TYPE:XOR  0  0  0
-REGS VALUE: 2|2
-cc43WRITE BACK 
+REGS VALUE0
+cc43CHANGE QI5
 WB Q & V:5
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:XOR addr:4104 busy:1 Qj:0 Qk:0 done:1 
+TYPE:XOR addr:4104 busy:1 Qj:0 Qk:0 Vj:192256 Vk:0 Rd:10 done:1 
 2 
-TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 done:0 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4516 Vk:4528 Rd:0 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4108|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:192256|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4108|pc|
 =================== 
@@ -1218,28 +1131,26 @@ INST FROM ADDR: ADDI 4108
 rs1 rs2 rd
 TYPE:ADDI  10  0  10
 TYPE:ADDI  0  0  0
-REGS VALUE: 2|0
-cc44WRITE BACK 
-WB Q & V:1
-WRITE BACK 
+REGS VALUE0
+cc44WB Q & V:1
 =======FP ========= 
 1 
-TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 done:0 
+TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 Vj:192256 Vk:0 Rd:10 done:0 
 2 
-TYPE:ADDI addr:4108 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4108 busy:1 Qj:0 Qk:0 Vj:192256 Vk:0 Rd:10 done:1 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:173 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4112|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:2|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:192256|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4112|pc|
 =================== 
@@ -1247,28 +1158,27 @@ INST FROM ADDR: SW 4112
 rs1 rs2 rd
 TYPE:SW  14  10  0
 TYPE:SW  0  0  0
-REGS VALUE: 4096|2
-cc45WRITE BACK 
+REGS VALUE0
+cc45CHANGE QI2
 WB Q & V:2
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 done:0 
+TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 Vj:192256 Vk:0 Rd:10 done:0 
 2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:192256 Vk:0 Rd:10 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:1 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:1 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4116|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:175|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:192429|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4116|pc|
 =================== 
@@ -1276,54 +1186,44 @@ INST FROM ADDR: JALR 4116
 rs1 rs2 rd
 TYPE:JALR  1  0  0
 TYPE:JALR  0  0  0
-REGS VALUE: 4252|0
+REGS VALUE0
 cc46=======FP ========= 
 1 
-TYPE:JALR addr:4116 busy:1 Qj:0 Qk:0 done:1 
+TYPE:JALR addr:4116 busy:1 Qj:0 Qk:0 Vj:4252 Vk:0 Rd:0 done:1 
 2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:192256 Vk:0 Rd:10 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4120|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:175|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4120|pc|
-=================== 
-INST FROM ADDR: LBU 4120
-rs1 rs2 rd
-TYPE:LBU  10  0  15
-TYPE:LBU  0  0  0
-REGS VALUE: 175|0
-cc47WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4124
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:192429|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc47RESET SIGNAL 4120
 =======FP ========= 
 1 
-TYPE:JALR addr:4116 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JALR addr:4116 busy:0 Qj:0 Qk:0 Vj:4252 Vk:0 Rd:0 done:0 
 2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:192256 Vk:0 Rd:10 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LBU addr:4120 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4252|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:175|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4252|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:192429|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4252|pc|
 =================== 
@@ -1331,27 +1231,25 @@ INST FROM ADDR: ADDI 4252
 rs1 rs2 rd
 TYPE:ADDI  8  0  8
 TYPE:ADDI  0  0  0
-REGS VALUE: 4524|0
-cc48WRITE BACK 
-WRITE BACK 
-=======FP ========= 
+REGS VALUE0
+cc48=======FP ========= 
 1 
-TYPE:ADDI addr:4252 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4252 busy:1 Qj:0 Qk:0 Vj:4516 Vk:0 Rd:8 done:1 
 2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:192256 Vk:0 Rd:10 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LBU addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4256|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:1|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:175|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4516|    |9:4528|    |10:192429|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4256|pc|
 =================== 
@@ -1359,28 +1257,700 @@ INST FROM ADDR: BNE 4256
 rs1 rs2 rd
 TYPE:BNE  8  9  0
 TYPE:BNE  0  0  0
-REGS VALUE: 4524|4528
-cc49WRITE BACK 
+REGS VALUE0
+cc49CHANGE QI1
 WB Q & V:1
-WRITE BACK 
 =======FP ========= 
 1 
-TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 Vj:4516 Vk:0 Rd:8 done:0 
 2 
-TYPE:BNE addr:4256 busy:1 Qj:0 Qk:0 done:1 
+TYPE:BNE addr:4256 busy:1 Qj:0 Qk:0 Vj:4520 Vk:4528 Rd:0 done:1 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4260|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:175|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:192429|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc50RESET SIGNAL 4260
+=======FP ========= 
+1 
+TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 Vj:4516 Vk:0 Rd:8 done:0 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4520 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4244|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:192429|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4244|pc|
+=================== 
+INST FROM ADDR: LW 4244
+rs1 rs2 rd
+TYPE:LW  8  0  10
+TYPE:LW  0  0  0
+REGS VALUE0
+cc51=======FP ========= 
+1 
+TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 Vj:4516 Vk:0 Rd:8 done:0 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4520 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4248|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:5|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:192429|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4248|pc|
+=================== 
+INST FROM ADDR: JAL 4248
+rs1 rs2 rd
+TYPE:JAL  0  0  1
+TYPE:JAL  0  0  0
+REGS VALUE0
+cc52CHANGE QI5
+=======FP ========= 
+1 
+TYPE:JAL addr:4248 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:1 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4520 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4252|0:0|    |1:1|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc53CHANGE QI1
+RESET SIGNAL 4252
+=======FP ========= 
+1 
+TYPE:JAL addr:4248 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4520 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4096|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4096|pc|
+=================== 
+INST FROM ADDR: LUI 4096
+rs1 rs2 rd
+TYPE:LUI  0  0  14
+TYPE:LUI  0  0  0
+REGS VALUE0
+cc54=======FP ========= 
+1 
+TYPE:LUI addr:4096 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:1 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4520 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4100|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:1|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4100|pc|
+=================== 
+INST FROM ADDR: LW 4100
+rs1 rs2 rd
+TYPE:LW  14  0  15
+TYPE:LW  0  0  0
+REGS VALUE0
+cc55CHANGE QI1
+=======FP ========= 
+1 
+TYPE:LUI addr:4096 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:0 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4520 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4104|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4104|pc|
+=================== 
+INST FROM ADDR: XOR 4104
+rs1 rs2 rd
+TYPE:XOR  10  15  10
+TYPE:XOR  0  0  0
+REGS VALUE0
+cc56CHANGE QI5
+WB Q & V:5
+=======FP ========= 
+1 
+TYPE:XOR addr:4104 busy:1 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:1 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4520 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4108|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4108|pc|
+=================== 
+INST FROM ADDR: ADDI 4108
+rs1 rs2 rd
+TYPE:ADDI  10  0  10
+TYPE:ADDI  0  0  0
+REGS VALUE0
+cc57WB Q & V:1
+=======FP ========= 
+1 
+TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+2 
+TYPE:ADDI addr:4108 busy:1 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:1 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:192429 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4112|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:2|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4112|pc|
+=================== 
+INST FROM ADDR: SW 4112
+rs1 rs2 rd
+TYPE:SW  14  10  0
+TYPE:SW  0  0  0
+REGS VALUE0
+cc58CHANGE QI2
+WB Q & V:2
+=======FP ========= 
+1 
+TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+2 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:1 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:1 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4116|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4116|pc|
+=================== 
+INST FROM ADDR: JALR 4116
+rs1 rs2 rd
+TYPE:JALR  1  0  0
+TYPE:JALR  0  0  0
+REGS VALUE0
+cc59=======FP ========= 
+1 
+TYPE:JALR addr:4116 busy:1 Qj:0 Qk:0 Vj:4252 Vk:0 Rd:0 done:1 
+2 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4120|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc60RESET SIGNAL 4120
+=======FP ========= 
+1 
+TYPE:JALR addr:4116 busy:0 Qj:0 Qk:0 Vj:4252 Vk:0 Rd:0 done:0 
+2 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4252|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4252|pc|
+=================== 
+INST FROM ADDR: ADDI 4252
+rs1 rs2 rd
+TYPE:ADDI  8  0  8
+TYPE:ADDI  0  0  0
+REGS VALUE0
+cc61=======FP ========= 
+1 
+TYPE:ADDI addr:4252 busy:1 Qj:0 Qk:0 Vj:4520 Vk:0 Rd:8 done:1 
+2 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4256|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:1|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4520|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4256|pc|
+=================== 
+INST FROM ADDR: BNE 4256
+rs1 rs2 rd
+TYPE:BNE  8  9  0
+TYPE:BNE  0  0  0
+REGS VALUE0
+cc62CHANGE QI1
+WB Q & V:1
+=======FP ========= 
+1 
+TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 Vj:4520 Vk:0 Rd:8 done:0 
+2 
+TYPE:BNE addr:4256 busy:1 Qj:0 Qk:0 Vj:4524 Vk:4528 Rd:0 done:1 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4260|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc63RESET SIGNAL 4260
+=======FP ========= 
+1 
+TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 Vj:4520 Vk:0 Rd:8 done:0 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4524 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4244|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4244|pc|
+=================== 
+INST FROM ADDR: LW 4244
+rs1 rs2 rd
+TYPE:LW  8  0  10
+TYPE:LW  0  0  0
+REGS VALUE0
+cc64=======FP ========= 
+1 
+TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 Vj:4520 Vk:0 Rd:8 done:0 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4524 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4248|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:5|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4248|pc|
+=================== 
+INST FROM ADDR: JAL 4248
+rs1 rs2 rd
+TYPE:JAL  0  0  1
+TYPE:JAL  0  0  0
+REGS VALUE0
+cc65CHANGE QI5
+=======FP ========= 
+1 
+TYPE:JAL addr:4248 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:1 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4524 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4252|0:0|    |1:1|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc66CHANGE QI1
+RESET SIGNAL 4252
+=======FP ========= 
+1 
+TYPE:JAL addr:4248 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4524 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4096|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4096|pc|
+=================== 
+INST FROM ADDR: LUI 4096
+rs1 rs2 rd
+TYPE:LUI  0  0  14
+TYPE:LUI  0  0  0
+REGS VALUE0
+cc67=======FP ========= 
+1 
+TYPE:LUI addr:4096 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:1 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4524 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4100|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:1|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4100|pc|
+=================== 
+INST FROM ADDR: LW 4100
+rs1 rs2 rd
+TYPE:LW  14  0  15
+TYPE:LW  0  0  0
+REGS VALUE0
+cc68CHANGE QI1
+=======FP ========= 
+1 
+TYPE:LUI addr:4096 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:0 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4524 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4104|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4104|pc|
+=================== 
+INST FROM ADDR: XOR 4104
+rs1 rs2 rd
+TYPE:XOR  10  15  10
+TYPE:XOR  0  0  0
+REGS VALUE0
+cc69CHANGE QI5
+WB Q & V:5
+=======FP ========= 
+1 
+TYPE:XOR addr:4104 busy:1 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:1 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4524 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4108|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4108|pc|
+=================== 
+INST FROM ADDR: ADDI 4108
+rs1 rs2 rd
+TYPE:ADDI  10  0  10
+TYPE:ADDI  0  0  0
+REGS VALUE0
+cc70WB Q & V:1
+=======FP ========= 
+1 
+TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+2 
+TYPE:ADDI addr:4108 busy:1 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:1 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4112|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:2|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:5943|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4112|pc|
+=================== 
+INST FROM ADDR: SW 4112
+rs1 rs2 rd
+TYPE:SW  14  10  0
+TYPE:SW  0  0  0
+REGS VALUE0
+cc71CHANGE QI2
+WB Q & V:2
+=======FP ========= 
+1 
+TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+2 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:1 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:1 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4116|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4116|pc|
+=================== 
+INST FROM ADDR: JALR 4116
+rs1 rs2 rd
+TYPE:JALR  1  0  0
+TYPE:JALR  0  0  0
+REGS VALUE0
+cc72=======FP ========= 
+1 
+TYPE:JALR addr:4116 busy:1 Qj:0 Qk:0 Vj:4252 Vk:0 Rd:0 done:1 
+2 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4120|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc73RESET SIGNAL 4120
+=======FP ========= 
+1 
+TYPE:JALR addr:4116 busy:0 Qj:0 Qk:0 Vj:4252 Vk:0 Rd:0 done:0 
+2 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4252|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4252|pc|
+=================== 
+INST FROM ADDR: ADDI 4252
+rs1 rs2 rd
+TYPE:ADDI  8  0  8
+TYPE:ADDI  0  0  0
+REGS VALUE0
+cc74=======FP ========= 
+1 
+TYPE:ADDI addr:4252 busy:1 Qj:0 Qk:0 Vj:4524 Vk:0 Rd:8 done:1 
+2 
+TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 Vj:5943 Vk:0 Rd:10 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4256|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:1|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4524|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+ISSUE NOT STALL
+4256|pc|
+=================== 
+INST FROM ADDR: BNE 4256
+rs1 rs2 rd
+TYPE:BNE  8  9  0
+TYPE:BNE  0  0  0
+REGS VALUE0
+cc75CHANGE QI1
+WB Q & V:1
+=======FP ========= 
+1 
+TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 Vj:4524 Vk:0 Rd:8 done:0 
+2 
+TYPE:BNE addr:4256 busy:1 Qj:0 Qk:0 Vj:4528 Vk:4528 Rd:0 done:1 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4260|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc76RESET SIGNAL 4260
+=======FP ========= 
+1 
+TYPE:ADDI addr:4252 busy:0 Qj:0 Qk:0 Vj:4524 Vk:0 Rd:8 done:0 
+2 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4528 Vk:4528 Rd:0 done:0 
+3 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
+4 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4260|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4260|pc|
 =================== 
@@ -1388,56 +1958,25 @@ INST FROM ADDR: ADDI 4260
 rs1 rs2 rd
 TYPE:ADDI  0  0  10
 TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
-cc50WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4264
-=======FP ========= 
+REGS VALUE0
+cc77=======FP ========= 
 1 
-TYPE:ADDI addr:4260 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4260 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:10 done:1 
 2 
-TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 done:0 
+TYPE:BNE addr:4256 busy:0 Qj:0 Qk:0 Vj:4528 Vk:4528 Rd:0 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4260|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:175|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4260|pc|
-=================== 
-INST FROM ADDR: ADDI 4260
-rs1 rs2 rd
-TYPE:ADDI  0  0  10
-TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
-cc51WRITE BACK 
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:ADDI addr:4260 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:ADDI addr:4260 busy:1 Qj:0 Qk:0 done:1 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4264|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:2|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:1|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4264|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:6116|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4264|pc|
 =================== 
@@ -1445,56 +1984,46 @@ INST FROM ADDR: JAL 4264
 rs1 rs2 rd
 TYPE:JAL  0  0  1
 TYPE:JAL  0  0  0
-REGS VALUE: 0|0
-cc52WRITE BACK 
-WRITE BACK 
+REGS VALUE0
+cc78CHANGE QI1
 =======FP ========= 
 1 
-TYPE:JAL addr:4264 busy:1 Qj:0 Qk:0 done:1 
+TYPE:ADDI addr:4260 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:10 done:0 
 2 
-TYPE:ADDI addr:4260 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4264 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:1 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4268|0:0|    |1:1|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:1|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4268|pc|
-=================== 
-INST FROM ADDR: ADDI 4268
-rs1 rs2 rd
-TYPE:ADDI  0  0  10
-TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
-cc53WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4272
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4268|0:0|    |1:2|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4252|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:1|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+cc79CHANGE QI2
+RESET SIGNAL 4268
 =======FP ========= 
 1 
-TYPE:JAL addr:4264 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ADDI addr:4260 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:10 done:0 
 2 
-TYPE:ADDI addr:4268 busy:1 Qj:0 Qk:0 done:1 
+TYPE:JAL addr:4264 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4096|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:2|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:1|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
+pc:4096|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:1|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4096|pc|
 =================== 
@@ -1502,27 +2031,25 @@ INST FROM ADDR: LUI 4096
 rs1 rs2 rd
 TYPE:LUI  0  0  14
 TYPE:LUI  0  0  0
-REGS VALUE: 0|0
-cc54WRITE BACK 
-WRITE BACK 
-=======FP ========= 
+REGS VALUE0
+cc80=======FP ========= 
 1 
-TYPE:LUI addr:4096 busy:1 Qj:0 Qk:0 done:1 
+TYPE:LUI addr:4096 busy:1 Qj:0 Qk:0 Vj:0 Vk:0 Rd:14 done:1 
 2 
-TYPE:ADDI addr:4268 busy:0 Qj:0 Qk:0 done:0 
+TYPE:JAL addr:4264 busy:0 Qj:0 Qk:0 Vj:0 Vk:0 Rd:1 done:0 
 3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:0 Vj:32765 Vk:0 Rd:0 done:0 
 4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
+TYPE:ERROR addr:0 busy:0 Qj:32747 Qk:3124468800 Vj:32765 Vk:2872297072 Rd:0 done:0 
+======= SW ========= 
+8 
+TYPE:SW addr:4112 busy:0 Qj:0 Qk:0 Vj:1 Vk:6116 Rd:0 done:0 
+9 
+TYPE:SW addr:4224 busy:0 Qj:0 Qk:0 Vj:32747 Vk:0 Rd:0 done:0 
+10 
+TYPE:ERROR addr:0 busy:0 Qj:0 Qk:2874360298 Vj:32747 Vk:1 Rd:0 done:0 
 pc:4100|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:1|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
+|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:1|    |11:0|    |12:0|    |13:0|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
 ISSUE NOT STALL
 4100|pc|
 =================== 
@@ -1530,741 +2057,5 @@ INST FROM ADDR: LW 4100
 rs1 rs2 rd
 TYPE:LW  14  0  15
 TYPE:LW  0  0  0
-REGS VALUE: 4096|0
-cc55WRITE BACK 
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:LUI addr:4096 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:ADDI addr:4268 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4104|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4104|pc|
-=================== 
-INST FROM ADDR: XOR 4104
-rs1 rs2 rd
-TYPE:XOR  10  15  10
-TYPE:XOR  0  0  0
-REGS VALUE: 2|0
-cc56WRITE BACK 
-WB Q & V:5
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:XOR addr:4104 busy:1 Qj:0 Qk:0 done:1 
-2 
-TYPE:ADDI addr:4268 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4108|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4108|pc|
-=================== 
-INST FROM ADDR: ADDI 4108
-rs1 rs2 rd
-TYPE:ADDI  10  0  10
-TYPE:ADDI  0  0  0
-REGS VALUE: 2|0
-cc57WRITE BACK 
-WB Q & V:1
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:ADDI addr:4108 busy:1 Qj:0 Qk:0 done:1 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4112|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:2|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4112|pc|
-=================== 
-INST FROM ADDR: SW 4112
-rs1 rs2 rd
-TYPE:SW  14  10  0
-TYPE:SW  0  0  0
-REGS VALUE: 4096|2
-cc58WRITE BACK 
-WB Q & V:2
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4116|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:175|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4116|pc|
-=================== 
-INST FROM ADDR: JALR 4116
-rs1 rs2 rd
-TYPE:JALR  1  0  0
-TYPE:JALR  0  0  0
-REGS VALUE: 4268|0
-cc59=======FP ========= 
-1 
-TYPE:JALR addr:4116 busy:1 Qj:0 Qk:0 done:1 
-2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4120|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:175|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4120|pc|
-=================== 
-INST FROM ADDR: LBU 4120
-rs1 rs2 rd
-TYPE:LBU  10  0  15
-TYPE:LBU  0  0  0
-REGS VALUE: 175|0
-cc60WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4124
-=======FP ========= 
-1 
-TYPE:JALR addr:4116 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LBU addr:4120 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4268|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:175|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4268|pc|
-=================== 
-INST FROM ADDR: ADDI 4268
-rs1 rs2 rd
-TYPE:ADDI  0  0  10
-TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
-cc61WRITE BACK 
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:ADDI addr:4268 busy:1 Qj:0 Qk:0 done:1 
-2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LBU addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4272|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:175|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4272|pc|
-=================== 
-INST FROM ADDR: JAL 4272
-rs1 rs2 rd
-TYPE:JAL  0  0  1
-TYPE:JAL  0  0  0
-REGS VALUE: 0|0
-cc62WRITE BACK 
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:ADDI addr:4268 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:JAL addr:4272 busy:1 Qj:0 Qk:0 done:1 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4276|0:0|    |1:2|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4268|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4276|pc|
-=================== 
-INST FROM ADDR: ADDI 4276
-rs1 rs2 rd
-TYPE:ADDI  0  0  10
-TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
-cc63WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4280
-=======FP ========= 
-1 
-TYPE:ADDI addr:4276 busy:1 Qj:0 Qk:0 done:1 
-2 
-TYPE:JAL addr:4272 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4096|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4276|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:2|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4096|pc|
-=================== 
-INST FROM ADDR: LUI 4096
-rs1 rs2 rd
-TYPE:LUI  0  0  14
-TYPE:LUI  0  0  0
-REGS VALUE: 0|0
-cc64WRITE BACK 
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:ADDI addr:4276 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:LUI addr:4096 busy:1 Qj:0 Qk:0 done:1 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4100|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:2|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4276|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:3|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4100|pc|
-=================== 
-INST FROM ADDR: LW 4100
-rs1 rs2 rd
-TYPE:LW  14  0  15
-TYPE:LW  0  0  0
-REGS VALUE: 4096|0
-cc65WRITE BACK 
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:ADDI addr:4276 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:LUI addr:4096 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4104|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4276|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:3|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4104|pc|
-=================== 
-INST FROM ADDR: XOR 4104
-rs1 rs2 rd
-TYPE:XOR  10  15  10
-TYPE:XOR  0  0  0
-REGS VALUE: 3|0
-cc66WRITE BACK 
-WB Q & V:5
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:XOR addr:4104 busy:1 Qj:0 Qk:0 done:1 
-2 
-TYPE:LUI addr:4096 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4108|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4276|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:3|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4108|pc|
-=================== 
-INST FROM ADDR: ADDI 4108
-rs1 rs2 rd
-TYPE:ADDI  10  0  10
-TYPE:ADDI  0  0  0
-REGS VALUE: 3|0
-cc67WRITE BACK 
-WB Q & V:1
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:ADDI addr:4108 busy:1 Qj:0 Qk:0 done:1 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4112|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:2|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4276|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:3|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4112|pc|
-=================== 
-INST FROM ADDR: SW 4112
-rs1 rs2 rd
-TYPE:SW  14  10  0
-TYPE:SW  0  0  0
-REGS VALUE: 4096|3
-cc68WRITE BACK 
-WB Q & V:2
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4116|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4276|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:176|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4116|pc|
-=================== 
-INST FROM ADDR: JALR 4116
-rs1 rs2 rd
-TYPE:JALR  1  0  0
-TYPE:JALR  0  0  0
-REGS VALUE: 4276|0
-cc69=======FP ========= 
-1 
-TYPE:JALR addr:4116 busy:1 Qj:0 Qk:0 done:1 
-2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4120|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4276|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:176|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4120|pc|
-=================== 
-INST FROM ADDR: LBU 4120
-rs1 rs2 rd
-TYPE:LBU  10  0  15
-TYPE:LBU  0  0  0
-REGS VALUE: 176|0
-cc70WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4124
-=======FP ========= 
-1 
-TYPE:JALR addr:4116 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LBU addr:4120 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4276|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4276|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:176|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4276|pc|
-=================== 
-INST FROM ADDR: ADDI 4276
-rs1 rs2 rd
-TYPE:ADDI  0  0  10
-TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
-cc71WRITE BACK 
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:ADDI addr:4276 busy:1 Qj:0 Qk:0 done:1 
-2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LBU addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4280|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4276|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:176|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4280|pc|
-=================== 
-INST FROM ADDR: JAL 4280
-rs1 rs2 rd
-TYPE:JAL  0  0  1
-TYPE:JAL  0  0  0
-REGS VALUE: 0|0
-cc72WRITE BACK 
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:ADDI addr:4276 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:JAL addr:4280 busy:1 Qj:0 Qk:0 done:1 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4284|0:0|    |1:2|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4276|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:3|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4284|pc|
-=================== 
-INST FROM ADDR: ADDI 4284
-rs1 rs2 rd
-TYPE:ADDI  0  0  10
-TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
-cc73WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4288
-=======FP ========= 
-1 
-TYPE:ADDI addr:4284 busy:1 Qj:0 Qk:0 done:1 
-2 
-TYPE:JAL addr:4280 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4096|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4284|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:3|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4096|pc|
-=================== 
-INST FROM ADDR: LUI 4096
-rs1 rs2 rd
-TYPE:LUI  0  0  14
-TYPE:LUI  0  0  0
-REGS VALUE: 0|0
-cc74WRITE BACK 
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:ADDI addr:4284 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:LUI addr:4096 busy:1 Qj:0 Qk:0 done:1 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4120 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4100|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:2|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4284|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:4|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4100|pc|
-=================== 
-INST FROM ADDR: LW 4100
-rs1 rs2 rd
-TYPE:LW  14  0  15
-TYPE:LW  0  0  0
-REGS VALUE: 4096|0
-cc75WRITE BACK 
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:ADDI addr:4284 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:LUI addr:4096 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4104|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4284|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:4|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4104|pc|
-=================== 
-INST FROM ADDR: XOR 4104
-rs1 rs2 rd
-TYPE:XOR  10  15  10
-TYPE:XOR  0  0  0
-REGS VALUE: 4|0
-cc76WRITE BACK 
-WB Q & V:5
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:XOR addr:4104 busy:1 Qj:0 Qk:0 done:1 
-2 
-TYPE:LUI addr:4096 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4108|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:1|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4284|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:4|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4108|pc|
-=================== 
-INST FROM ADDR: ADDI 4108
-rs1 rs2 rd
-TYPE:ADDI  10  0  10
-TYPE:ADDI  0  0  0
-REGS VALUE: 4|0
-cc77WRITE BACK 
-WB Q & V:1
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:ADDI addr:4108 busy:1 Qj:0 Qk:0 done:1 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4112|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:2|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4284|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:4|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4112|pc|
-=================== 
-INST FROM ADDR: SW 4112
-rs1 rs2 rd
-TYPE:SW  14  10  0
-TYPE:SW  0  0  0
-REGS VALUE: 4096|4
-cc78WRITE BACK 
-WB Q & V:2
-WRITE BACK 
-=======FP ========= 
-1 
-TYPE:XOR addr:4104 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LW addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4116|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4284|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:177|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4116|pc|
-=================== 
-INST FROM ADDR: JALR 4116
-rs1 rs2 rd
-TYPE:JALR  1  0  0
-TYPE:JALR  0  0  0
-REGS VALUE: 4284|0
-cc79=======FP ========= 
-1 
-TYPE:JALR addr:4116 busy:1 Qj:0 Qk:0 done:1 
-2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:ERROR addr:4100 busy:0 Qj:0 Qk:0 done:0 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4120|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4284|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:177|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4120|pc|
-=================== 
-INST FROM ADDR: LBU 4120
-rs1 rs2 rd
-TYPE:LBU  10  0  15
-TYPE:LBU  0  0  0
-REGS VALUE: 177|0
-cc80WRITE BACK 
-WRITE BACK 
-RESET SIGNAL 4124
-=======FP ========= 
-1 
-TYPE:JALR addr:4116 busy:0 Qj:0 Qk:0 done:0 
-2 
-TYPE:ADDI addr:4108 busy:0 Qj:0 Qk:0 done:0 
-3 
-TYPE:LUI addr:12 busy:0 Qj:0 Qk:0 done:0 
-4 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:3162868160 done:0 
-=======LOAD ========= 
-5 
-TYPE:LBU addr:4120 busy:1 Qj:0 Qk:0 done:1 
-6 
-TYPE:ERROR addr:0 busy:0 Qj:32713 Qk:312800104 done:0 
-7 
-TYPE:ERROR addr:0 busy:0 Qj:0 Qk:312805496 done:0 
-pc:4284|0:0|    |1:0|    |2:0|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:0|    |9:0|    |10:0|    |11:0|    |12:0|    |13:0|    |14:0|    |15:5|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-|0:0|    |1:4284|    |2:131040|    |3:0|    |4:0|    |5:0|    |6:0|    |7:0|    |8:4528|    |9:4528|    |10:177|    |11:0|    |12:255|    |13:196608|    |14:4096|    |15:0|    |16:0|    |17:0|    |18:0|    |19:0|    |20:0|    |21:0|    |22:0|    |23:0|    |24:0|    |25:0|    |26:0|    |27:0|    |28:0|    |29:0|    |30:0|    |31:0|    
-ISSUE NOT STALL
-4284|pc|
-=================== 
-INST FROM ADDR: ADDI 4284
-rs1 rs2 rd
-TYPE:ADDI  0  0  10
-TYPE:ADDI  0  0  0
-REGS VALUE: 0|0
+REGS VALUE0
 cc81
