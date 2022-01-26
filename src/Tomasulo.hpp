@@ -35,7 +35,6 @@
 
 // store no RD , write bc chaged , execu should read, not 
 
-
 #pragma once
 #include <unordered_map>
 #include <unordered_set>
@@ -78,7 +77,6 @@ struct RS{
 
         out << "Vj:" <<  _RS.Vj << " ";
         out << "Vk:" <<  _RS.Vk << " ";
-
 
         out << "Rd:" <<  _RS.rd << " ";
         out << "done:" <<  _RS.done << " \n";
@@ -236,7 +234,7 @@ public:
             assert(r != 0);
 
             // for load store
-            if (Q_i[inst.rs1] == 0)
+            if (Q_i[inst.rs1] != 0)
                 R_S[r].Qj = Q_i[inst.rs1]; 
             else { 
                 R_S[r].Vj = REGS.get(inst.rs1); R_S[r].Qj = 0;
@@ -282,7 +280,6 @@ struct ALUUnit
         else return x;
     }
 
-    // fenceng?
     // for a typical r
     // FP
     void go()
@@ -305,7 +302,6 @@ struct ALUUnit
             inst.src1 = R_S[r].Vj;
             inst.src2 = R_S[r].Vk;
             inst.type = R_S[r].type;
-            // assert(h->stall_signal == 0 || inst.type == ERROR);
 
             switch (inst.type){
                 case ERROR: return;
@@ -507,15 +503,14 @@ public:
         if (R_S[r].busy && R_S[r].done && (R_S[r].FP_action || R_S[r].load))
         {
             // load FP
-            if (!h->cdb.busyQ)
+            if (!h->cdb.busy)
             {
                 h->cdb.busy = 1;
                 for (int x = 1; x <= 31; x ++) if (Q_i[x] == r) {
                      REGS.reg[x] = R_S[r].dest, Q_i[x] = 0; // !!notice r != 0;
-                     std::cout << "CHANGE QI" << r << "\n";
+                     std::cout << "CHANGE QI" << x <<  r << "\n";
                 }
-                // std::cout << "Q_I AFTER WRITE BACK:" << Q_i[2] << "\n";
-                for (int ri = 1; ri <= 10; ri ++ ) {
+                for (int ri = 1; ri <= 10; ri ++ ) if (R_S[ri].busy ){
                     if (R_S[ri].Qj == r) 
                     {
                         R_S[ri].Vj = R_S[r].dest, R_S[ri].Qj = 0; // !!notice r != 0;
@@ -542,7 +537,6 @@ public:
                     std::cout << "RESET SIGNAL " << REGS.pc << "\n";
 
                     REGS.pc = h->nextpc;
-                    // std::cout << "check pc wb: " << REGS.pc << "\n";
                     if (! R_S[r].dest && R_S[r].BXX ) 
                         REGS.pc = R_S[r].addr + 4;
                 }
@@ -583,6 +577,11 @@ class Tomasolu
     WriteB wb;
 public:
     Tomasolu(memory* _mem):h(_mem), mem(_mem), issue(&h), execu(&h), wb(&h) {}
+
+    int output(){
+        return h.regs.reg[10] & 255u;
+    }
+
     void run()
     {
         std::cout << "RUN TOMASOLU\n ";
@@ -592,7 +591,7 @@ public:
         {
             std::cout << "cc" << cc ;
             if (h.regs._end) break;
-            if (cc > 80) break;
+            // if (cc > 80) break;
             wb.go();
             execu.go();
 

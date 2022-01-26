@@ -27,5 +27,9 @@ int main(int argc, char* argv[]){
     Tomasolu tomasulo = Tomasolu(&mem);
     mem.loadFromDisk();
     tomasulo.run();
+      std::cout << " === TOMA OUTPUT: === " << std::endl;
+    int ans = tomasulo.output();
+    std::cout << ans << std::endl;
+
     return 0;
 }
