@@ -178,10 +178,9 @@ public:
     {
         // fetch
         assert(inst.type == ERROR);
-        std::cout << h->regs.pc << "|pc|\n";
+        // std::cout << h->regs.pc << "|pc|\n";
 
         inst.fromMemory = h->regs.load(h->regs.pc, 4);
-        // std::cout << "FROM MEMORY: "<< inst.fromMemory << "\n";
         inst.addr = h->regs.pc;
         h->regs.pc += 4;
 
@@ -194,7 +193,6 @@ public:
         }
         std::cout << inst;
         // std::cout << "REGS VALUE: " << REGS.get(inst.rs1) << "|" << REGS.get(inst.rs2) << "\n";
-        std::cout << "REGS VALUE"  << Q_i[2] << "\n";
 
         // find an empty station;
         if (inst.FP_action)
@@ -484,8 +482,8 @@ public:
             else
                 s.go();
         }
-        std::cout << h->rst;
-        std::cout << h->regs;
+        // std::cout << h->rst;
+        // std::cout << h->regs;
     }
 };
 
@@ -508,20 +506,20 @@ public:
                 h->cdb.busy = 1;
                 for (int x = 1; x <= 31; x ++) if (Q_i[x] == r) {
                      REGS.reg[x] = R_S[r].dest, Q_i[x] = 0; // !!notice r != 0;
-                     std::cout << "CHANGE QI" << x <<  r << "\n";
+                    //  std::cout << "CHANGE QI" << x <<  r << "\n";
                 }
                 for (int ri = 1; ri <= 10; ri ++ ) if (R_S[ri].busy ){
                     if (R_S[ri].Qj == r) 
                     {
                         R_S[ri].Vj = R_S[r].dest, R_S[ri].Qj = 0; // !!notice r != 0;
                         h->cdb.commondatabus.push(ri);
-                        std::cout << "WB Q & V:" << r << "\n"; // if cdb trigger execu
+                        // std::cout << "WB Q & V:" << r << "\n"; // if cdb trigger execu
                     }
                     if (R_S[ri].Qk == r) 
                     {
                         R_S[ri].Vk = R_S[r].dest, R_S[ri].Qk = 0; // !!notice r != 0;
                         h->cdb.commondatabus.push(ri);
-                        std::cout << "WB Q & V:" << r << "\n";
+                        // std::cout << "WB Q & V:" << r << "\n";
                     }
                 }
                 R_S[r].busy = 0;
@@ -534,7 +532,7 @@ public:
                 if (R_S[r].BXX || R_S[r].type == JAL || R_S[r].type == JALR || R_S[r].type == AUIPC) 
                 {
                     h->stall_signal = 0;
-                    std::cout << "RESET SIGNAL " << REGS.pc << "\n";
+                    // std::cout << "RESET SIGNAL " << REGS.pc << "\n";
 
                     REGS.pc = h->nextpc;
                     if (! R_S[r].dest && R_S[r].BXX ) 
@@ -604,7 +602,7 @@ public:
 
             if (!h.stall_signal && h.cdb.commondatabus.size() == 0 && h.RS_stall_signal == 0) 
             {
-                std::cout << "ISSUE NOT STALL\n";
+                // std::cout << "ISSUE NOT STALL\n";
                 issue.go();
             }
             cc++;

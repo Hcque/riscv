@@ -29,7 +29,7 @@ int main(int argc, char* argv[]){
     tomasulo.run();
       std::cout << " === TOMA OUTPUT: === " << std::endl;
     int ans = tomasulo.output();
-    std::cout << ans << std::endl;
+    std::cerr << ans << std::endl;
 
     return 0;
 }
