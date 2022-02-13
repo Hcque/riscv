@@ -1,5 +1,6 @@
 # Riscv
 My design of  riscv simulator. It supports serial and 5 stage pipeline.
+For running: > ./dotest.sh
 
 Implementing process:
 
