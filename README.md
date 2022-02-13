@@ -1,4 +1,4 @@
-# riscv
+# Riscv
 My design of  riscv simulator. It supports serial and 5 stage pipeline.
 
 Implementing process:
